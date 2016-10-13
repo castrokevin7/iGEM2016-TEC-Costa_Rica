@@ -60,24 +60,6 @@
 			padding-top: 20px; 
 			text-align: center;
 		}
-		.slideanim {visibility:hidden;}
-		.slide {
-		    animation-name: slide;
-		    -webkit-animation-name: slide;
-		    animation-duration: 1s;
-		    -webkit-animation-duration: 1s;
-		    visibility: visible;
-		}
-		@keyframes slide {
-		  0% {
-		    opacity: 0;
-		    transform: translateY(70%);
-		  } 
-		  100% {
-		    opacity: 1;
-		    transform: translateY(0%);
-		  }
-		}
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 		}
 		@media screen and (max-width: 1280px) {
@@ -97,7 +79,7 @@
 			<div class="concept">
 				<p style="text-align: center;">Prostal is a non-invasive, innovative system which aims to detect RNA and to produce a signal which is easy to read. To achieve this, we have separated our project in two main modules: I) detection of RNA and II) Signal. For the RNA detection, we chose the dCas9 (D10A, H840A) protein of <em>Streptococcus pyogenes</em>. This protein binds to the RNA and is engineered to produce a measurable signal.</p>
 			</div>		
-			<h2>Background</h2>
+			<h1>Background</h1>
 			<p>Prostate cancer (pCa) is the second most common type of cancer among men in Costa Rica, with a man dying every 27 hours in average. Yearly data since 2012 shows that an average of 373 men die every year of this disease, and 44 of every 100 000 men suffer from this illness. Globally, an estimated 300 000 men die every year of pCa, and more than a million men are diagnosed, so this is a global concern. This data is aggravated by the fact that most of deaths occur because men refuse to undergo clinical examination, which consists mainly in Digital Rectal Examination (DRE). Therefore, if a method which can detect pCa is developed in which DRE or a biopsy are not needed, the rate of deaths could be dramatically reduced, since pCa is not aggressive if properly treated. There are alternative tests, such as Prostate Specific Antigen (PSA) or RNA-PCR amplification, but the first is not really specific for cancer, and the second one is expensive and requires costly equipment. Therefore, we propose a bacterial-based system which can detect RNA and produce an easy-to-read signal.</p>
 			<div class="container-fluid slideanim">
 			  <div class="row">
@@ -109,7 +91,7 @@
 			    	</div>
 			    </div>
 			    <div class="col-sm-8">
-				  <h2>System</h2>
+				  <h1>System</h1>
 			      <p>Our system was designed aiming to detect PCA3, a long non-coding RNA that works as a biomarker for prostate cancer detection, but it can be used to detect any DNA or RNA molecule. This system uses a modified dCas9 to detect an specific nucleic acid molecule and the conformational change this protein suffers when it binds to the target molecule is used to trigger the signaling mechanism.</p>
 			      <br><a class="btn btn-default btn-lg" href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/System">Read More</a>
 			    </div>
@@ -125,7 +107,7 @@
 			    	</div>
 			    </div>
 			    <div class="col-sm-8 col-sm-pull-4">
-					  <h2>Modelling & Simulations</h2>
+					  <h1>Modelling & Simulations</h1>
 						<p>The modelling for the Project can be classified into two categories:</p>
 						<ul>
 							<li><p>Mathematical modelling</p></li>
@@ -145,7 +127,7 @@
 			    	</div>		    	
 			    </div>
 			    <div class="col-sm-8">
-				  <h2>Parts</h2>
+				  <h1>Parts</h1>
 				  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 			      <br><a class="btn btn-default btn-lg" href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Modelling_Simulations">Read More</a>
 			    </div>
@@ -161,7 +143,7 @@
 			    	</div>	
 			    </div>
 			    <div class="col-sm-8 col-sm-pull-4">
-				  <h2>Safety</h2>
+				  <h1>Safety</h1>
 			      <p>Our project is related to the detection of a human disease via a biomarker molecule found in the urine of patients with prostate cancer. Since local regulation does not allow us to work with human samples, we designed our project in a way that it can work as a proof-of-concept of a detection system and pose no risk to human health.</p>
 			      <br><a class="btn btn-default btn-lg" href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Safety">Read More</a>
 			    </div>
@@ -172,12 +154,12 @@
 			    <div class="col-sm-4">
 			    	<div class="section-image">
 			    		<div class="image-align">
-			    			<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Collaborations"><imgrations" src="http://2016.igem.org/wiki/images/7/76/T--TEC-Costa_Rica--prostal_project_collaborations.png" alt="Project Collaborations"></a>
+			    			<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Collaborations"><img src="http://2016.igem.org/wiki/images/7/76/T--TEC-Costa_Rica--prostal_project_collaborations.png" class="img-responsive image-link" alt="Project Collaborations"></a>
 			    		</div>
 			    	</div>			    	
 			    </div>
 			    <div class="col-sm-8">
-				  <h2>Collaborations</h2>
+				  <h1>Collaborations</h1>
 			      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 			      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 			      <br><a class="btn btn-default btn-lg" href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Collaborations">Read More</a>
@@ -190,17 +172,7 @@
 			nav.className += " active";
 			
 			var elements = document.getElementsByClassName('image-link');
-			elements[0].addEventListener("mouseover", function() {
-				this.style.height = "175px"; 
-				this.style.width = "175px"; 
-				this.style.marginTop = "10px";
-			});
-			elements[0].addEventListener("mouseout", function() {
-				this.style.height = "150px"; 
-				this.style.width = "150px"; 
-				this.style.marginTop = "25px";
-			});
-			elements.slice(1).forEach(function(element) {
+			Array.prototype.forEach.call(elements, function(element) {
 				element.addEventListener("mouseover", function() {
 					this.style.height = "175px"; 
 					this.style.width = "175px"; 
