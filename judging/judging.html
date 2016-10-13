@@ -1,0 +1,152 @@
+{{:Team:TEC-Costa_Rica/Template:Header}}
+{{:Team:TEC-Costa_Rica/Template:Stylesheet}}
+<html>
+	<style type="text/css">
+		.jumbotron {
+			height: 350px;
+			width: 100%;
+			margin-bottom: 0;
+			padding: 0;
+			display: table;
+			color: white;
+			background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
+			background-size: cover;
+			background-position: top;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+		}
+		.jumbotron h1 {
+			display: table-cell;
+			vertical-align: middle;
+			background-color: rgba(0, 0, 0, 0.2);
+		}				
+		.parallax {
+			perspective: 1px;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}	
+		.concept {
+			display: block;
+			text-align: center;
+			margin: 10px auto 0 auto;
+			width: 80%
+		}
+		#judging-sections { margin-top: 20px; }
+		#judging-sections .row { margin-top: 10px; }
+		#judging-sections .row .col-sm-4 { height: 350px; }
+		.panel {
+		    border: 1px solid gray; 
+		    border-radius:0 !important;
+		    transition: box-shadow 0.5s;
+		    height: 100%;
+		    margin-bottom: 15px;
+		}
+		.panel:hover { box-shadow: 5px 0px 40px rgba(0,0,0, .2); }
+		.panel-footer .btn:hover {
+		    border: 1px solid gray;
+		    background-color: #fff !important;
+		    color: gray;
+		}
+		.panel-heading {
+		    color: #fff !important;
+		    background-color: gray !important;
+		    padding: 25px;
+		    border-bottom: 1px solid transparent;
+		    border-top-left-radius: 0px;
+		    border-top-right-radius: 0px;
+		    border-bottom-left-radius: 0px;
+		    border-bottom-right-radius: 0px;
+		}
+		.panel-body { height: 125px; }
+		.panel-body p { text-align: center; }
+		.panel-footer { background-color: white !important; }
+		.panel-footer h3 { font-size: 32px; }
+		.panel-footer h4 {
+		    color: #aaa;
+		    font-size: 14px;
+		}
+		.panel-footer .btn {
+		    margin: 15px 0;
+		    background-color: gray;
+		    color: #fff;
+		}
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+		}
+		@media screen and (max-width: 1280px) {
+		}
+		@media screen and (max-width: 980px) {
+		}
+		@media screen and (max-width: 736px) {
+			.panel { height: auto; }
+			.panel-body { height: auto; }
+		}
+		@media screen and (max-width: 480px) {
+			.panel { height: auto; }
+			.panel-body { height: auto; }
+		} 	
+	</style>	
+	<body>
+		<main class="judging well">
+			<div class="jumbotron text-center parallax">
+				<h1 style="font-size: 50px;">Judging</h1>
+			</div>
+			<div class="concept">
+				<p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>	
+			<div id="judging-sections" class="container-fluid">
+			  <div class="row">
+			    <div class="col-sm-4 col-xs-12">
+			      <div class="panel panel-default text-center">
+			        <div class="panel-heading">
+			          <h1>Golden Medals</h1>
+			        </div>
+			        <div class="panel-body">
+			          <p style="text-align: center;">ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			        </div>
+			        <div class="panel-footer">
+			        	<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Judging/Golden_Medals"><button class="btn btn-lg">More</button></a>
+			        </div>
+			      </div>      
+			    </div>     
+			    <div class="col-sm-4 col-xs-12">
+			      <div class="panel panel-default text-center">
+			        <div class="panel-heading">
+			          <h1>Silver Medals</h1>
+			        </div>
+			        <div class="panel-body">
+			          <p style="text-align: center;">ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			        </div>
+			        <div class="panel-footer">
+			        	<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Judging/Silver_Medals"><button class="btn btn-lg">More</button></a>
+			        </div>
+			      </div>      
+			    </div>       
+			    <div class="col-sm-4 col-xs-12">
+			      <div class="panel panel-default text-center">
+			        <div class="panel-heading">
+			          <h1>Bronze Medals</h1>
+			        </div>
+			        <div class="panel-body">
+			          <p style="text-align: center;">ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			        </div>
+			        <div class="panel-footer">
+			        	<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Judging/Bronze_Medals"><button class="btn btn-lg">More</button></a>
+			        </div>
+			      </div>      
+			    </div>    
+			  </div>
+			</div>
+		</main>
+		<script type="text/javascript">
+			var navs = document.getElementsByClassName('dropdown');
+			Array.prototype.forEach.call(navs, function(nav) {
+				navs.className = "";
+				navs.className = "dropdown";
+			});
+			var nav = document.getElementById('nav-judging');
+			nav.className += " active";
+		</script>
+	</body>
+</html>
+{{:Team:TEC-Costa_Rica/Template:Scripts}}
+{{:Team:TEC-Costa_Rica/Template:Footer}}

@@ -1,0 +1,138 @@
+{{:Team:TEC-Costa_Rica/Template:Header}}
+{{:Team:TEC-Costa_Rica/Template:Stylesheet}}
+<html>
+	<style type="text/css">
+		.jumbotron {
+			height: 350px;
+			width: 100%;
+			margin-bottom: 0;
+			padding: 0;
+			display: table;
+			color: white;
+			background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
+			background-size: cover;
+			background-position: top;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+		}
+		.jumbotron h1 {
+			display: table-cell;
+			vertical-align: middle;
+			background-color: rgba(0, 0, 0, 0.2);
+		}				
+		.parallax {
+			perspective: 1px;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}	
+		.concept {
+			display: block;
+			text-align: center;
+			margin: 10px auto 0 auto;
+			width: 80%
+		}	
+		.notebook .container-fluid {
+		    padding: 30px 25px;
+		}
+		.notebook .container-fluid .row {
+			padding-bottom: 20px;
+		    border-bottom: 1px solid #d3d3d3;
+		}	
+		.notebook .container-fluid .row a {
+			color: black;
+		}
+		.notebook .container-fluid .row .col-sm-4 {
+			padding: 20px;
+		}
+		.section-image {
+			border-radius: 50%;
+			height: 250px;
+			width: 250px;			
+			background-color: #364C5E;
+		}	
+		.section-image img {
+			margin: 0 auto 0 auto;
+			height: 150px;
+			width: 150px;	
+			margin-top: 25px;	
+		}	
+		.image-align {
+			padding-top: 20px; 
+			text-align: center;
+		}			
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+		}
+		@media screen and (max-width: 1280px) {
+		}
+		@media screen and (max-width: 980px) {
+		}
+		@media screen and (max-width: 736px) {
+		}
+		@media screen and (max-width: 480px) {
+		}				
+	</style>
+	<body>
+		<main class="notebook well">
+			<div class="jumbotron text-center parallax">
+				<h1 style="font-size: 50px;">Notebook</h1>
+			</div>
+			<div class="concept">
+				<p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>		
+			<div class="container-fluid">
+			  <div class="row">
+			    <div class="col-sm-4">
+				    <div class="section-image">
+				    	<div class="image-align">
+				    		<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Notebook/Laboratory"><img src="http://2016.igem.org/wiki/images/5/5b/T--TEC-Costa_Rica--prostal_notebook_lab.png" class="img-responsive image-link"></a>	 
+				    	</div>
+				    </div>
+			    </div>
+			    <div class="col-sm-8">
+				  <h2>Laboratory</h2>
+			      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			      <br><a class="btn btn-default btn-lg" href="http://2016.igem.org/Team:TEC-Costa_Rica/Notebook/Laboratory">Get in Touch</a>
+			    </div>
+			  </div>
+			</div>
+
+			<div class="container-fluid">
+			  <div class="row slideanim" style="border: none;">
+			    <div class="col-sm-4 col-sm-push-8">
+				    <div class="section-image">
+				    	<div class="image-align">
+				    		<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Notebook/Protocols"><img src="http://2016.igem.org/wiki/images/7/79/T--TEC-Costa_Rica--prostal_notebook_protocols.png" class="img-responsive image-link"></a>	 
+				    	</div>
+				    </div>
+			    </div>
+			    <div class="col-sm-8 col-sm-pull-4">
+				  <h2>Protocols</h2>
+			      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			      <br><a class="btn btn-default btn-lg" href="http://2016.igem.org/Team:TEC-Costa_Rica/Notebook/Protocols">Get in Touch</a>
+			    </div>
+			  </div>
+			</div>			
+		</main>
+		<script type="text/javascript">
+			var nav = document.getElementById('nav-notebook');
+			nav.className += " active";
+
+			var elements = document.getElementsByClassName('image-link');
+			Array.prototype.forEach.call(elements, function(element) {
+				element.addEventListener("mouseover", function() {
+					this.style.height = "175px"; 
+					this.style.width = "175px"; 
+					this.style.marginTop = "10px";
+				});
+				element.addEventListener("mouseout", function() {
+					this.style.height = "150px"; 
+					this.style.width = "150px"; 
+					this.style.marginTop = "25px";
+				});	
+			});
+		</script>
+	</body>
+</html>
+{{:Team:TEC-Costa_Rica/Template:Scripts}}
+{{:Team:TEC-Costa_Rica/Template:Footer}}

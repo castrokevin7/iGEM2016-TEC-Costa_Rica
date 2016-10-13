@@ -1,0 +1,310 @@
+{{:Team:TEC-Costa_Rica/Template:Header}}
+{{:Team:TEC-Costa_Rica/Template:Stylesheet}}
+<html>
+	<style type="text/css">
+		.jumbotron {
+			height: 350px;
+			width: 100%;
+			margin-bottom: 0;
+			padding: 0;
+			display: table;
+			color: white;
+			background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
+			background-size: cover;
+			background-position: top;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+		}
+		.jumbotron h1 {
+			display: table-cell;
+			vertical-align: middle;
+			background-color: rgba(0, 0, 0, 0.2);
+		}				
+		.parallax {
+			perspective: 1px;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}	
+		.concept {
+			display: block;
+			text-align: center;
+			margin: 10px auto 0 auto;
+			width: 85%
+		}
+		.container-fluid .row { margin-bottom: 20px; } 
+		figure { margin-bottom: 15px; }
+		.modal-trigger {
+		    cursor: pointer;
+		    transition: 0.3s;
+		}
+		.modal-trigger:hover { opacity: 0.7; }
+		.modal {
+		    display: none; /* Hidden by default */
+		    position: fixed; /* Stay in place */
+		    z-index: 1; /* Sit on top */
+		    padding-top: 100px; /* Location of the box */
+		    left: 0;
+		    top: 0;
+		    width: 100%; /* Full width */
+		    height: 100%; /* Full height */
+		    overflow: auto; /* Enable scroll if needed */
+		    background-color: rgb(0,0,0); /* Fallback color */
+		    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+		}
+		.modal-content, .modal-content img {
+		    margin: auto;
+		    display: block;
+		    width: 90%;
+		    max-width: 700px;
+		}
+		.caption-modal {
+		    margin: auto;
+		    display: block;
+		    width: 90%;
+		    max-width: 700px;
+		    text-align: center;
+		    color: #ccc;
+		    padding: 10px 0;
+		    height: 150px;
+		}
+		.modal-content, .modal-content img, .caption-modal {
+		    -webkit-animation-name: zoom;
+		    -webkit-animation-duration: 0.6s;
+		    animation-name: zoom;
+		    animation-duration: 0.6s;
+		}
+		@-webkit-keyframes zoom {
+		    from {-webkit-transform:scale(0)}
+		    to {-webkit-transform:scale(1)}
+		}
+		@keyframes zoom {
+		    from {transform:scale(0)}
+		    to {transform:scale(1)}
+		}
+		.close-modal {
+		    position: absolute;
+		    right: -20px;
+		    top: -20px;
+		    color: white;
+		    font-size: 30px;
+		    font-weight: bold;
+		    transition: 0.3s;
+		}
+		.close-modal:hover,
+		.close-modal:focus {
+		    color: #bbb;
+		    text-decoration: none;
+		    cursor: pointer;
+		}
+		.slideanim {visibility:hidden;}
+		.slide {
+		    animation-name: slide;
+		    -webkit-animation-name: slide;
+		    animation-duration: 1s;
+		    -webkit-animation-duration: 1s;
+		    visibility: visible;
+		}
+		@keyframes slide {
+		  0% {
+		    opacity: 0;
+		    transform: translateY(70%);
+		  } 
+		  100% {
+		    opacity: 1;
+		    transform: translateY(0%);
+		  }
+		}	
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+		}
+		@media screen and (max-width: 1280px) {
+		}
+		@media screen and (max-width: 980px) {
+		}
+		@media screen and (max-width: 736px) {
+		    .modal-content, .modal-content img { width: 90%; }
+		}
+		@media screen and (max-width: 480px) {
+		    .modal-content, .modal-content img { width: 90%; }
+		}								
+	</style>
+	<body>
+		<main class="interlab well">
+			<div class="jumbotron text-center parallax">
+				<h1 style="font-size: 50px;">Interlab</h1>
+			</div>
+			<div class="concept text-center">
+				<h2>How close can the numbers be when fluorescence is measured all around the world?</h2>
+				<p style="text-align: center;">This year’s Interlab study aims to establish standard units for the measurement of fluorescence, by establishing a comparison between the measurements of many different labs around the globe with previously measured standards.</p>
+			</div>	
+			<div class="container-fluid">
+				<h2>Constructs</h2>
+			  <div class="row">
+			    <div class="col-sm-6">
+						<p>For this experiment, a series of five constructs were used, with three being a GFP (E0040) device with a constitutive promoter (J23101 - strong, J23106 - medium, and J23117 - weak), B0034 RBS, and B0015 terminator; and the other two the controls (I20270 - positive, and R0040 - negative).</p>
+			    </div>
+			    <div class="col-sm-6">
+				    <figure><img class="modal-trigger img-responsive" alt="Diagram of the constructs used for the experiment." src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="><figcaption><p>Figure 1. Diagram of the constructs used for the experiment.</p></figcaption></figure>
+				    <div class="modal">
+				      <div class="modal-content">
+				      	<span class="close-modal">x</span>
+				      	<img>				      	
+				      </div> 
+				      <div class="caption-modal"><p style="text-align: center;"></p></div>
+				    </div>
+			    </div>
+			  </div>
+			</div>			
+			<div class="container-fluid slideanim">
+				<h2>Equipment</h2>
+			  <div class="row">
+			    <div class="col-sm-6">
+			   	  <p>The measurement was made on a BioTek Synergy H1 Multi-Mode Reader, in the National Center of Biotechnological Innovations.</p>
+			    </div>
+			    <div class="col-sm-6">
+			    	<figure><img class="modal-trigger img-responsive" alt="Equipment used for measurement." src="http://2016.igem.org/wiki/images/6/6e/T--TEC-Costa_Rica--prostal_interlab_Lector_de_placas.jpeg"><figcaption><p>Figure 2. Equipment used for measurement.</p></figcaption></figure> 
+			    	<div class="modal">
+				      <div class="modal-content">
+				      	<span class="close-modal">x</span>
+				      	<img>				      	
+				      </div> 
+				      <div class="caption-modal"><p style="text-align: center;"></p></div>
+			    	</div>
+			    </div>
+			  </div>
+			</div>
+			<div class="container-fluid slideanim">
+				<h2>Materials and Methods</h2>
+				<p>The experiments were made made on a transformed Escherichia coli, strain DH5α. The bacteria were grown on Luria-Bertani broth. The materials and protocols were supplied by igem HQ.</p>
+				<br>
+			  <div class="row">
+			    <div class="col-sm-6">
+						<p>First, the OD600 measurement was standardized using the provided LUDOX to create a correction factor for the Abs600 measurement between the instruments.</p>
+			    </div>
+			    <div class="col-sm-6">
+			    	<figure><img class="modal-trigger img-responsive" alt="OD600 calibration with LUDOX." src="http://2016.igem.org/wiki/images/2/2e/T--TEC-Costa_Rica--prostal_interlab_OD600.png"><figcaption><p>Figure 3. OD600 calibration with LUDOX.</p></figcaption></figure>
+			    	<div class="modal">
+				      <div class="modal-content">
+				      	<span class="close-modal">x</span>
+				      	<img>				      	
+				      </div> 
+				      <div class="caption-modal"><p style="text-align: center;"></p></div>
+				    </div>
+			    </div>
+			  </div>
+			  <div class="row">
+			    <div class="col-sm-6">
+						<p>Then, the fluorescence value was corrected using a series of dilutions of the chromophore FITC as a standard. A curve was generated with the serial dilutions of the molecule which was measured with the plate reader with the GFP program.</p> 
+			    </div>
+			    <div class="col-sm-6">
+						<figure><img class="modal-trigger img-responsive" alt="FITC measurement standard curve." src="http://2016.igem.org/wiki/images/2/21/T--TEC-Costa_Rica--prostal_interlab_FITC-curve.png"><figcaption><p>Figure 4. FITC measurement standard curve.</p></figcaption></figure>
+					<div class="modal">
+				      <div class="modal-content">
+				      	<span class="close-modal">x</span>
+				      	<img>				      	
+				      </div> 
+				      <div class="caption-modal"><p style="text-align: center;"></p></div>
+				    </div>
+			    </div>
+			  </div>
+			  <div class="row">
+			    <div class="col-sm-6">
+						<p>After the bacteria were transformed and grown overnight, we set all the concentrations to an Abs600 of 0,02. These subcultures were kept in a shaker, and samples were taken every hour for 6 hours.</p>
+			    </div>
+			    <div class="col-sm-6">
+						<figure><img class="modal-trigger img-responsive" alt="Abs600 of the overnight culture." src="http://2016.igem.org/wiki/images/6/64/T--TEC-Costa_Rica--prostal_interlab_Normalization.png"><figcaption><p>Figure 5. Abs600 of the overnight culture.</p></figcaption></figure>
+					<div class="modal">
+				      <div class="modal-content">
+				      	<span class="close-modal">x</span>
+				      	<img>				      	
+				      </div> 
+				      <div class="caption-modal"><p style="text-align: center;"></p></div>
+				    </div>
+			    </div>
+			  </div>			  
+			</div>	
+			<div class="container-fluid slideanim">
+				<h2>Results</h2>	
+			  <div class="row">
+			    <div class="col-sm-6">
+			   		<p>In Figure 6., we show the data obtained from the growth of <em>Escherichia coli</em>. It can be seen that the device 1 has the lowest growth, while device 3 has the highest.</p>
+			    </div>
+			    <div class="col-sm-6">
+			    	<figure><img class="modal-trigger img-responsive" alt="Growth of the bacteria vs time." src="http://2016.igem.org/wiki/images/a/a8/T--TEC-Costa_Rica--prostal_interlab_Abs600.png"><figcaption><p>Figure 6. Growth of the bacteria vs time.</p></figcaption></figure>
+			    	<div class="modal">
+				      <div class="modal-content">
+				      	<span class="close-modal">x</span>
+				      	<img>				      	
+				      </div> 
+				      <div class="caption-modal"><p style="text-align: center;"></p></div>
+				    </div>
+			    </div>
+			  </div>
+			  <div class="row">
+			    <div class="col-sm-6">
+						<p>A curve for fluorescence was also generated, where it can be easily seen that the device 1 has the most fluorescence, followed by device 2, positive control, and negative control and device 3 in the bottom with no response.</p>
+			    </div>
+			    <div class="col-sm-6">
+			    	<figure><img class="modal-trigger img-responsive" alt="Fluorescence of the constructs vs time." src="http://2016.igem.org/wiki/images/4/4a/T--TEC-Costa_Rica--prostal_interlab_GFP-FI.png"><figcaption><p>Figure 7. Fluorescence of the constructs vs time.</p></figcaption></figure>
+			    	<div class="modal">
+				      <div class="modal-content">
+				      	<span class="close-modal">x</span>
+				      	<img>				      	
+				      </div> 
+				      <div class="caption-modal"><p style="text-align: center;"></p></div>
+				    </div>
+			    </div>
+			  </div>	
+			  <div class="row">
+			    <div class="col-sm-6">
+						<p>Also, a ratio of fluorescence against absorbance was established in order to correct for the effect of the GFP production on the bacterial growth.</p>
+			    </div>
+			    <div class="col-sm-6">
+			    	<figure><img class="modal-trigger img-responsive" alt="Fluorescence/Absorbance ratio." src="http://2016.igem.org/wiki/images/d/dd/T--TEC-Costa_Rica--prostal_interlab_FIAbs.png"><figcaption><p>Figure 8. Fluorescence/Absorbance ratio.</p></figcaption></figure>
+			    	<div class="modal">
+				      <div class="modal-content">
+				      	<span class="close-modal">x</span>
+				      	<img>				      	
+				      </div> 
+				      <div class="caption-modal"><p style="text-align: center;"></p></div>
+				    </div>
+			    </div>
+			  </div>			  		  
+			</div>
+		</main>
+		<script type="text/javascript">
+			var navs = document.getElementsByClassName('dropdown');
+			Array.prototype.forEach.call(navs, function(nav) {
+				navs.className = "";
+				navs.className = "dropdown";
+			});
+			var nav = document.getElementById('nav-interlab');
+			nav.className += " active";
+
+			var triggers = document.getElementsByClassName('modal-trigger');
+			var modals = document.getElementsByClassName('modal');
+			var closers = document.getElementsByClassName('close-modal');
+			Array.prototype.forEach.call(triggers, function(trigger) {
+			  trigger.addEventListener("click", function() {
+			    var modal = this.parentNode.parentNode.getElementsByClassName("modal")[0];
+			    var modal_content = modal.getElementsByClassName("modal-content")[0];
+			    var img = modal_content.getElementsByTagName("img")[0];
+			    var caption = modal.getElementsByClassName("caption-modal")[0];
+			    var p = caption.getElementsByTagName("p")[0];
+		        img.src = this.src;
+		        p.innerHTML = this.alt;
+		        modal.style.display = "block";
+
+			  })
+			});
+			Array.prototype.forEach.call(closers, function(close) {
+			  close.addEventListener("click", function() {
+			    Array.prototype.forEach.call(modals, function(modal) {
+			      modal.style.display = "none";
+			    });
+			  })
+			});
+		</script>
+	</body>
+</html>
+{{:Team:TEC-Costa_Rica/Template:Scripts}}
+{{:Team:TEC-Costa_Rica/Template:Footer}}

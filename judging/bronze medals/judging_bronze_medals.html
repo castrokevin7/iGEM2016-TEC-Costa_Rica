@@ -1,0 +1,57 @@
+{{:Team:TEC-Costa_Rica/Template:Header}}
+{{:Team:TEC-Costa_Rica/Template:Stylesheet}}
+<html>
+	<style type="text/css">
+		.jumbotron {
+			height: 350px;
+			width: 100%;
+			margin-bottom: 0;
+			padding: 0;
+			display: table;
+			color: white;
+			background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
+			background-size: cover;
+			background-position: top;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+		}
+		.jumbotron h1 {
+			display: table-cell;
+			vertical-align: middle;
+			background-color: rgba(0, 0, 0, 0.2);
+		}	
+		.jumbotron span { font-size: 40px; }
+		.parallax {
+			perspective: 1px;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}	
+		.concept {
+			display: block;
+			text-align: center;
+			margin: 10px auto 0 auto;
+			width: 80%
+		}
+	</style>		
+	<body>
+		<main class="bronze_medals well">
+			<div class="jumbotron text-center parallax">
+				<h1 style="font-size: 50px;">Judging<br><span>Bronze Medals</span></h1>			
+			</div>
+			<div class="concept">
+				<p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>	
+		</main>
+		<script type="text/javascript">
+			var navs = document.getElementsByClassName('dropdown');
+			Array.prototype.forEach.call(navs, function(nav) {
+				navs.className = "";
+				navs.className = "dropdown";
+			});
+			var nav = document.getElementById('nav-judging');
+			nav.className += " active";
+		</script>
+	</body>
+</html>
+{{:Team:TEC-Costa_Rica/Template:Scripts}}
+{{:Team:TEC-Costa_Rica/Template:Footer}}

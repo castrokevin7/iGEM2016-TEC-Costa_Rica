@@ -1,0 +1,93 @@
+{{:Team:TEC-Costa_Rica/Template:Header}}
+{{:Team:TEC-Costa_Rica/Template:Stylesheet}}
+<html>
+	<style type="text/css">
+		.jumbotron {
+			height: 350px;
+			width: 100%;
+			margin-bottom: 0;
+			padding: 0;
+			display: table;
+			color: white;
+			background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
+			background-size: cover;
+			background-position: top;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+		}
+		.jumbotron h1 {
+			display: table-cell;
+			vertical-align: middle;
+			background-color: rgba(0, 0, 0, 0.2);
+		}	
+		.jumbotron span { font-size: 40px; }
+		.parallax {
+			perspective: 1px;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}	
+		.concept {
+			display: block;
+			text-align: center;
+			margin: 10px auto 0 auto;
+			width: 80%
+		}
+		.img-date:hover { opacity: 0.7; }
+		.months { margin-top: 20px;	}
+		@-webkit-keyframes zoom {
+		    from {-webkit-transform:scale(0)}
+		    to {-webkit-transform:scale(1)}
+		}
+		@keyframes zoom {
+		    from {transform:scale(0)}
+		    to {transform:scale(1)}
+		}
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+		}
+		@media screen and (max-width: 1280px) {
+		}
+		@media screen and (max-width: 980px) {
+		}
+		@media screen and (max-width: 736px) {
+		}
+		@media screen and (max-width: 480px) {
+		}				
+	</style>
+	<body>
+		<main class="laboratory well">
+			<div class="jumbotron text-center parallax">
+				<h1 style="font-size: 50px;">Laboratory<br><span>Notebook</span></h1>
+			</div>
+			<div class="concept">
+				<p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>	
+			<div class="container-fluid months">
+				<div class="row">
+					<div class="col-sm-3">
+						<a href=""><img src="http://2016.igem.org/wiki/images/2/2a/T--TEC-Costa_Rica--prostal_notebook_lab_july.png" class="img-responsive img-date"></a>
+					</div>
+					<div class="col-sm-3">
+						<a href=""><img src="http://2016.igem.org/wiki/images/b/b0/T--TEC-Costa_Rica--prostal_notebook_lab_august.png" class="img-responsive img-date"></a>
+					</div>
+					<div class="col-sm-3">
+						<a href=""><img src="http://2016.igem.org/wiki/images/8/8d/T--TEC-Costa_Rica--prostal_notebook_lab_september.png" class="img-responsive img-date"></a>
+					</div>
+					<div class="col-sm-3">
+						<a href=""><img src="http://2016.igem.org/wiki/images/0/09/T--TEC-Costa_Rica--prostal_notebook_lab_october.png" class="img-responsive img-date"></a>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script type="text/javascript">
+			var navs = document.getElementsByClassName('dropdown');
+			Array.prototype.forEach.call(navs, function(nav) {
+				navs.className = "";
+				navs.className = "dropdown";
+			});
+			var nav = document.getElementById('nav-notebook');
+			nav.className += " active";
+		</script>
+	</body>
+</html>
+{{:Team:TEC-Costa_Rica/Template:Scripts}}
+{{:Team:TEC-Costa_Rica/Template:Footer}}

@@ -1,0 +1,118 @@
+{{:Team:TEC-Costa_Rica/Template:Header}}
+{{:Team:TEC-Costa_Rica/Template:Stylesheet}}
+<html>
+	<style type="text/css">
+		.jumbotron {
+			height: 350px;
+			width: 100%;
+			padding: 0;
+			margin-bottom: 0;
+			display: table;
+			color: white;
+			background-size: cover;
+			background-position: top left;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-color: transparent;
+		}				
+		.parallax {
+			perspective: 1px;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+		.jumbotron img {
+			height: 400px; 
+			width: 100%; 
+			left: 0;
+		}
+		.concept {
+			display: block;
+			text-align: center;
+			margin: 10px auto 0 auto;
+			width: 80%
+		}
+		.team .container img {
+			width: 350px;
+			height: 300px;
+		}	
+		.team .container img:hover { opacity: 0.7; }  	
+		.team .container h2 { margin-bottom: 0; }		
+		.marketing { margin-top: 20px; }
+		.marketing .col-lg-4 {
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		.marketing h2 { font-weight: normal; }
+		.marketing .col-lg-4 p {
+			margin-right: 10px;
+			margin-left: 10px;
+		}
+		.slideanim {visibility:hidden;}
+		.slide {
+		    animation-name: slide;
+		    -webkit-animation-name: slide;
+		    animation-duration: 1s;
+		    -webkit-animation-duration: 1s;
+		    visibility: visible;
+		}
+		@keyframes slide {
+		  0% {
+		    opacity: 0;
+		    transform: translateY(70%);
+		  } 
+		  100% {
+		    opacity: 1;
+		    transform: translateY(0%);
+		  }
+		}	
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+		}
+		@media screen and (max-width: 1280px) {
+		}
+		@media screen and (max-width: 980px) {
+		}
+		@media screen and (max-width: 736px) {
+		    .jumbotron { height: 200px; }
+		    .jumbotron img { height: 200px; }
+		}
+		@media screen and (max-width: 480px) {
+		    .jumbotron { height: 200px; }
+		    .jumbotron img { height: 200px; }
+		}  	
+	</style>
+	<body>
+		<main class="team well">
+			<div class="jumbotron">
+				<img class="responsive" src="http://2016.igem.org/wiki/images/b/b9/T--TEC-Costa_Rica--prostal_logo_black.png" alt="iGEM Costa Rica Logo">
+			</div>
+			<div class="concept">
+				<p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>				
+			<div class="container marketing">
+			  <div class="row slideanim">
+			    <div class="col-lg-4">
+			    	<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Team/Members"><img class="img-thumbnail img-responsive" src="http://2016.igem.org/wiki/images/2/27/T--TEC-Costa_Rica--prostal_team_members.jpg" alt="Team Members"></a>
+			      <h2>Members</h2>
+			      <p style="text-align: center;">Meet our team members!</p>
+			    </div>
+			    <div class="col-lg-4">
+			    	<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Team/Instructors_Investigators"><img class="img-thumbnail img-responsive" src="http://2016.igem.org/wiki/images/1/14/T--TEC-Costa_Rica--prostal_team_instructors.jpg" alt="Team Instructors & Investigators"></a>
+			      <h2>Instructors & Investigators</h2>
+			      <p style="text-align: center;">Meet our team Instructors & Investigators!</p>
+			    </div>			    
+			    <div class="col-lg-4">
+			    	<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Team/Sponsors"><img class="img-thumbnail img-responsive" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Team Sponsors"></a>
+			      <h2>Instructors & Investigators</h2>
+			      <p style="text-align: center;">Take a look to our Sponsors!</p>
+			    </div>		    
+			  </div>	
+			</div>		
+		</main>
+		<script type="text/javascript">
+			var nav = document.getElementById('nav-team');
+			nav.className += " active";
+		</script>
+	</body>
+</html>
+{{:Team:TEC-Costa_Rica/Template:Scripts}}
+{{:Team:TEC-Costa_Rica/Template:Footer}}

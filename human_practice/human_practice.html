@@ -1,0 +1,96 @@
+{{:Team:TEC-Costa_Rica/Template:Header}}
+{{:Team:TEC-Costa_Rica/Template:Stylesheet}}
+<html>
+	<style type="text/css">
+		.jumbotron {
+			height: 350px;
+			width: 100%;
+			margin-bottom: 0;
+			padding: 0;
+			display: table;
+			color: white;
+			background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
+			background-size: cover;
+			background-position: top;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+		}
+		.jumbotron h1 {
+			display: table-cell;
+			vertical-align: middle;
+			background-color: rgba(0, 0, 0, 0.2);
+		}	
+		.parallax {
+			perspective: 1px;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}			
+		.concept {
+			display: block;
+			text-align: center;
+			margin: 10px auto 0 auto;
+			width: 80%
+		}	
+		.human_practice .container-fluid {
+		    padding: 30px 25px;
+		}
+		.human_practice .container-fluid .row {
+			padding-bottom: 20px;
+		    border-bottom: 1px solid #d3d3d3;
+		}	
+		.human_practice .container-fluid .row a {
+			color: black;
+		}
+		.human_practice .container-fluid .row .col-sm-4 {
+			padding: 20px;
+		}			
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+		}
+		@media screen and (max-width: 1280px) {
+		}
+		@media screen and (max-width: 980px) {
+		}
+		@media screen and (max-width: 736px) {
+		}
+		@media screen and (max-width: 480px) {
+		}					
+	</style>
+	<body>
+		<main class="human_practice well">
+			<div class="jumbotron text-center parallax">	  
+				<h1 style="font-size: 50px;">Human Practice</h1>
+			</div>			
+			<div class="concept">
+				<p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="container-fluid">
+			  <div class="row">
+			    <div class="col-sm-5">
+			    	<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Human_Practice/Synbiothon"><img id="synbiothon" src="http://2016.igem.org/wiki/images/1/1e/T--TEC-Costa_Rica--prostal_human_practice_synbio.png" width="450px" height="200px" class="img-responsive" alt="SynBioThon logo"></a>
+			    </div>
+			    <div class="col-sm-7">
+				  <h2>SynBioThon 2016: rewriting the code</h2>
+			      <p>SynBioThon 2016 (SBT16) is a Synthetic Biology tournament, in which teams of students work for a weekend to create a genetic device that can solve some kind of problem.</p>
+			      <br><a id="test" class="btn btn-default btn-lg" href="http://2016.igem.org/Team:TEC-Costa_Rica/Human_Practice/Synbiothon">Read More</a>
+			    </div>
+			  </div>
+			</div>
+		</main>
+		<script type="text/javascript">
+			var nav = document.getElementById('nav-human_practice');
+			nav.className += " active";
+
+			var synbiothon = document.getElementById('synbiothon');
+			synbiothon.addEventListener("mouseover", function() {
+				this.style.border = "4px solid #364C5E";
+				this.style.marginTop = "-5px"
+			});
+			synbiothon.addEventListener("mouseout", function() {
+				this.style.border = "none";
+				this.style.marginTop = "0"
+			});
+		</script>
+	</body>
+</html>
+{{:Team:TEC-Costa_Rica/Template:Scripts}}
+{{:Team:TEC-Costa_Rica/Template:Footer}}

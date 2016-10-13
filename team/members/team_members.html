@@ -1,0 +1,379 @@
+{{:Team:TEC-Costa_Rica/Template:Header}}
+{{:Team:TEC-Costa_Rica/Template:Stylesheet}}
+<html>
+  <style type="text/css">
+    .jumbotron {
+      height: 650px;
+      width: 90%;
+      margin: 0 auto;
+      padding: 0;
+      display: table;
+      color: white;
+      background-size: cover;
+      background-position: top;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+    .jumbotron img {
+      height: 650px; 
+      width: 100%; 
+      display: block;
+      margin: 0 auto;
+    }
+    .jumbotron h1 {
+      left: 0;
+      position: absolute;
+      text-align: center;
+      top: 350px;
+      width: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .jumbotron span { font-size: 40px; }
+    .parallax {
+      perspective: 1px;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    .concept {
+      display: block;
+      text-align: center;
+      margin: 10px auto 0 auto;
+      width: 80%
+    }    
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .card h2 {
+      margin-bottom: 0;
+    }
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        background-color: #d3d3d3;
+    }
+    .card img {
+        border-radius: 5px 5px 0 0;
+        height: 300px;
+        width: 100%
+    }
+    .card .container-fluid { padding: 2px 16px; }
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    .modal-content {
+        background-color: #fefefe;
+        margin: 100px auto; /* 15% from the top and centered */
+        padding: 5px;
+        border: 1px solid #888;
+        width: 85%; /* Could be more or less, depending on screen size */
+    }
+    .modal-content img { 
+      height: 500px; 
+      height: 500px;
+    }
+    .close-modal {
+        color: gray;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    } 
+    .close-modal:hover,
+    .close-modal:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .marketing { margin-top: 20px; }
+    .marketing .col-lg-3 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .marketing h2 { font-weight: normal; }
+    .marketing .col-lg-3 p {
+      margin-right: 10px;
+      margin-left: 10px;
+    }         
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    }
+    @media screen and (max-width: 1280px) {
+    }
+    @media screen and (max-width: 980px) {
+    }
+    @media screen and (max-width: 736px) {
+        .jumbotron { 
+          height: 300px; 
+          width: 100%;
+        }
+        .jumbotron img { 
+          height: 300px; 
+          width: 100%; 
+        }
+        .jumbotron h1 { top: 120px; }
+        .modal-content img { height: 300px; }
+    }
+    @media screen and (max-width: 480px) {
+        .jumbotron { 
+          height: 300px; 
+          width: 100%;
+        }
+        .jumbotron img { 
+          height: 300px; 
+          width: 100%; 
+        }
+        .jumbotron h1 { top: 120px; }
+        .modal-content img { height: 300px; }
+    }       
+  </style>
+  <body>
+  <main class="team-members well">  
+    <div class="jumbotron text-center">   
+      <img class="responsive" src="http://2016.igem.org/wiki/images/5/59/T--TEC-Costa_Rica--prostal_team_members2.jpg" alt="iGEM Costa Rica Team Members">
+      <h1 style="font-size: 50px;">Team<br><span>Members</span></h1>
+    </div>  
+    <div class="concept">
+      <p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="container marketing">
+      <div class="row slideanim" style="margin-top: 35px;">
+        <div class="col-lg-3">
+          <div class="card">
+            <img class="img-responsive" src="http://2016.igem.org/wiki/images/5/58/T--TEC-Costa_Rica--prostal_team_member_juli.jpg" alt="Juliana Artavia">
+            <div class="container-fluid">
+              <h2>Juliana Artavia</h2>
+              <p style="text-align: center;">Industrial Design Engineering</p>
+            </div>
+          </div>
+          <div class="modal">
+            <div class="modal-content">
+              <span class="close-modal">x</span>
+               <div class="container-fluid marketing">
+                 <div class="row featurette">
+                   <div class="col-md-5">
+                     <img src="http://2016.igem.org/wiki/images/5/58/T--TEC-Costa_Rica--prostal_team_member_juli.jpg" class="featurette-image img-thumbnail img-responsive center-block" alt="Juliana Artavia">
+                   </div>
+                   <div class="col-md-6">
+                     <h2 class="featurette-heading">Juliana Artavia</h2>
+                     <p class="lead">Juliana, 19, is the designer of the team, so she's the one who makes all the designs and drawings we post every time.</p>
+                   </div>
+                 </div>
+               </div>
+            </div>
+           </div>
+        </div> 
+        <div class="col-lg-3">
+          <div class="card">
+            <img class="img-responsive" src="http://2016.igem.org/wiki/images/2/20/T--TEC-Costa_Rica--prostal_team_member_kevin.jpg" alt="Kevin Castro">
+            <div class="container-fluid">
+              <h2>Kevin Castro</h2>
+              <p style="text-align: center;">Computing Engineering</p>
+            </div>
+          </div>
+          <div class="modal">
+            <div class="modal-content">
+              <span class="close-modal">x</span>
+               <div class="container-fluid marketing">
+                 <div class="row featurette">
+                   <div class="col-md-5">
+                     <img src="http://2016.igem.org/wiki/images/2/20/T--TEC-Costa_Rica--prostal_team_member_kevin.jpg" class="featurette-image img-thumbnail img-responsive center-block" alt="Kevin Castro">
+                   </div>
+                   <div class="col-md-6">
+                     <h2 class="featurette-heading">Kevin Castro</h2>
+                     <p class="lead">Kevin is the Computer Engineer in charge of the wiki, but he is also helping us with some protein modelling, so we hope we can turn him into the dark side of bioinformatics. As he puts it: "This project has become the Kernel of my Linux, the html of my essence.com"</p>
+                   </div>
+                 </div>
+               </div>
+            </div>
+           </div>
+        </div> 
+        <div class="col-lg-3">
+          <div class="card">
+            <img class="img-responsive" src="http://2016.igem.org/wiki/images/9/95/T--TEC-Costa_Rica--prostal_team_member_pablo.jpg" alt="Pablo Vargas">
+            <div class="container-fluid">
+              <h2>Pablo Vargas</h2>
+              <p style="text-align: center;">Biotechnology Engineering</p>
+            </div>
+          </div>
+          <div class="modal">
+            <div class="modal-content">
+              <span class="close-modal">x</span>
+               <div class="container-fluid marketing">
+                 <div class="row featurette">
+                   <div class="col-md-5">
+                     <img src="http://2016.igem.org/wiki/images/9/95/T--TEC-Costa_Rica--prostal_team_member_pablo.jpg" class="featurette-image img-thumbnail img-responsive center-block" alt="Pablo Vargas">
+                   </div>
+                   <div class="col-md-6">
+                     <h2 class="featurette-heading">Pablo Vargas</h2>
+                     <p class="lead">Pablo Vargas, 20, is the team´s community manager, he loves modelling (proteins, of course), and he loves when other people get interested in SynBio.</p>
+                   </div>
+                 </div>
+               </div>
+            </div>
+           </div>
+        </div> 
+        <div class="col-lg-3">
+          <div class="card">
+            <img class="img-responsive" src="http://2016.igem.org/wiki/images/3/35/T--TEC-Costa_Rica--prostal_team_member_pau.jpg" alt="Paula Thiel">
+            <div class="container-fluid">
+              <h2>Paula Thiel</h2>
+              <p style="text-align: center;">Biotechnology Engineering</p>
+            </div>
+          </div>
+          <div class="modal">
+            <div class="modal-content">
+              <span class="close-modal">x</span>
+               <div class="container-fluid marketing">
+                 <div class="row featurette">
+                   <div class="col-md-5">
+                     <img src="http://2016.igem.org/wiki/images/3/35/T--TEC-Costa_Rica--prostal_team_member_pau.jpg" class="featurette-image img-thumbnail img-responsive center-block" alt="Paula Thiel">
+                   </div>
+                   <div class="col-md-6">
+                     <h2 class="featurette-heading">Paula Thiel</h2>
+                     <p class="lead">Paula Thiel is the youngest member of the team (She´s 19). She was the one who started first at the SynBio world, she hadn´t even had her first class and she already was working in the lab. Apart from her love of biotechnology, she adores physics, so she studies both at the same time.</p>
+                   </div>
+                 </div>
+               </div>
+            </div>
+           </div>
+        </div>         
+      </div>
+      <div class="row slideanim" style="margin-top: 10px;">
+        <div class="col-lg-3">        
+          <div class="card">
+            <img class="img-responsive" src="http://2016.igem.org/wiki/images/b/b9/T--TEC-Costa_Rica--prostal_team_member_rafa.jpg" alt="Rafael Montenegro">
+            <div class="container-fluid">
+              <h2>Rafael Montenegro</h2>
+              <p style="text-align: center;">Biotechnology Engineering</p>
+            </div>
+          </div>
+          <div class="modal">
+            <div class="modal-content">
+              <span class="close-modal">x</span>
+               <div class="container-fluid marketing">
+                 <div class="row featurette">
+                   <div class="col-md-5">
+                     <img src="http://2016.igem.org/wiki/images/b/b9/T--TEC-Costa_Rica--prostal_team_member_rafa.jpg" class="featurette-image img-thumbnail img-responsive center-block" alt="Rafael Montenegro">
+                   </div>
+                   <div class="col-md-6">
+                     <h2 class="featurette-heading">Rafael Montenegro</h2>
+                     <p class="lead">Rafael Montenegro, with 23 years, is the oldest member of our team, therefore, he is almost finishing his major. He´s always reading papers and sharing them with us. He is usually quiet.</p>
+                   </div>
+                 </div>
+               </div>
+            </div>
+           </div>
+        </div> 
+        <div class="col-lg-3">
+          <div class="card">
+            <img class="img-responsive" src="http://2016.igem.org/wiki/images/8/84/T--TEC-Costa_Rica--prostal_team_member_sam.jpg" alt="Samantha García">
+            <div class="container-fluid">
+              <h2>Samantha García</h2>
+              <p style="text-align: center;">Biotechnology Engineering</p>
+            </div>
+          </div>
+          <div class="modal">
+            <div class="modal-content">
+              <span class="close-modal">x</span>
+               <div class="container-fluid marketing">
+                 <div class="row featurette">
+                   <div class="col-md-5">
+                     <img src="http://2016.igem.org/wiki/images/8/84/T--TEC-Costa_Rica--prostal_team_member_sam.jpg" class="featurette-image img-thumbnail img-responsive center-block" alt="Samantha García">
+                   </div>
+                   <div class="col-md-6">
+                     <h2 class="featurette-heading">Samantha García</h2>
+                     <p class="lead">Samantha García was one of the first in the team to be part of the SynBio world, when she started to work in the biotech startup Cibus 3.0. Therefore, she holds a lot of experience in the lab. Besides from that, she also loves dancing, so she sometimes has to come back to the lab after her rehearsals. We don't only excel in science.</p>
+                   </div>
+                 </div>
+               </div>
+            </div>
+           </div>
+        </div> 
+        <div class="col-lg-3">
+          <div class="card">
+            <img class="img-responsive" src="http://2016.igem.org/wiki/images/4/49/T--TEC-Costa_Rica--prostal_team_member_sofia.jpg" alt="Sofía Vieto">
+            <div class="container-fluid">
+              <h2>Sofía Vieto</h2>
+              <p style="text-align: center;">Biotechnology Engineering</p>
+            </div>
+          </div>
+          <div class="modal">
+            <div class="modal-content">
+              <span class="close-modal">x</span>
+               <div class="container-fluid marketing">
+                 <div class="row featurette">
+                   <div class="col-md-5">
+                     <img src="http://2016.igem.org/wiki/images/4/49/T--TEC-Costa_Rica--prostal_team_member_sofia.jpg" class="featurette-image img-thumbnail img-responsive center-block" alt="Sofía Vieto">
+                   </div>
+                   <div class="col-md-6">
+                     <h2 class="featurette-heading">Sofía Vieto</h2>
+                     <p class="lead">Sofía Vieto is the most nice and kind member of our team; she always says hello with a smile and likes to keep peace in our un-slept souls. Yet, she also has great experience in SynBio, so she likes that everything goes well and according as planned. Apart from science, she loves tennis.</p>
+                   </div>
+                 </div>
+               </div>
+            </div>
+           </div>
+        </div> 
+        <div class="col-lg-3">
+          <div class="card">
+            <img class="img-responsive" src="http://2016.igem.org/wiki/images/4/46/T--TEC-Costa_Rica--prostal_team_member_tim.jpg" alt="Timothy Bustillos">
+            <div class="container-fluid">
+              <h2>Timothy Bustillos</h2>
+              <p style="text-align: center;">Mechatronics Engineering</p>
+            </div>
+          </div>
+          <div class="modal">
+            <div class="modal-content">
+              <span class="close-modal">x</span>
+               <div class="container-fluid marketing">
+                 <div class="row featurette">
+                   <div class="col-md-5">
+                     <img src="http://2016.igem.org/wiki/images/4/46/T--TEC-Costa_Rica--prostal_team_member_tim.jpg" class="featurette-image img-thumbnail img-responsive center-block" alt="Timothy Bustillos">
+                   </div>
+                   <div class="col-md-6">
+                     <h2 class="featurette-heading">Timothy Bustillos</h2>
+                     <p class="lead">Timothy Bustillos, our Math Guy. He studies Mechatronic Engineering, but he also has had a great history on the Math Olympics, both national and international. What took kind of 6 months to biotech students to learn about bioprocesses, he learnt it in a few days!</p>
+                   </div>
+                 </div>
+               </div>
+            </div>
+           </div>
+        </div>         
+      </div>  
+     </div>
+    </main>
+    <script type="text/javascript">
+      var nav = document.getElementById('nav-team');
+      nav.className += " active";
+
+      var cards = document.getElementsByClassName("card");
+      var modals = document.getElementsByClassName("modal");
+      var closers = document.getElementsByClassName("close-modal");
+      Array.prototype.forEach.call(cards, function(card) {
+        card.addEventListener("click", function() {
+          var modal = this.parentNode.getElementsByClassName("modal")[0];
+          modal.style.display = "block";
+        })
+      });
+      Array.prototype.forEach.call(closers, function(close) {
+        close.addEventListener("click", function() {
+          Array.prototype.forEach.call(modals, function(modal) {
+            modal.style.display = "none";
+          });
+        })
+      });
+    </script>
+  </body>
+</html>
+{{:Team:TEC-Costa_Rica/Template:Scripts}}
+{{:Team:TEC-Costa_Rica/Template:Footer}}

@@ -1,0 +1,155 @@
+<html>
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,600" rel="stylesheet">
+	<style type="text/css">
+	/* Setting the WIKI config to default. START */
+	* {
+		margin: 0;
+		padding: 0;
+		border: 0;		
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	#globalWrapper {
+		margin: 0 auto;
+		padding: 0;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: auto;
+		position: relative;
+		overflow: visible;
+		background-color: transparent;
+	}
+	#content {
+		margin: 0;
+		padding: 0;
+		border: none;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: auto;
+		position: relative;
+		z-index: 1;
+		background-color: transparent;
+	}
+	#bodyContent, #HQ_page, #mw-content-text {
+		margin: 0 auto;
+		padding: 0;
+		border: none;
+		border-color: none;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		height: auto;
+		width: 100%;
+		position: relative;
+		background-color: transparent;
+	}
+	#top_title, #sideMenu, #top_menu_under { display: none;	}
+	#top_menu_14 { position: fixed;	}
+	/* Setting the WIKI config to default. END */
+
+	body { background: #FFFFFF url('http://2016.igem.org/wiki/images/4/4c/T--TEC-Costa_Rica--gplaypattern_background.png') top left repeat; }
+	#HQ_page h1, #HQ_page h2, #HQ_page h3 { 
+		font-family: 'Poppins', sans-serif;	
+		font-weight: bold;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	#HQ_page h1 { font-size: 26px; }
+	#HQ_page h2 { font-size: 22px; }
+	#HQ_page h3 { font-size: 18px; }
+	#HQ_page p {
+		font-family: 'Lato', sans-serif;
+		font-size: 16px;
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+
+	/* NAVBAR settings. START */
+	navbar {
+		box-shadow: 5px 4px 5px #000;
+		font-family: 'Open Sans', sans-serif;
+		margin-top: 16px;
+		background: #FFFFFF url('http://2016.igem.org/wiki/images/7/7e/T--TEC-Costa_Rica--lodyas_background.png') top left repeat;
+	}
+	#navbar { float: right; }
+	.navbar-nav li a {
+		line-height: 25px;
+		font-family: 'Poppins', sans-serif;
+		font-weight: normal;
+		text-transform: uppercase;
+		font-size: 12px;
+	}
+	.dropdown .dropdown-menu { margin: 0; }
+	.dropdown:hover {
+		border-bottom: 2px solid white;
+		background-color: black;
+	}
+	.active { border-bottom: 2px solid white;}	
+	.navbar-toggle { margin-top: 15px; }
+	.navbar-brand { padding-top: 7.5px; }
+	.navbar-brand img {
+		height: 50px; 
+		width: 125px;
+	}	
+	.navbar .container-fluid { width: 85%; }
+
+	.well { background-color: rgba(245, 245, 245, 0.8); }
+
+	main {
+		width: 90%;
+		height: 100%;
+		display: block;
+		margin: auto;
+		margin-top: 90px; 
+		position: relative;
+		padding-bottom: 200px;
+	}
+
+	.slideanim { visibility: hidden; }
+	.slide {
+	    animation-name: slide;
+	    -webkit-animation-name: slide;
+	    animation-duration: 1s;
+	    -webkit-animation-duration: 1s;
+	    visibility: visible;
+	}
+	@keyframes slide {
+	  0% {
+	    opacity: 0;
+	    transform: translateY(70%);
+	  } 
+	  100% {
+	    opacity: 1;
+	    transform: translateY(0%);
+	  }
+	}
+	
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {}
+	@media screen and (max-width: 1280px) {
+	}
+	@media screen and (max-width: 980px) {
+		#navbar { float: left; }
+	}
+	@media screen and (max-width: 768px) {	
+		#navbar { 
+			float: left; 
+			width: 100%;
+		}
+		.navbar-nav li a { text-align: center; }
+	}
+	@media screen and (max-width: 480px) {	
+		#navbar { 
+			float: left; 
+			width: 100%;
+		}
+		.navbar-nav li a { text-align: center; }	
+	}	
+	</style>
+</html>

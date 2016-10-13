@@ -1,0 +1,40 @@
+<html>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('ul.nav li.dropdown').hover(function() {
+			$(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(500);
+		}, function() {
+			$(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(500);
+		});
+
+		$('#facebook-logo').hover(function() {
+			$(this).attr('src','http://2016.igem.org/wiki/images/0/06/T--TEC-Costa_Rica--socialmedia_logo_facebook-hover.png');
+		}, function() {
+			$(this).attr('src','http://2016.igem.org/wiki/images/6/62/T--TEC-Costa_Rica--socialmedia_logo_facebook.png');  
+		});
+
+		$('#twitter-logo').hover(function() {
+			$(this).attr('src','http://2016.igem.org/wiki/images/c/c0/T--TEC-Costa_Rica--socialmedia_logo_twitter-hover.png');
+		}, function() {
+			$(this).attr('src','http://2016.igem.org/wiki/images/1/1e/T--TEC-Costa_Rica--socialmedia_logo_twitter.png');  
+		});
+
+		$('#instagram-logo').hover(function() {
+			$(this).attr('src','http://2016.igem.org/wiki/images/2/23/T--TEC-Costa_Rica--socialmedia_logo_instagram-hover.png');
+		}, function() {
+			$(this).attr('src','http://2016.igem.org/wiki/images/f/f4/T--TEC-Costa_Rica--socialmedia_logo_instagram.png');  
+		});			
+		$('.carousel').carousel();	
+
+		$(window).scroll(function() {
+		  $(".slideanim").each(function() {
+		    var pos = $(this).offset().top;
+		    var winTop = $(window).scrollTop();
+		      if (pos < winTop + 600) {
+		        $(this).addClass("slide");
+		      }
+		  });
+		});
+	});
+	</script>
+</html>

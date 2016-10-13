@@ -1,0 +1,71 @@
+{{:Team:TEC-Costa_Rica/Template:Header}}
+{{:Team:TEC-Costa_Rica/Template:Stylesheet}}
+<html>
+	<style type="text/css">
+		.jumbotron {
+			height: 350px;
+			width: 100%;
+			margin-bottom: 0;
+			padding: 0;
+			display: table;
+			color: white;
+			background-image:  url('http://2016.igem.org/wiki/images/f/f9/T--TEC-Costa_Rica--prostal_project_system_bg.jpg');
+			background-size: cover;
+			background-position: top;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+		}
+		.jumbotron h1 {
+			display: table-cell;
+			vertical-align: middle;
+			background-color: rgba(0, 0, 0, 0.2);
+		}		
+		.jumbotron span { font-size: 40px; }		
+		.parallax {
+			perspective: 1px;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}	
+		.concept {
+			display: block;
+			text-align: center;
+			margin: 10px auto 0 auto;
+			width: 80%
+		}
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+			.jumbotron { background-attachment: scroll; }
+		}
+		@media screen and (max-width: 1280px) {
+		}
+		@media screen and (max-width: 980px) {
+			.jumbotron { background-attachment: scroll; }
+		}
+		@media screen and (max-width: 736px) {
+			.jumbotron h1 { font-size: 2.5em; }
+			.jumbotron p { font-size: .9em; }
+		}
+		@media screen and (max-width: 480px) {
+		}				
+	</style>
+	<body>
+		<main class="project-parts well">
+			<div class="jumbotron text-center parallax">
+				<h1 style="font-size: 50px;">Project<br><span>Parts</span></h1>
+			</div>
+			<div class="concept">
+				<p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>	
+		</main>
+		<script type="text/javascript">
+			var navs = document.getElementsByClassName('dropdown');
+			Array.prototype.forEach.call(navs, function(nav) {
+				navs.className = "";
+				navs.className = "dropdown";
+			});
+			var nav = document.getElementById('nav-project');
+			nav.className += " active";
+		</script>	
+	</body>
+</html>
+{{:Team:TEC-Costa_Rica/Template:Scripts}}
+{{:Team:TEC-Costa_Rica/Template:Footer}}
