@@ -104,7 +104,7 @@
 			    <div class="col-sm-4">
 			    	<div class="section-image">
 			    		<div class="image-align">
-			    			<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/System"><img id="system" src="http://2016.igem.org/wiki/images/6/6b/T--TEC-Costa_Rica--prostal_project_system.png" class="img-responsive" alt="Project System"></a>	 
+			    			<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/System"><img id="system" src="http://2016.igem.org/wiki/images/6/6b/T--TEC-Costa_Rica--prostal_project_system.png" class="img-responsive image-link" alt="Project System"></a>	 
 			    		</div>
 			    	</div>
 			    </div>
@@ -120,18 +120,18 @@
 			    <div class="col-sm-4 col-sm-push-8">
 			    	<div class="section-image">
 			    		<div class="image-align">
-			    			<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Modelling_Simulations"><img id="modelling_simulations" src="http://2016.igem.org/wiki/images/1/1c/T--TEC-Costa_Rica--prostal_project_simulations.png" class="img-responsive" alt="Project Modelling & Simulations"></a>  			
+			    			<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Modelling_Simulations"><img src="http://2016.igem.org/wiki/images/1/1c/T--TEC-Costa_Rica--prostal_project_simulations.png" class="img-responsive image-link" alt="Project Modelling & Simulations"></a>  			
 			    		</div>
 			    	</div>
 			    </div>
 			    <div class="col-sm-8 col-sm-pull-4">
-				  <h2>Modelling & Simulations</h2>
-					<p>The modelling for the Project can be classified into two categories:</p>
-					<ul>
-						<li><p>Mathematical modelling</p></li>
-						<li><p>Structural modelling</p></li>
-					</ul>
-			      <br><a class="btn btn-default btn-lg" href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Modelling_Simulations">Read More</a>
+					  <h2>Modelling & Simulations</h2>
+						<p>The modelling for the Project can be classified into two categories:</p>
+						<ul>
+							<li><p>Mathematical modelling</p></li>
+							<li><p>Structural modelling</p></li>
+						</ul>
+				      <br><a class="btn btn-default btn-lg" href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Modelling_Simulations">Read More</a>
 			    </div>
 			  </div>
 			</div>
@@ -140,7 +140,7 @@
 			    <div class="col-sm-4">
 			    	<div class="section-image">
 			    		<div class="image-align">
-			    			<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Parts"><img id="parts" src="http://2016.igem.org/wiki/images/1/1c/T--TEC-Costa_Rica--prostal_project_simulations.png" class="img-responsive" alt="Project Parts"></a>  
+			    			<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Parts"><img src="http://2016.igem.org/wiki/images/1/1c/T--TEC-Costa_Rica--prostal_project_simulations.png" class="img-responsive image-link" alt="Project Parts"></a>  
 			    		</div>
 			    	</div>		    	
 			    </div>
@@ -156,7 +156,7 @@
 			    <div class="col-sm-4 col-sm-push-8">
 			    	<div class="section-image">
 			    		<div class="image-align">
-			    		<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Safety"><img id="safety" src="http://2016.igem.org/wiki/images/5/5e/T--TEC-Costa_Rica--prostal_project_safety.png" class="img-responsive" alt="Project Safety"></a>
+			    		<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Safety"><img src="http://2016.igem.org/wiki/images/5/5e/T--TEC-Costa_Rica--prostal_project_safety.png" class="img-responsive image-link" alt="Project Safety"></a>
 			    		</div>
 			    	</div>	
 			    </div>
@@ -172,7 +172,7 @@
 			    <div class="col-sm-4">
 			    	<div class="section-image">
 			    		<div class="image-align">
-			    			<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Collaborations"><img id="collaborations" src="http://2016.igem.org/wiki/images/7/76/T--TEC-Costa_Rica--prostal_project_collaborations.png" alt="Project Collaborations"></a>
+			    			<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Collaborations"><imgrations" src="http://2016.igem.org/wiki/images/7/76/T--TEC-Costa_Rica--prostal_project_collaborations.png" alt="Project Collaborations"></a>
 			    		</div>
 			    	</div>			    	
 			    </div>
@@ -186,31 +186,21 @@
 			</div>				
 		</main>	
 		<script type="text/javascript">
-			var navs = document.getElementsByClassName('dropdown');
-			Array.prototype.forEach.call(navs, function(nav) {
-				navs.className = "";
-				navs.className = "dropdown";
-			});
 			var nav = document.getElementById('nav-project');
 			nav.className += " active";
-
-			var system = document.getElementById('system');
-			system.addEventListener("mouseover", function() {
+			
+			var elements = document.getElementsByClassName('image-link');
+			elements[0].addEventListener("mouseover", function() {
 				this.style.height = "175px"; 
 				this.style.width = "175px"; 
 				this.style.marginTop = "10px";
 			});
-			system.addEventListener("mouseout", function() {
+			elements[0].addEventListener("mouseout", function() {
 				this.style.height = "150px"; 
 				this.style.width = "150px"; 
 				this.style.marginTop = "25px";
 			});
-			var modelling_simulations = document.getElementById('modelling_simulations');
-			var parts = document.getElementById('parts');
-			var safety = document.getElementById('safety');
-			var collaborations = document.getElementById('collaborations');
-			var elements = [modelling_simulations, safety, collaborations];
-			elements.forEach(function(element) {
+			elements.slice(1).forEach(function(element) {
 				element.addEventListener("mouseover", function() {
 					this.style.height = "175px"; 
 					this.style.width = "175px"; 
