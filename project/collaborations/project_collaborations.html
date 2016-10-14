@@ -34,39 +34,35 @@
 			width: 80%
 		}
 		#vgemcollaboration {
-			background-image:url('http://2016.igem.org/wiki/images/d/de/T--Virginia--collabopen.png');
-			top:0;
-			left:0;
-			background-size:180px 220px; /*Adjust background-size and the width and height properties here if you wish to resize the icon*/
-			width:180px;
-			height:220px;
-			z-index:100;
+			background-image: url('http://2016.igem.org/wiki/images/d/de/T--Virginia--collabopen.png');
+			top: 0;
+			left: 0;
+			background-size: 180px 220px; /*Adjust background-size and the width and height properties here if you wish to resize the icon*/
+			width: 180px;
+			height: 220px;
+			z-index: 100;
 		}
 		#vgemcollaboration:hover {
-			background-image:url('http://2016.igem.org/wiki/images/a/a5/T--Virginia--collabclosed.png');
+			background-image: url('http://2016.igem.org/wiki/images/a/a5/T--Virginia--collabclosed.png');
 		}
 		#vgemcollaboration a {
-		        display:inline-block;
-		        width:100%;
-		        height:100%;
+		    display: inline-block;
+		    width: 100%;
+		    height: 100%;
 		}			
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-			.jumbotron { background-attachment: scroll; }
 		}
 		@media screen and (max-width: 1280px) {
 		}
 		@media screen and (max-width: 980px) {
-			.jumbotron { background-attachment: scroll; }
 		}
 		@media screen and (max-width: 736px) {
-			.jumbotron h1 { font-size: 2.5em; }
-			.jumbotron p { font-size: .9em; }
 		}
 		@media screen and (max-width: 480px) {
 		}				
 	</style>
 	<body>
-		<main class="collaborations well">		
+		<main class="project-collaborations well">		
 			<div class="jumbotron text-center parallax">
 				<h1 style="font-size: 50px;">Project<br><span>Collaborations</span></h1>
 			</div>
@@ -74,15 +70,11 @@
 				<p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 			</div>
 			<div id="vgemcollaboration">
-			        <a href="http://2016.igem.org/Team:Virginia/Collaborations" target="_blank"></a>
-			</div>			 
+			    <a href="http://2016.igem.org/Team:Virginia/Collaborations" target="_blank"></a>
+			</div>	 
+			<img src="http://2016.igem.org/wiki/images/e/ec/T--TEC-Costa_Rica--prostal_project_collaboration_EPFL.jpg" class="img-responsive" alt="EPFL">
 		</main>
 		<script type="text/javascript">
-			var navs = document.getElementsByClassName('dropdown');
-			Array.prototype.forEach.call(navs, function(nav) {
-				navs.className = "";
-				navs.className = "dropdown";
-			});
 			var nav = document.getElementById('nav-project');
 			nav.className += " active";
 		</script>	

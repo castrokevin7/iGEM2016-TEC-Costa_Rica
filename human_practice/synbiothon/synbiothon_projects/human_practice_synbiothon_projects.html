@@ -63,7 +63,6 @@
 		    transition: 0.4s;
 		    text-align: center;
 		}
-		button.accordion.active, button.accordion:hover { background-color: #ddd; }
 		div.panel {
 		    padding: 0 18px;
 		    display: none;
@@ -253,59 +252,9 @@
 			</div>
 			<div class="comments container-fluid">
 				<div class="row slideanim">
-					<img class="img-responsive" src="http://2016.igem.org/wiki/images/3/3c/T--TEC-Costa_Rica--prostal_hp_projects_commet1.jpg" alt="Comment 1">
-				</div>
-				<div class="row slideanim">
 					<img class="img-responsive" src="http://2016.igem.org/wiki/images/4/44/T--TEC-Costa_Rica--prostal_hp_projects_commet2.jpg" alt="Comment 2">
 				</div>
-				<div class="row slideanim">
-					<img class="img-responsive" src="http://2016.igem.org/wiki/images/c/cf/T--TEC-Costa_Rica--prostal_hp_projects_commet3.jpg" alt="Comment 3">
-				</div>
-				<div class="row slideanim">
-					<img class="img-responsive" src="http://2016.igem.org/wiki/images/4/43/T--TEC-Costa_Rica--prostal_hp_projects_commet4.jpg" alt="Comment 4">
-				</div>
-				<div class="row slideanim">
-					<img class="img-responsive" src="http://2016.igem.org/wiki/images/6/61/T--TEC-Costa_Rica--prostal_hp_projects_commet5.jpg" alt="Comment 4">
-				</div>
 			</div>
-			<!--
-			<h2>What really happened at SBT16</h2>
-			<h2>Biohackers’ Journal</h2>
-			<h3>09.02.2016</h3>
-			<p><strong>5:00 pm</strong> exactly the first participants showed up at the registration spot with their full backpacks, plenty of snacks, computers, and pillows. 10 minutes passed and a line of over 30 people announced that SBT16 was going to success.</p>
-			<br>
-			<p>We welcomed students with the biggest Rock, Paper, Scissors tournament EVER seen in iGEM. Right after having fun and laughter the first workshop began: Design Thinking by our friend Juan Diego Jaén “JuanDi”, from Startup Weekend Costa Rica. Thanks JuanDi!</p>
-			<br>
-			<p>Dinner was followed by Brainstorming, and after an hour most of the 15 teams had identified the problem they were going to address, so a Pitch Session started. Listening every team’s ideas made participants conscious about all the different areas where Synthetic Biology can be applied.</p>
-			<br>
-			<p>Everyone logged in Benchling because Biohacking began!</p>
-			<br>
-			<p>With the help of the 24 hour mentors Silver, Silvia and David (meet them at our team page) every team got started in the design of a strategy to solve the selected problem.</p>
-			<br>
-			<p>Few people hit the sack that night…</p>
-			<h3>09.03.2016</h3>
-			<p>Saturday officially started at 8:00 am with breakfast, and during this morning Mentorship (Round 1) took place.</p>
-			<br>
-			<p>After calming down starving stomachs our iGEM team performed. We gave a small talk about our work, our team and teamwork; we spoke about iGEM, our experience  at the competition and we encouraged people to follow their dreams as we did. Of course we talked about SynBioThon as our Human Practice, the reason why we organized it and what we would like people to learn at SBT16.</p>
-			<br>
-			<p>We also had our friends from Magenta BioLabs giving a talk about Entrepreneurship, since they are a biotechnology startup raised in our university that had the opportunity to incubate at IndieBio, Ireland.</p>
-			<br>
-			<p>Once finished the talks, biohacking continued all over the afternoon, only disrupted by Mentorship (Round 2) which helped teams to clear some doubts and generate some others.</p>
-			<br>
-			<p>7:00 pm was dinner time and at 8:00 pm Pitch Session began. After going wrong, Paola Rodríguez “Pao”, from Startup Weekend Costa Rica showed the best practices while pitching in her workshop “How to Pitch”. We thank Pao, it was great!</p>
-			<br>
-			<p>Biohacking continued and nobody hit the sack...</p>
-			<h3>09.04.2016</h3>
-			<p>Second breakfast of the weekend announced the last day of competition. Then Mentorship (Round 3) was given and the teams got the last advices.</p>
-			<br>
-			<p>At 3:00 pm Silver (mentor and judge) started qualifying Benchling, while participants focused on their presentations.</p>
-			<br>
-			<p>Show-off began at 4:00 pm; every team gave a presentation of the project they worked on and an hour later we announced the 6 finalists chosen by the judges. Those teams had a second round of presentations, they were evaluated and a score was assigned.</p>
-			<br>
-			<p>After 54 hours of biohacking, mentorship, pitches and workshops we rewarded the first three places: bronze, silver and gold medals from SBT16.</p>
-			<br>
-			<p>Everyone hit the sack that night!</p>
-			-->
 		</main>
 		<script type="text/javascript">
 			var nav = document.getElementById('nav-human_practice');
@@ -318,6 +267,22 @@
 			        this.nextElementSibling.classList.toggle("show");
 			    }
 			}
+
+			var cards = document.querySelectorAll("button.accordion");
+			var colors = ["#0091d7", "#eb7f00"];
+			Array.prototype.forEach.call(cards, function(card) {
+				card.addEventListener("mouseover", function() {
+					var color = colors[Math.floor(Math.random() * colors.length)];
+					this.style.backgroundColor = color;
+				});
+				card.addEventListener("mouseout", function() {
+					var color = colors[Math.floor(Math.random() * colors.length)];
+					if (this.className.indexOf("active") > -1)
+						this.style.backgroundColor = color;
+					else
+						this.style.backgroundColor = "#eee";
+				});
+			});		
 		</script>
 	</body>
 </html>
