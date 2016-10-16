@@ -1,0 +1,100 @@
+{{:Team:TEC-Costa_Rica/Template:Header}}
+{{:Team:TEC-Costa_Rica/Template:Stylesheet}}
+<html>
+	<style type="text/css">
+		.jumbotron {
+			height: 350px;
+			width: 100%;
+			margin-bottom: 0;
+			padding: 0;
+			display: table;
+			color: white;
+			background-image:  url('http://2016.igem.org/wiki/images/f/f9/T--TEC-Costa_Rica--prostal_project_system_bg.jpg');
+			background-size: cover;
+			background-position: top;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+		}
+		.jumbotron h1 {
+			display: table-cell;
+			vertical-align: middle;
+			background-color: rgba(0, 0, 0, 0.2);
+		}		
+		.jumbotron span { font-size: 40px; }		
+		.parallax {
+			perspective: 1px;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}	
+		.concept {
+			display: block;
+			text-align: center;
+			margin: 10px auto 20px auto;
+			width: 80%
+		}					
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+		}
+		@media screen and (max-width: 1280px) {
+		}
+		@media screen and (max-width: 980px) {
+		}
+		@media screen and (max-width: 736px) {
+		}
+		@media screen and (max-width: 480px) {
+		}				
+	</style>
+	<body>
+	<main class="mathematical-modelling well">
+			<div class="jumbotron text-center parallax">
+				<h1 style="font-size: 50px;">Modelling & Simulations<br><span>Mathematical Modelling</span></h1>
+			</div>
+			<div class="concept">
+				<p style="text-align: center;">Our mathematical model was based on Boolean logic gates, because we want a signal response only if all our inputs are present, and an analogical output is not our main focus. For this, we designed a genetic three-input AND gate activated on IntN (SpiltTEV IntN DnaE), IntC (SplitTEV IntC DnaE) and GFP-Q (GFP-TEVlinker-Quencher); each of them were controlled by separate promoter inputs. The output was the fluorescence exhibited by GFP.</p>
+			</div>	
+			<div class="container-fluid">
+				<h1>Mathematical Modelling</h1>
+				<p>First, we considered the more general approach of the system (Fig. 1). Each inducer will activate the expression of IntN, IntC or GFP-Q. Both inteins will bind to produce the TEV, which starts the cleavage of GFP-Q to produce GFP. Because of the nature of the system, the fluorescence will start after the 3 inducers were added, and no response would be shown if any one of them were missing. Initially we wanted to prove every scenario, but due to time constrains we instead considered the IntC and GFP-Q to express constitutively (as if their inducers were always present) (Fig. 2). This way, we only control the expression of IntN.</p>
+			</div>
+			<div id="model-kinetics" class="container-fluid">
+				<h1>Model Kinetics</h1>
+				<p>The expression of a protein can be modelled by using Mass Action Kinetics:</p>
+				<!-- FORMULA -->
+				<p>When the gene needs an activator, we need to consider first the binding of the inducer to the operator site:</p>
+				<!-- FORMULA -->
+				<p>Because this binding occurs in a faster scale than the expression, we can suppose this reaction reaches steady state:</p>
+				<!-- FORMULA -->
+				<p>The kinetic equation will be similar to the one involving Mass Action, except that the activated transcription rate will be proportional to the fraction of bound operators.</p>
+				<!-- FORMULA -->
+				<p>Finally, the rate of P will be described as:</p>
+				<!-- FORMULA -->
+				<p>This differential equation is a special case of expression using a Hill function, where the Hill constant equals 1.</p>
+				<p>Most of the other reactions in our system were regulated only by the Law of mass action, except for the enzymatic behavior of the TEV, which is not consumed in the process. To simulate it we used the Michaelis-Menten theory. The basic reaction is as follow (using the Rapid Equilibrium assumption to reduce the model):</p>
+				<!-- FORMULA -->
+				<p>, where E is the enzyme, S substrate, ES the enzyme-substrate complex and P product. Using a Quasi-Steady State assumption on the complex we will eventually reach the known equation:</p>
+				<!-- FORMULA -->
+				<p>In this formula Vm, the maximal rate, is defined by k2 ∗ [E], but because in our system the concentration of the enzyme (TEV) changes over time, we cannot omit this factor. So we have the slightly modified version:</p>
+				<!-- FORMULA -->
+				<p>In summary, our model is based on the following differential equations:</p>
+				<!-- FORMULA -->
+				<p>The parameters used are showed in the next table.</p>
+				<p>Description of model parameters</p>
+				<!-- TABLE -->
+			</div>
+			<div id="data-gathering" class="container-fluid"></div>
+			<div id="assumptions" class="container-fluid">
+				<p>Other assumptions were made to further simplify the model:</p>
+				<ol>
+					<li><p>Even when the affinity between a polymerase and an activated gene is very low when the activator is not present, there will still be a low transcription rate (called basal rate). Regardless we considered the basal rate of IntN as zero.</p></li>
+					<li><p>Because the bacteria will constantly produce IntC and GFP-Q, at the start of the assays we wouldn’t be sure of their initial concentration. So we assumed that by this point, both reactions were in steady state. That is, <!-- FORMULA --></p></li>
+				</ol>
+			</div>
+			<div id="results" class="container-fluid"></div>
+		</main>
+		<script type="text/javascript">
+			var nav = document.getElementById('nav-project');
+			nav.className += " active";
+		</script>
+	</body>
+</html>
+{{:Team:TEC-Costa_Rica/Template:Scripts}}
+{{:Team:TEC-Costa_Rica/Template:Footer}}

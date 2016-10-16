@@ -46,6 +46,11 @@
 		  }
 		}	
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+		}	
+		@media screen and (max-width: 1920px) {
+			.carousel { height: 700px; }
+			.carousel .item { height: 700px; }	
+			.carousel-inner > .item > img { height: 700px; }
 		}
 		@media screen and (max-width: 1280px) {
 		}
@@ -116,11 +121,6 @@
 			<p>We used a series of protocols and activities to achieve our goal, many of which can be found here.</p>
 		</main>
 		<script type="text/javascript">
-			var navs = document.getElementsByClassName('dropdown');
-			Array.prototype.forEach.call(navs, function(nav) {
-				navs.className = "";
-				navs.className = "dropdown";
-			});
 			var nav = document.getElementById('nav-home');
 			nav.className += " active";
 		</script>
