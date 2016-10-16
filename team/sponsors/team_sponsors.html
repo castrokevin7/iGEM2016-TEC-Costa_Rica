@@ -9,7 +9,7 @@
 			padding: 0;
 			display: table;
 			color: white;
-			background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');				
+			background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');	
 			background-size: cover;
 			background-position: top;
 			background-attachment: fixed;
@@ -32,18 +32,35 @@
 			margin: 10px auto 0 auto;
 			width: 80%
 		} 
-		.team-sponsors .container-fluid {
-		  padding: 30px 25px;
-		}
+		.team-sponsors .container-fluid { padding: 30px 25px; }
 		.team-sponsors .container-fluid .row {
 			padding-bottom: 20px;
-		  border-bottom: 1px solid #d3d3d3;
+			border-bottom: 1px solid #d3d3d3;
 		}
-		.team-sponsors .container-fluid img:hover {
-	    opacity: 0.7;
+		.team-sponsors .container-fluid img:hover { opacity: 0.7; }		
+		.card {
+			border-radius: 5px;
+			text-align: center;
+			height: 100%;
+			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+			background-color: #d3d3d3;
+		}
+		.card .container-fluid { padding: 10px 16px; }		
+		#godfathers .row { 
+			border: none; 
+			margin-top: 15px;
 		}		
-		#godfathers {
-			list-style: none;
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+		}
+		@media screen and (max-width: 1280px) {
+		}
+		@media screen and (max-width: 980px) {
+		}
+		@media screen and (max-width: 736px) {
+			.col-sm-3 { height: auto; }
+		}
+		@media screen and (max-width: 480px) {
+			.col-sm-3 { height: auto; }
 		}
 	</style>
 	<body>
@@ -152,19 +169,56 @@
 			</div>
 			
 
-			<div class="container-fluid slideanim">
+			<div id="godfathers" class="container-fluid slideanim">
 				<h1>Godfathers</h1>
 				<p>These people helped us in the early stage of our project. Without them, we couldn’t have had payed the registration fee. Thanks a lot.</p>
-				<ul id="godfathers">
-					<li><p>Alejandro Hernández</p></li>
-					<li><p>Esmeralda Vargas</p></li>
-					<li><p>Eugenia Hidalgo</p></li>
-					<li><p>Jorge Vieto</p></li>
-					<li><p>Sandra Herrera</p></li>
-					<li><p>Virginia Montero</p></li>
-				</ul>
+				<div class="row">
+					<div class="col-sm-4">
+	         			<div class="card">
+	            			<div class="container-fluid">
+								<h2>Alejandro Hernández</h2>
+	            			</div>
+	         			 </div>
+					</div>
+					<div class="col-sm-4">
+			          	<div class="card">
+			            	<div class="container-fluid">
+								<h2>Esmeralda Vargas</h2>
+			            	</div>
+			          	</div>
+					</div>
+					<div class="col-sm-4">
+			          	<div class="card">
+			            	<div class="container-fluid">
+								<h2>Eugenia Hidalgo</h2>
+			            	</div>
+			          	</div>
+					</div>
+				</div>				
+				<div class="row">
+					<div class="col-sm-4">
+	          			<div class="card">
+	            			<div class="container-fluid">
+								<h2>Jorge Vieto</h2>
+	            			</div>
+	          			</div>
+					</div>
+					<div class="col-sm-4">
+	          			<div class="card">
+	            			<div class="container-fluid">
+								<h2>Sandra Herrera</h2>
+	            			</div>
+	          			</div>					
+					</div>
+					<div class="col-sm-4">
+	          			<div class="card">
+	            			<div class="container-fluid">
+								<h2>Virginia Montero</h2>
+	            			</div>
+	          			</div>
+					</div>
+				</div>
 			</div>
-
 		</main>
 		<script type="text/javascript">
 			var nav = document.getElementById('nav-team');
