@@ -20,9 +20,7 @@
 			vertical-align: middle;
 			background-color: rgba(0, 0, 0, 0.2);
 		}	
-		.jumbotron span {
-			font-size: 40px;
-		}		
+		.jumbotron span { font-size: 40px; }		
 		.parallax {
 			perspective: 1px;
 			overflow-x: hidden;
@@ -71,9 +69,10 @@
 		    margin: 15px 0;
 		    color: #fff;
 		}
-		.syn-video h1 { text-align: center; }
-		.syn-video video {
+		#syn-video h1 { text-align: center; }
+		#syn-video video { 
 			display: block;
+			margin: 0 auto;
 		}
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 		}
@@ -166,15 +165,18 @@
 			    </div>    
 			  </div>
 			</div>	
+			<!--
 			<div class="comments container-fluid">
 				<div class="row slideanim">
 					<img class="img-responsive" src="http://2016.igem.org/wiki/images/3/3c/T--TEC-Costa_Rica--prostal_hp_projects_commet1.jpg" alt="Comment 1">
 				</div>
 			</div>
-			<div class="syn-video container-fluid">
+			-->
+			<div id="syn-video" class="container-fluid">
 				<h1>Take a look at SynBioThon 2016!</h1>
-				<video id="vid1" controls="" preload="none" width="569px" height="320px">
-					<source src="http://2016.igem.org/wiki/images/0/0e/T--TEC-Costa_Rica--Video_SBT.mp4" type="video/mp4">
+				<video controls>
+				  <source src="http://2016.igem.org/wiki/images/0/0e/T--TEC-Costa_Rica--Video_SBT.mp4" type="video/mp4">
+				   Your browser does not support HTML5 video.
 				</video>
 			</div>
 		</main>

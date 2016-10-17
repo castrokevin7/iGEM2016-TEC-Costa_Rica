@@ -71,6 +71,49 @@
 			list-style: none;
 		}		
 		.carousel-control { color: white; }
+				#synbiothon-details { margin-top: 20px; }
+		#synbiothon-details .row { margin-top: 10px; }
+		#synbiothon-details .row .col-sm-4 { height: 350px; }
+		#synbiothon-details .panel {
+		    border-radius: 0 !important;
+		    transition: box-shadow 0.5s;
+		    height: 100%;
+		    margin-bottom: 15px;
+		    display: block;
+		    padding: 0;
+		}
+		#synbiothon-details .panel:hover { box-shadow: 5px 0px 40px rgba(0,0,0, .2); }
+		#synbiothon-details .panel-footer .btn:hover {
+		    border: 1px solid gray;
+		    background-color: #fff !important;
+		    color: gray;
+		}
+		#synbiothon-details .panel-heading {
+		    color: #fff !important;
+		    padding: 25px;
+		    border-bottom: 1px solid transparent;
+		    border-top-left-radius: 0px;
+		    border-top-right-radius: 0px;
+		    border-bottom-left-radius: 0px;
+		    border-bottom-right-radius: 0px;
+		    height: 125px;
+		}
+		#synbiothon-details .panel-body { height: 125px; }
+		#synbiothon-details .panel-body p { text-align: center; }
+		#synbiothon-details .panel-footer { background-color: white !important; }
+		#synbiothon-details .panel-footer h3 { font-size: 32px; }
+		#synbiothon-details .panel-footer h4 {
+		    color: #aaa;
+		    font-size: 14px;
+		}
+		#synbiothon-details .panel-footer .btn {
+		    margin: 15px 0;
+		    color: #fff;
+		}
+		#synbiothon-details .row {
+			padding-top: 20px;
+			border-top: 1px solid #d3d3d3;
+		}
 		@media (min-width: 768px) {
 			.carousel-caption p {
 				margin-bottom: 20px;
@@ -126,11 +169,13 @@
 					</div>
 				</div>
 			</div>
+			<!--
 			<div class="comments container-fluid slideanim">
 				<div class="row">
 					<img class="img-responsive" src="http://2016.igem.org/wiki/images/c/cf/T--TEC-Costa_Rica--prostal_hp_projects_commet3.jpg" alt="Comment 3">
 				</div>
-			</div>			
+			</div>	
+			-->		
 			<div class="container-fluid slideanim" id="second-round">
 				<h1>Second Round</h1>
 				<p>At the second round the six finalists were asked to give a presentation of 10 minutes, with two minutes extra for questions from the judges. In this round the four judges (including Silver, who qualified Benchling during the first round) listened the six presentations, but every judge evaluated a different aspect:</p>
@@ -189,10 +234,66 @@
 					</div>				
 				</div>
 			</div>
+			<div id="synbiothon-details" class="container-fluid">
+			  <div class="row slideanim">
+			    <div class="col-sm-4">
+			      <div class="panel panel-default text-center">
+			        <div class="panel-heading">
+			          <h1>Biohacker's Journal</h1>
+			        </div>
+			        <div class="panel-body">
+			          <p style="text-align: center;">What really happened at SBT16!</p>
+			        </div>
+			        <div class="panel-footer">
+			        	<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Human_Practice/Synbiothon/Biohacker_Journal"><button class="btn btn-lg">Read More</button></a>	
+			        </div>
+			      </div>      
+			    </div>  
+			    <div class="col-sm-4">
+			      <div class="panel panel-default text-center">
+			        <div class="panel-heading">
+			          <h1>Projects</h1>
+			        </div>
+			        <div class="panel-body">
+			          <p style="text-align: center;">Here you can read about the 15 projects that were generated at SBT16.</p>
+			        </div>
+			        <div class="panel-footer">
+			        	<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Human_Practice/Synbiothon/Projects"><button class="btn btn-lg">Read More</button></a>
+			        </div>
+			      </div>      
+			    </div>     
+			    <div class="col-sm-4">
+			      <div class="panel panel-default text-center">
+			        <div class="panel-heading">
+			          <h1>Mentors & Judges</h1>
+			        </div>
+			        <div class="panel-body">
+			          <p style="text-align: center;">Molecular and Synthetic Biology experts were invited to join SBT16. Check them out!</p>
+			        </div>
+			        <div class="panel-footer">
+			        	<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Human_Practice/Synbiothon/Mentors_Judges"><button class="btn btn-lg">Read More</button></a>	        
+			        </div>
+			      </div>      
+			    </div>   
+			  </div>
+			</div>
 		</main>
 		<script type="text/javascript">
 			var nav = document.getElementById('nav-human_practice');
-			nav.className += " active";	
+			nav.className += " active";				
+
+			var panels = document.querySelectorAll(".panel");
+			var panelsFooter = document.querySelectorAll(".panel-footer");
+			var panelsHeading = document.querySelectorAll(".panel-heading");
+			var panelsFooterBtn = document.querySelectorAll(".panel-footer .btn");
+			var colors = ["#0091d7", "#eb7f00"];
+			for (var i = 0; i < panelsFooter.length; i++) {
+				var color = colors[i % 2];
+				panels[i].style.border = "1px solid " + color;
+				panelsFooter[i].style.backgroundColor = color;				
+				panelsHeading[i].style.backgroundColor = color;
+				panelsFooterBtn[i].style.backgroundColor = color;
+			}
 		</script>
 	</body>
 </html>
