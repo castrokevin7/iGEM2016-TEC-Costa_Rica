@@ -31,7 +31,40 @@
 			text-align: center;
 			margin: 10px auto 20px auto;
 			width: 80%
-		}					
+		}	
+		#model-kinetics img {
+			width: 50%;
+			display: block;
+			margin: 0 auto;
+		}		
+		#structural-modelling .container-fluid {
+		    padding: 30px 25px;
+		}
+		#structural-modelling .container-fluid .row {
+		    border-top: 1px solid #d3d3d3;
+		}	
+		#structural-modelling .container-fluid .row a {
+			color: black;
+		}
+		#structural-modelling .container-fluid .row .col-sm-4 {
+			padding: 20px;
+		}
+		#structural-modelling .section-image {
+			border-radius: 50%;
+			height: 250px;
+			width: 250px;			
+			background-color: #364C5E;
+		}	
+		#structural-modelling .section-image img {
+			margin: 0 auto 0 auto;
+			height: 150px;
+			width: 150px;	
+			margin-top: 25px;	
+		}	
+		#structural-modelling .image-align {
+			padding-top: 20px; 
+			text-align: center;
+		}	
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 		}
 		@media screen and (max-width: 1280px) {
@@ -55,40 +88,64 @@
 				<h1>Mathematical Modelling</h1>
 				<p>First, we considered the more general approach of the system (Fig. 1). Each inducer will activate the expression of IntN, IntC or GFP-Q. Both inteins will bind to produce the TEV, which starts the cleavage of GFP-Q to produce GFP. Because of the nature of the system, the fluorescence will start after the 3 inducers were added, and no response would be shown if any one of them were missing. Initially we wanted to prove every scenario, but due to time constrains we instead considered the IntC and GFP-Q to express constitutively (as if their inducers were always present) (Fig. 2). This way, we only control the expression of IntN.</p>
 			</div>
-			<div id="model-kinetics" class="container-fluid">
+			<div id="model-kinetics" class="container-fluid slideanim">
 				<h1>Model Kinetics</h1>
 				<p>The expression of a protein can be modelled by using Mass Action Kinetics:</p>
-				<!-- FORMULA -->
+				<img src="http://2016.igem.org/wiki/images/7/78/T--TEC-Costa_Rica--prostal_project_system_mathematical_modelling_ecuation1.png" class="img-responsive" alt="Ecuation 1">
 				<p>When the gene needs an activator, we need to consider first the binding of the inducer to the operator site:</p>
-				<!-- FORMULA -->
+				<img src="http://2016.igem.org/wiki/images/4/45/T--TEC-Costa_Rica--prostal_project_system_mathematical_modelling_ecuation2.png" class="img-responsive" alt="Ecuation 2">
+				<img src="http://2016.igem.org/wiki/images/6/61/T--TEC-Costa_Rica--prostal_project_system_mathematical_modelling_ecuation3.png" class="img-responsive" alt="Ecuation 3">
 				<p>Because this binding occurs in a faster scale than the expression, we can suppose this reaction reaches steady state:</p>
-				<!-- FORMULA -->
+				<img src="http://2016.igem.org/wiki/images/7/71/T--TEC-Costa_Rica--prostal_project_system_mathematical_modelling_ecuation4.png" class="img-responsive" alt="Ecuation 4">
 				<p>The kinetic equation will be similar to the one involving Mass Action, except that the activated transcription rate will be proportional to the fraction of bound operators.</p>
-				<!-- FORMULA -->
+				<img src="http://2016.igem.org/wiki/images/e/ec/T--TEC-Costa_Rica--prostal_project_system_mathematical_modelling_ecuation5.png" class="img-responsive" alt="Ecuation 5">
 				<p>Finally, the rate of P will be described as:</p>
-				<!-- FORMULA -->
+				<img src="http://2016.igem.org/wiki/images/5/5b/T--TEC-Costa_Rica--prostal_project_system_mathematical_modelling_ecuation6.png" class="img-responsive" alt="Ecuation 6">
 				<p>This differential equation is a special case of expression using a Hill function, where the Hill constant equals 1.</p>
 				<p>Most of the other reactions in our system were regulated only by the Law of mass action, except for the enzymatic behavior of the TEV, which is not consumed in the process. To simulate it we used the Michaelis-Menten theory. The basic reaction is as follow (using the Rapid Equilibrium assumption to reduce the model):</p>
-				<!-- FORMULA -->
+				<img src="http://2016.igem.org/wiki/images/a/af/T--TEC-Costa_Rica--prostal_project_system_mathematical_modelling_ecuation7.png" class="img-responsive" alt="Ecuation 7">
 				<p>, where E is the enzyme, S substrate, ES the enzyme-substrate complex and P product. Using a Quasi-Steady State assumption on the complex we will eventually reach the known equation:</p>
-				<!-- FORMULA -->
+				<img src="http://2016.igem.org/wiki/images/5/52/T--TEC-Costa_Rica--prostal_project_system_mathematical_modelling_ecuation8.png" class="img-responsive" alt="Ecuation 8">
 				<p>In this formula Vm, the maximal rate, is defined by k2 ∗ [E], but because in our system the concentration of the enzyme (TEV) changes over time, we cannot omit this factor. So we have the slightly modified version:</p>
-				<!-- FORMULA -->
+				<img src="http://2016.igem.org/wiki/images/b/ba/T--TEC-Costa_Rica--prostal_project_system_mathematical_modelling_ecuation9.png" class="img-responsive" alt="Ecuation 9">
 				<p>In summary, our model is based on the following differential equations:</p>
-				<!-- FORMULA -->
+				<img src="http://2016.igem.org/wiki/images/d/d9/T--TEC-Costa_Rica--prostal_project_system_mathematical_modelling_ecuations_summary.png" class="img-responsive" alt="Equation Summary">
 				<p>The parameters used are showed in the next table.</p>
 				<p>Description of model parameters</p>
-				<!-- TABLE -->
+				<img src="http://2016.igem.org/wiki/images/1/1d/T--TEC-Costa_Rica--prostal_project_system_mathematical_modelling_parameters.png" class="img-responsive" alt="Parameters Table">
 			</div>
-			<div id="data-gathering" class="container-fluid"></div>
-			<div id="assumptions" class="container-fluid">
+			<div id="data-gathering" class="container-fluid slideanim">
+				<h1>Data Gathering</h1>
+			</div>
+			<div id="assumptions" class="container-fluid slideanim">
+				<h1>Assumptions</h1>
 				<p>Other assumptions were made to further simplify the model:</p>
 				<ol>
 					<li><p>Even when the affinity between a polymerase and an activated gene is very low when the activator is not present, there will still be a low transcription rate (called basal rate). Regardless we considered the basal rate of IntN as zero.</p></li>
 					<li><p>Because the bacteria will constantly produce IntC and GFP-Q, at the start of the assays we wouldn’t be sure of their initial concentration. So we assumed that by this point, both reactions were in steady state. That is, <!-- FORMULA --></p></li>
 				</ol>
 			</div>
-			<div id="results" class="container-fluid"></div>
+			<div id="results" class="container-fluid slideanim">
+				<h1>Results</h1>
+			</div>
+			<div id="structural-modelling">
+				<div class="container-fluid">
+				  <div class="row">
+				    <div class="col-sm-4">
+					    <div class="section-image">
+					    	<div class="image-align">
+					    		<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Modelling_Simulations/Structural_Modelling"><img src="" class="img-responsive image-link" alt="Structural Modelling"></a>	 
+					    	</div>
+					    </div>
+				    </div>
+				    <div class="col-sm-8">
+					  <h1>Structural Modelling</h1>
+				      <p>On the structural modelling area, we worked on the visualization of different Streptococcus pyogenes Cas9 Structures on varying conformations (Sternberg, LaFrance, Kaplan, & Doudna, 2015)...</p>
+				      <br><a class="btn btn-default btn-lg" href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Modelling_Simulations/Structural_Modelling">Read More</a>
+				    </div>
+				  </div>
+				</div>
+			</div>
 		</main>
 		<script type="text/javascript">
 			var nav = document.getElementById('nav-project');

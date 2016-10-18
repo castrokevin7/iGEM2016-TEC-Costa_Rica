@@ -32,12 +32,37 @@
 			margin: 10px auto 0 auto;
 			width: 80%
 		}
-		.first-round p, .second-round p { width: 80%; }	
+		#first-round .row { margin-top: 15px; }
+		#first-round .col-sm-3 { margin-bottom: 10px; }
+		.card {
+			border-radius: 5px;
+			text-align: center;
+			height: 100%;
+			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);	
+			color: white;	
+			background-color: black;	
+		}
+		.card .container-fluid { padding: 10px 16px; }	
+		#finalists .row { 
+			border: none; 
+			margin-top: 15px;
+		}
+		#finalists .col-sm-4 { 
+			margin-bottom: 10px;
+		}
+		#final-aspects {
+			margin-top: 15px;
+		}
+		#finalists h2, #final-aspects h2  {
+			padding: 0;
+			margin: 0;
+		}		
+		#winners { margin-top: 15px; }
 		#winners h1, #winners h2 { 
 			margin: 0; 
 			padding: 0;
 		}
-		.carousel h1, .carousel h1 { 
+		.carousel h1, .carousel h2 { 
 			margin: 0; 
 			padding-top: 0;
 		}
@@ -71,7 +96,7 @@
 			list-style: none;
 		}		
 		.carousel-control { color: white; }
-				#synbiothon-details { margin-top: 20px; }
+		#synbiothon-details { margin-top: 20px; }
 		#synbiothon-details .row { margin-top: 10px; }
 		#synbiothon-details .row .col-sm-4 { height: 350px; }
 		#synbiothon-details .panel {
@@ -139,33 +164,81 @@
 	<body>
 		<main class="synbiothon-evaluation well">
 			<div class="jumbotron text-center parallax">	  
-				<h1 style="font-size: 50px;">SynBioThon 2016<br><span>Evaluation</span></h1>
+				<h1 style="font-size: 50px;">SynBioThon 2016<br><span>Evaluation & Winners</span></h1>
 			</div>	
 			<div class="concept">
 				<h2>The evaluation consisted of two different rounds.</h2>
 			</div>		
-			<div class="container-fluid" id="first-round">
+			<div id="first-round" class="container-fluid">
 				<h1>First Round</h1>
 				<p>During first round the 15 teams were divided in three groups (five teams per group) and one judge was assigned per group. Every team gave an exposition of five minutes while the respective judge scored from 1 to 10 the following aspects:</p>
-				<div class="aspects container">
+				<div id="aspects" class="container">
 					<div class="row">
-						<div class="col-sm-2">ASDF</div>
-						<div class="col-sm-2">ASDF</div>
-						<div class="col-sm-2">ASDF</div>
-						<div class="col-sm-2">ASDF</div>
+						<div class="col-sm-3">
+							<img src="http://2016.igem.org/wiki/images/4/4a/T--TEC-Costa_Rica--prostal_human_practice_evaluation_presentation.png" class="img-responsive" alt="Presentation">
+							<p style="text-align: center;">Presentation</p>								
+						</div>
+						<div class="col-sm-3">
+							<img src="http://2016.igem.org/wiki/images/5/51/T--TEC-Costa_Rica--prostal_human_practice_evaluation_impact.png" class="img-responsive" alt="Impact">	
+							<p style="text-align: center;">Impact and viability</p>
+						</div>						
+						<div class="col-sm-3">
+							<img src="http://2016.igem.org/wiki/images/d/d5/T--TEC-Costa_Rica--prostal_human_practice_evaluation_chasis.png" class="img-responsive" alt="Chasis">									
+							<p style="text-align: center;">Chasis</p>							
+						</div>
+						<div class="col-sm-3">
+							<img src="http://2016.igem.org/wiki/images/b/bf/T--TEC-Costa_Rica--prostal_human_practice_evaluation_bioinformatic.png" class="img-responsive" alt="Bioinformatic">									
+							<p style="text-align: center;">Bioinformatic design</p>							
+						</div>
 					</div>
 				</div>				
 				<p>Once every judge listened the five teams that corresponded, they checked quickly the scores assigned and selected the two teams with highest scores. In this way, every judge selected two finalists, having a total of six teams for the second round:</p>
-				<div class="finalists container">
+				<div id="finalists" class="container">
 					<div class="row">
-						<div class="col-sm-4">hola</div>
-						<div class="col-sm-4">hola</div>
-						<div class="col-sm-4">hola</div>
-					</div>
+						<div class="col-sm-4">
+		         			<div class="card">
+		            			<div class="container-fluid">
+									<h2>AlumiGen3+</h2>
+		            			</div>
+		         			 </div>
+						</div>
+						<div class="col-sm-4">
+				          	<div class="card">
+				            	<div class="container-fluid">
+									<h2>GastroLac</h2>
+				            	</div>
+				          	</div>
+						</div>
+						<div class="col-sm-4">
+				          	<div class="card">
+				            	<div class="container-fluid">
+									<h2>Hemoalgae</h2>
+				            	</div>
+				          	</div>
+						</div>
+					</div>				
 					<div class="row">
-						<div class="col-sm-4">hola</div>
-						<div class="col-sm-4">hola</div>
-						<div class="col-sm-4">hola</div>
+						<div class="col-sm-4">
+		          			<div class="card">
+		            			<div class="container-fluid">
+									<h2>PAP aleve</h2>
+		            			</div>
+		          			</div>
+						</div>
+						<div class="col-sm-4">
+		          			<div class="card">
+		            			<div class="container-fluid">
+									<h2>MelAro</h2>
+		            			</div>
+		          			</div>					
+						</div>
+						<div class="col-sm-4">
+		          			<div class="card">
+		            			<div class="container-fluid">
+									<h2>BetPro</h2>
+		            			</div>
+		          			</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -179,11 +252,61 @@
 			<div class="container-fluid slideanim" id="second-round">
 				<h1>Second Round</h1>
 				<p>At the second round the six finalists were asked to give a presentation of 10 minutes, with two minutes extra for questions from the judges. In this round the four judges (including Silver, who qualified Benchling during the first round) listened the six presentations, but every judge evaluated a different aspect:</p>
-				<div class="final-aspects container">
-					<div class="row"></div>
+				<div id="final-aspects" class="container">
+					<div class="row">
+						<div class="col-sm-4">
+		         			<div class="card">
+		            			<div class="container-fluid">
+									<h2>Bioinformatic design by Silver Ceballos.</h2>
+									<h3>(30% of final score)</h3>
+		            			</div>
+		         			 </div>
+						</div>
+						<div class="col-sm-4">
+						</div>
+						<div class="col-sm-4">
+				          	<div class="card">
+				            	<div class="container-fluid">
+									<h2>Technical viability by Raúl Trejos.</h2>
+									<h3>(30% of the final score)</h3>
+				            	</div>
+				          	</div>
+						</div>
+					</div>				
+					<div class="row">
+						<div class="col-sm-4"></div>
+						<div class="col-sm-4">
+		          			<div class="card">
+		            			<div class="container-fluid">
+									<h2>Presentation by the four judges.</h2>
+									<h3>(10% of final score)</h3>
+		            			</div>
+		          			</div>					
+						</div>
+						<div class="col-sm-4"></div>
+					</div>			
+					<div class="row">
+						<div class="col-sm-4">
+		          			<div class="card">
+		            			<div class="container-fluid">
+									<h2>Impact by Karla Valerín.</h2>
+									<h3>(20% of final score)</h3>
+		            			</div>
+		          			</div>
+						</div>
+						<div class="col-sm-4"></div>
+						<div class="col-sm-4">						
+				          	<div class="card">
+				            	<div class="container-fluid">
+									<h2>Chasis by Karol Jiménez.</h2>
+									<h3>(10% of final score)</h3>
+				            	</div>
+				          	</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="container-fluid slideanim" id="winners">
+			<div id="winners" class="container-fluid slideanim" >
 				<div class="container">
 					<div class="row">
 						<h1>The winners</h1>					
@@ -294,6 +417,15 @@
 				panelsHeading[i].style.backgroundColor = color;
 				panelsFooterBtn[i].style.backgroundColor = color;
 			}
+
+			var finalists = document.querySelectorAll("#finalists .card");
+			for (var i = 0; i < finalists.length; i++)
+				finalists[i].style.backgroundColor = colors[i % 2];
+
+
+			var finalAspects = document.querySelectorAll("#final-aspects .card");
+			for (var i = 0; i < finalAspects.length; i++)
+				finalAspects[i].style.backgroundColor = colors[i % 2];
 		</script>
 	</body>
 </html>

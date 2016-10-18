@@ -47,13 +47,18 @@
 			border-radius: 5px;
 			text-align: center;
 			height: 100%;
-			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-			background-color: #d3d3d3;
+			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);	
+			color: white;	
+			background-color: black;	
 		}
 		.card .container-fluid { padding: 10px 16px; }		
 		#godfathers .row { 
 			border: none; 
 			margin-top: 15px;
+		}
+		#godfathers h2 { 
+			padding: 10px 0;
+			margin: 0;
 		}		
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 		}
@@ -228,6 +233,11 @@
 		<script type="text/javascript">
 			var nav = document.getElementById('nav-team');
 			nav.className += " active";
+
+			var colors = ["#c0392b", "#e74c3c"];
+			var godfathers = document.querySelectorAll("#godfathers .card");
+			for (var i = 0; i < godfathers.length; i++)
+				godfathers[i].style.backgroundColor = colors[i % 2];
 		</script>
 	</body>
 </html>

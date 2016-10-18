@@ -32,6 +32,75 @@
 			margin: 10px auto 0 auto;
 			width: 80%
 		}	
+		#advantageous { margin-bottom: 15px; }
+		#advantageous .container-fluid { padding: 30px 25px; }
+		button.accordion {
+		    background-color: #eee;
+		    color: #444;
+		    cursor: pointer;
+		    padding: 18px;
+		    width: 100%;
+		    text-align: left;
+		    border: none;
+		    outline: none;
+		    transition: 0.4s;
+		    text-align: center;
+		}
+		div.panel {
+			padding: 5px 50px;
+			display: none;
+			margin: 0;
+			border: 1px solid gray;
+		}
+		div.panel.show { display: block; }
+		.accordion h1 {
+			margin: 0;
+			padding: 0;
+		}
+		#system-sections { 
+			margin-top: 20px;
+			padding-top: 10px;
+			border-top: 1px solid #d3d3d3;
+		}
+		#system-sections .row { margin-top: 10px; }
+		.panel {
+		    border: 1px solid #1f303d; 
+		    border-radius:0 !important;
+		    transition: box-shadow 0.5s;
+		    height: 100%;
+		    margin-bottom: 15px;
+		    display: block;
+		    padding: 0;
+		}
+		.panel:hover { box-shadow: 5px 0px 40px rgba(0,0,0, .2); }
+		.panel-footer .btn:hover {
+		    border: 1px solid #1f303d;
+		    background-color: #fff !important;
+		    color: #1f303d;
+		}
+		.panel-heading {
+		    color: #fff !important;
+		    background-color: #1f303d !important;
+		    padding: 25px;
+		    border-bottom: 1px solid transparent;
+		    border-top-left-radius: 0px;
+		    border-top-right-radius: 0px;
+		    border-bottom-left-radius: 0px;
+		    border-bottom-right-radius: 0px;
+		}
+		.panel-body { height: 125px; }
+		.panel-body p { text-align: center; }
+		.panel-footer { background-color: white !important; }
+		.panel-footer h3 { font-size: 32px; }
+		.panel-footer h4 {
+		    color: #aaa;
+		    font-size: 14px;
+		}
+		.panel-footer .btn {
+		    margin: 15px 0;
+		    background-color: #1f303d;
+		    color: #fff;
+		}
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 		}
 		@media screen and (max-width: 1280px) {
@@ -51,10 +120,48 @@
 			<div class="concept">
 				<p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 			</div>
+			<div id="system-sections" class="container-fluid slideanim">
+			  <div class="row">
+			    <div class="col-sm-6">
+			      <div class="panel panel-default text-center">
+			        <div class="panel-heading">
+			          <h1>Detection</h1>
+			        </div>
+			        <div class="panel-body">
+			          <p style="text-align: center;">Our detection system uses a modified dCas9 for detecting a specific RNA or DNA target.</p>
+			        </div>
+			        <div class="panel-footer">
+			        	<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/System/Detection"><button class="btn btn-lg">Read More</button></a>
+			        </div>
+			      </div>      
+			    </div>   
+			    <div class="col-sm-6">
+			      <div class="panel panel-default text-center">
+			        <div class="panel-heading">
+			          <h1>Response</h1>
+			        </div>
+			        <div class="panel-body">
+			          <p style="text-align: center;">Our response system is based on the reconstitution of a split TEV, which is able to cleavage a Green Fluorescent Protein from its dark quencher, allowing fluorescence emission.</p>
+			        </div>
+			        <div class="panel-footer">
+			        	<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/System/Response"><button class="btn btn-lg">Read More</button></a>
+			        </div>
+			      </div>      
+			    </div>    
+			  </div>
+			</div>
 		</main>
 		<script type="text/javascript">
 			var nav = document.getElementById('nav-project');
-			nav.className += " active";
+			nav.className += " active"; 
+
+			var acc = document.getElementsByClassName("accordion");
+			for (var i = 0; i < acc.length; i++) {
+			    acc[i].onclick = function() {
+			        this.classList.toggle("active");
+			        this.nextElementSibling.classList.toggle("show");
+			    }
+			}
 		</script>
 	</body>
 </html>

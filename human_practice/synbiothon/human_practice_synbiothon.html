@@ -34,7 +34,10 @@
 		}
 		#synbiothon-details { margin-top: 20px; }
 		#synbiothon-details .row { margin-top: 10px; }
-		#synbiothon-details .row .col-sm-3 { height: 350px; }
+		#synbiothon-details .row .col-sm-3 { 
+			height: 350px; 
+			margin-bottom: 20px;
+		}
 		.panel {
 		    border-radius: 0 !important;
 		    transition: box-shadow 0.5s;
@@ -73,6 +76,12 @@
 		#syn-video video { 
 			display: block;
 			margin: 0 auto;
+			width: 100%;
+    		height: auto;
+		}
+		#synbiothon-details .row {
+			padding-top: 20px;
+			border-top: 1px solid #d3d3d3;
 		}
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 		}
@@ -108,9 +117,16 @@
 				<p>For SBT16, we had diverse talks in different classes and universities, trying to reach the most diverse participants for our event but also for promoting Synthetic Biology within students. In our university (TEC), we spoke with people of different majors (Biotechnology Engineering, Material Science, Agricultural Engineering, and others). We also went to University of Costa Rica (UCR), where we spoke with people of Biology, Microbiology, and Pharmacy, and to the National University (UNA), where we talked to students of Biology. We also gave talks in other universities such as UCIMED (Medical School), and LEAD University (Business Management).
 				<br><br>Prior to the event, we had preparatory workshops with students so they could get a grasp of genetics, molecular biology, and bioinformatics if they weren’t familiar with them. A total of eight workshops were imparted at UCR, UNA, and TEC. We had about 80 students overall in a full-day session. We had a theoric section, and then an activity to test the concepts, and after lunch a demonstrative session of bioinformatics, centered in databases and Benchling, which was followed by work.
 				<br><br>These workshops encouraged students to participate in SBT16, so once the inscription closed we had 78 students from three different universities, willing to participate in our 54-hour SynBio competition.</p>
-			</div>			
-			<div id="synbiothon-details" class="container-fluid">
-			  <div class="row slideanim">
+			</div>	
+			<div id="syn-video" class="container-fluid">
+				<h1>Take a look at SynBioThon 2016!</h1>
+				<video controls>
+				  <source src="http://2016.igem.org/wiki/images/0/0e/T--TEC-Costa_Rica--Video_SBT.mp4" type="video/mp4">
+				   Your browser does not support HTML5 video.
+				</video>
+			</div>		
+			<div id="synbiothon-details" class="container-fluid slideanim">
+			  <div class="row">
 			    <div class="col-sm-3">
 			      <div class="panel panel-default text-center">
 			        <div class="panel-heading">
@@ -172,13 +188,6 @@
 				</div>
 			</div>
 			-->
-			<div id="syn-video" class="container-fluid">
-				<h1>Take a look at SynBioThon 2016!</h1>
-				<video controls>
-				  <source src="http://2016.igem.org/wiki/images/0/0e/T--TEC-Costa_Rica--Video_SBT.mp4" type="video/mp4">
-				   Your browser does not support HTML5 video.
-				</video>
-			</div>
 		</main>
 		<script type="text/javascript">
 			var nav = document.getElementById('nav-human_practice');
