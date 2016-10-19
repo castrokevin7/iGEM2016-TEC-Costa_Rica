@@ -34,6 +34,7 @@
 		}	
 		#advantageous { margin-bottom: 15px; }
 		#advantageous .container-fluid { padding: 30px 25px; }
+		#module-sections { margin-bottom: 15px; }
 		button.accordion {
 		    background-color: #eee;
 		    color: #444;
@@ -45,12 +46,16 @@
 		    outline: none;
 		    transition: 0.4s;
 		    text-align: center;
+		    margin-bottom: 1px;
+		}
+		button.accordion:hover {
+		    background-color: #ccc;
 		}
 		div.panel {
 			padding: 5px 50px;
 			display: none;
 			margin: 0;
-			border: 1px solid gray;
+			border: 1px solid #eee;
 		}
 		div.panel.show { display: block; }
 		.accordion h1 {
@@ -63,7 +68,7 @@
 			border-top: 1px solid #d3d3d3;
 		}
 		#system-sections .row { margin-top: 10px; }
-		.panel {
+		#system-sections .panel {
 		    border: 1px solid #1f303d; 
 		    border-radius:0 !important;
 		    transition: box-shadow 0.5s;
@@ -72,13 +77,9 @@
 		    display: block;
 		    padding: 0;
 		}
-		.panel:hover { box-shadow: 5px 0px 40px rgba(0,0,0, .2); }
-		.panel-footer .btn:hover {
-		    border: 1px solid #1f303d;
-		    background-color: #fff !important;
-		    color: #1f303d;
-		}
-		.panel-heading {
+		#system-sections a:hover { text-decoration: none; }
+		#system-sections .panel:hover { box-shadow: 10px 0px 80px rgba(0,0,0,0.3); }
+		#system-sections .panel-heading {
 		    color: #fff !important;
 		    background-color: #1f303d !important;
 		    padding: 25px;
@@ -87,19 +88,6 @@
 		    border-top-right-radius: 0px;
 		    border-bottom-left-radius: 0px;
 		    border-bottom-right-radius: 0px;
-		}
-		.panel-body { height: 125px; }
-		.panel-body p { text-align: center; }
-		.panel-footer { background-color: white !important; }
-		.panel-footer h3 { font-size: 32px; }
-		.panel-footer h4 {
-		    color: #aaa;
-		    font-size: 14px;
-		}
-		.panel-footer .btn {
-		    margin: 15px 0;
-		    background-color: #1f303d;
-		    color: #fff;
 		}
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 		}
@@ -118,37 +106,79 @@
 				<h1 style="font-size: 50px;">System<br><span>Signaling Module</span></h1>
 			</div>	
 			<div class="concept">
-				<p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<p style="text-align: center;">The signaling module is based on the interaction of the two fragments of an intein derived protease. Each of the split intein fragments was designed to be inserted in a different Cas9 domain. Thus, when the Cas9 conformational change occurs the distance between the split intein fragments is reduced and the reaction takes place. As a result of the cleavage, a split TEV protease joined to a trans-splicing Npu DnaE N-intein is released as a signal. To test the intein reac tion we designed two BioBricks with histags on them in order to recover the excised fragments by protein extraction.</p>
+			</div>
+			<div id="advantageous" class="container-fluid">
+			  <div class="row">
+			    <div class="col-sm-5 col-sm-push-7">
+			    	<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" class="img-responsive">
+			    </div>
+			    <div class="col-sm-7 col-sm-pull-5">					  
+					<h1>Advantageous Signaling</h1>
+					<p>Our signaling strategy uses the cleavage properties of a cis-splicing split intein to release an insertion when a conformational change occurs. The specifity of the intein derived protease recognition makes it suitable for proteolytic reactions in E.coli and S.cerevisae. Therefore, this module gives a precise approach for protein excision and so provides a mechanism useful for signaling and protein regulation.</p>
+			    </div>
+			  </div>
+			</div>
+			<div class="module-sections">
+				<button id="background" class="accordion"><h1>Background</h1></button>
+				<div class="panel">
+					<h2>1. Intein derived protease</h2>
+					<p>We thought that the best way to indicate that the Cas9 conformational change had occurred was through the release of a signal molecule. For that reason, our signaling module is based on the interaction of two insertions in the Cas9 protein that allows the release of a split TEV protease when the conformational change occurs. To release one of the insertions we decided to use the Ssp DnaB S1 split-intein. This intein derived protease (IP) consists of a 144 aa C-terminal intein fragment that recognices and cleaves the peptide bond between the Gly and Cys residues of the 16 aa N-terminal fragment (Volkmann et al., 2011), thus resulting in a cis-splicing reaction as shown in figure X.</p>
+					<br>
+					<p>We choosed the Ssp DnaB S1 split-intein because it has high ligation kinetics which reduces the time of reaction (Aranko et al., 2014). Also, Volkman et al., 2011 have proved that the intein reaction can occur in <em>Escherichia coli</em> without affecting the cell viability. Aditionally, the high specificity of the C-intein recognition avoids undesired cleavege of other proteins (Tropilina & Mills, 2014). This IP has already been used in iGEM and it's in the repository.</p>
+
+					<h2>2. Release of split TEV</h2>
+					<p>In order to allow the reaction to occur only with the Cas9 conformational change, we decided to insert the C-intein in one of the hotspots and the complement intein in a second hotspot. Thus, when the Cas9 binds to the target ARN the distance between the insertions is reduced and the intein reaction takes place. Because we aimed to release an amino acid sequence inside a domain we had to excise not one but two peptide bonds. For that reason, one of the insertions consists of a split TEV protease joined with a trans-splicing Npu DnaE N-intein and flanked by two N-inteins. Therefore, when the insertions become closer the C—intein will cleave both N-inteins and release a split TEV protease used in our response module. The trans-splicing intein was added to allow the reconstitution of the split-TEV in the mentioned module.</p>
+					<br>
+					<p>Based on the protein structural model we decided to insert the smallest sequence in the REC lobe because it suffers the most aggressive conformational change. In contrast, the longest insertion which included the split TEV protease joined to a trans-splicing Npu DnaE N-intein and both N-inteins was inserted in the HNH domain. Also, we added the flexible linker 2x (GGGS) on both sides of each insertion to allow a better interaction between the split inteins. According to Chen et al. (2013) flexible linkers are usually used to provide a degree of movement and thus allow a better interaction between the linked peptide sequences. This linker has already been used in iGEM to fuse proteins and is part of the repository.</p>
+					<div><a href="#background"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+				</div>
+				<button id="design" class="accordion"><h1>Design</h1></button>
+				<div class="panel">
+					<br>
+					<p>We designed the insertions as gBlocks. Both of them are flanked with BbsI recognition sequences that generate an overhang complementary to the insertion spots in the dCas9. Also, the insertions contain the sequences around the hotspots that the dCas9 lacks.</p>
+					<br>
+					<p>The first insertion consists on an Ssp DnaB C-intein flanked by a 2x (GGGS) linker, the sequences were obtained from the following Bio-Bricks: BBa_K1362251 and BBa_K1486003. The second insertion contains two 2x (GGS) that flank a Ssp DnaB N-intein followed by a N-Terminal split TEV, a Histag, a Npu DnaE N-intein and another Ssp DnaB N-intein. The sequences were based on the undermentioned Bio-Bricks: Bba_ K1486003, Bba_ K1362408, BBa_K1159101, BBa_K844000 and BBa_K1362400.</p>
+					<br>
+					<p>Also, we designed two BioBricks to test the cleavage activity of the split inteins we used in the insertions. The first Biobrick consists of a histag followed by a red fluorescent protein (RFP), an Ssp DnaB N-intein and a double terminator. The sequences were obtained from the following BioBricks: BBa_K844000, BBa_E1010, and BBa_B0010. This first BioBrick we designed was then assembled with an IPTG inducible promoter (Bba_R0010) and a RBS Elowitz.</p>
+					<br>
+					<p>The second BioBrick contains the complementary Ssp DnaB C-intein with a histag and a double terminator. For this design we used the following BioBricks from the iGEM repository: BBa_K1362251, BBa_K844000 and BBa_B0010. We assembled this BioBrick with an Anderson Promoter J23100 and a RBS Elowitz. Both assembled complete devices were also registered as BioBricks.</p>
+					<div><a href="#design"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+				</div>		
+				<button id="results" class="accordion"><h1>Results</h1></button>
+				<div class="panel">			
+					<div><a href="#results"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+				</div>	
+				<button id="references" class="accordion"><h1>References</h1></button>
+				<div class="panel">
+					<br>
+					<p>Aranko, A. S., Wlodawer, A., & Iwai, H. (2014). Nature's recipe for splitting inteins. <em>Protein Engineering Design and Selection</em>, 27(8), 263-271. doi:10.1093/protein/gzu028</p>
+					<br>
+					<p>Chen, X., Zaro, J. L., & Shen, W. (2013). Fusion protein linkers: Property, design and functionality. <em>Advanced Drug Delivery Reviews</em>, 65(10), 1357-1369. doi:10.1016/j.addr.2012.09.039</p>
+					<br>
+					<p>Topilina, N. I., & Mills, K. V. (2014). Recent advances in in vivo applications of intein-mediated protein splicing. <em>Mobile DNA</em>, 5(1), 5. doi:10.1186/1759-8753-5-5</p>
+					<br>
+					<p>Volkmann, G., Volkmann, V., & Liu, X. (2011). Site-specific protein cleavage in vivo by an intein-derived protease. <em>FEBS Letters</em>, 586(1), 79-84. doi:10.1016/j.febslet.2011.11.028</p>
+					<div><a href="#references"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+				</div>
 			</div>
 			<div id="system-sections" class="container-fluid slideanim">
-			  <div class="row">
-			    <div class="col-sm-6">
-			      <div class="panel panel-default text-center">
-			        <div class="panel-heading">
-			          <h1>Detection</h1>
-			        </div>
-			        <div class="panel-body">
-			          <p style="text-align: center;">Our detection system uses a modified dCas9 for detecting a specific RNA or DNA target.</p>
-			        </div>
-			        <div class="panel-footer">
-			        	<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/System/Detection"><button class="btn btn-lg">Read More</button></a>
-			        </div>
-			      </div>      
-			    </div>   
-			    <div class="col-sm-6">
-			      <div class="panel panel-default text-center">
-			        <div class="panel-heading">
-			          <h1>Response</h1>
-			        </div>
-			        <div class="panel-body">
-			          <p style="text-align: center;">Our response system is based on the reconstitution of a split TEV, which is able to cleavage a Green Fluorescent Protein from its dark quencher, allowing fluorescence emission.</p>
-			        </div>
-			        <div class="panel-footer">
-			        	<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/System/Response"><button class="btn btn-lg">Read More</button></a>
-			        </div>
-			      </div>      
-			    </div>    
-			  </div>
+			  	<div class="row">
+					<div class="col-sm-6">
+						<div class="panel panel-default text-center">
+							<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/System/Detection"><div class="panel-heading">
+							<h1>Detection</h1>
+							</div></a>
+						</div>      
+					</div>   
+					<div class="col-sm-6">
+						<div class="panel panel-default text-center">
+							<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/System/Response"><div class="panel-heading">
+							<h1>Response</h1>
+							</div></a>
+						</div>      
+					</div>    
+				</div>
 			</div>
 		</main>
 		<script type="text/javascript">
