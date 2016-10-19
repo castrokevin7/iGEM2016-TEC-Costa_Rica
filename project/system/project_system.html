@@ -19,23 +19,63 @@
 			display: table-cell;
 			vertical-align: middle;
 			background-color: rgba(0, 0, 0, 0.2);
-		}	
-		.jumbotron span { font-size: 40px; }
-		.parallax {
-			perspective: 1px;
-			overflow-x: hidden;
-			overflow-y: auto;
-		}	
-		.concept {
-			display: block;
-			text-align: center;
-			margin: 10px auto 0 auto;
-			width: 80%
 		}
 		#advantages { margin-top: 20px; }
 		#advantages img {
 			text-align: center;
 		}
+		.modal-trigger {
+		    cursor: pointer;
+		    transition: 0.3s;
+		}
+		.modal-trigger:hover { opacity: 0.7; }
+		.modal {
+		    display: none; /* Hidden by default */
+		    position: fixed; /* Stay in place */
+		    z-index: 1; /* Sit on top */
+		    padding-top: 100px; /* Location of the box */
+		    left: 0;
+		    top: 0;
+		    width: 100%; /* Full width */
+		    height: 100%; /* Full height */
+		    overflow: auto; /* Enable scroll if needed */
+		    background-color: rgb(0,0,0); /* Fallback color */
+		    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+		}
+		.modal-content, .modal-content img {
+		    margin: auto;
+		    display: block;
+		    width: 95%;
+		}
+		.modal-content, .modal-content img, {
+		    -webkit-animation-name: zoom;
+		    -webkit-animation-duration: 0.6s;
+		    animation-name: zoom;
+		    animation-duration: 0.6s;
+		}
+		@-webkit-keyframes zoom {
+		    from {-webkit-transform:scale(0)}
+		    to {-webkit-transform:scale(1)}
+		}
+		@keyframes zoom {
+		    from {transform:scale(0)}
+		    to {transform:scale(1)}
+		}
+		.close-modal {
+		    position: absolute;
+		    right: -20px;
+		    top: -20px;
+		    color: white;
+		    font-size: 30px;
+		    font-weight: bold;
+		    transition: 0.3s;
+		}
+		.close-modal:hover,
+		.close-modal:focus {
+		    color: #bbb;
+		    text-decoration: none;
+		    cursor: pointer;
+		}	
 		#system-modules { margin-top: 20px; }
 		#system-modules .row { margin-top: 10px; }
 		#system-modules .row .col-sm-4 { height: 350px; }
@@ -106,6 +146,13 @@
 			<div id="overview" class="container-fluid slideanim">
 				<h1>Overview</h1>
 				<p>Our system uses a modified dCas9 for detecting a specific nucleic acid molecule and the conformational change this protein suffers when it binds to the target is used to trigger  a signaling mechanism. Since our dCas9 has intein insertions in two specific amino acid residues, the dCas9 conformational change provokes an intein reaction that enables the release of a split TEV. Next, following protein trans-splicing, TEV protease becomes catalytically active and it is able to cleavage a Green Fluorescent Protein from a Dark Quencher, which leads to fluorescence emission.</p>
+				<img src="http://2016.igem.org/wiki/images/5/5e/T--TEC-Costa_Rica--prostal_project_system_overview.png" class="img-responsive modal-trigger" alt="System Overview">
+				<div class="modal">
+				  <div class="modal-content">
+				  	<span class="close-modal">x</span>
+				  	<img>				      	
+				  </div>
+				</div>
 			</div>
 			<div id="system-modules" class="container-fluid slideanim">
 				<h1>System Modules</h1>
@@ -152,81 +199,31 @@
 			    </div>    
 			  </div>
 			</div>
-
-			<!--
-			<style type="text/css">
-				#wiki-tour {
-					color: white;
-					display: block;
-					width: 80%;
-					margin: 0 auto;
-					padding: 10px 0;
-				}
-				#wiki-tour .navbar { margin: 0; }
-				#wiki-tour h3 { 
-					text-align: center;
-					margin: 0;
-				}
-				#wiki-tour span {
-					font-size: 22px;
-				}
-				#wiki-tour ul {
-					text-align: center;
-					margin: 0;
-				}
-				#wiki-tour .nav-bar li {
-					margin: 0 10px;
-					padding: 0 20px;
-				}
-				#wiki-tour #left-indicator, #wiki-tour #right-indicator {
-					margin: 0;
-					padding: 0 20px;
-				}
-			</style>
-			<div id="wiki-tour">
-				<nav class="navbar navbar-inverse">
-				  <div class="container-fluid">
-				    <h3>Wiki Tour</h3>
-				    <ul class="nav navbar-nav">
-				    	<li id="left-indicator">
-				    		<a href="http://2016.igem.org/Team:TEC-Costa_Rica"><span class="glyphicon glyphicon-chevron-left"></span></a>
-				    	</li>
-						<li id="home-tour">
-							<span class="glyphicon glyphicon-map-marker"></span>
-							<p>Home</p>
-						</li>
-						<li id="system-tour">
-							<span class="glyphicon glyphicon-chevron-down"></span>
-							<p>System</p>
-						</li>
-						<li id="modelling_simulation-tour">
-							<span class="glyphicon glyphicon-chevron-down"></span>
-							<p>Modelling & Simulations</p>
-						</li>
-						<li id="parts-tour">
-							<span class="glyphicon glyphicon-chevron-down"></span>
-							<p>Parts</p>
-						</li>
-						<li id="human_practice-tour">
-							<span class="glyphicon glyphicon-chevron-down"></span>
-							<p>Human Practice</p>
-						</li>
-						<li id="team-tour">
-							<span class="glyphicon glyphicon-chevron-down"></span>
-							<p>Team</p>
-						</li>
-						<li id="right-indicator">
-				    		<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/System"><span class="glyphicon glyphicon-chevron-right"></span></a>
-				    	</li>
-				    </ul>
-				  </div>
-				</nav>			
-			</div>
-			-->
 		</main>
 		<script type="text/javascript">
 			var nav = document.getElementById('nav-project');
 			nav.className += " active";
+
+			var triggers = document.getElementsByClassName('modal-trigger');
+			var modals = document.getElementsByClassName('modal');
+			var closers = document.getElementsByClassName('close-modal');
+			Array.prototype.forEach.call(triggers, function(trigger) {
+			  trigger.addEventListener("click", function() {
+			    var modal = this.parentNode.parentNode.getElementsByClassName("modal")[0];
+			    console.log(modal-trigger);
+			    var modal_content = modal.getElementsByClassName("modal-content")[0];
+			    var img = modal_content.getElementsByTagName("img")[0];
+		        img.src = this.src;
+		        modal.style.display = "block";
+			  })
+			});
+			Array.prototype.forEach.call(closers, function(close) {
+			  close.addEventListener("click", function() {
+			    Array.prototype.forEach.call(modals, function(modal) {
+			      modal.style.display = "none";
+			    });
+			  })
+			});
 		</script>
 	</body>
 </html>
