@@ -2,13 +2,8 @@
 {{:Team:TEC-Costa_Rica/Template:Stylesheet}}
 <html>
 	<head> 
-		<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
-		<style type="text/css">	
-			.dropdown .dropdown-menu { margin: 0; }
-			.dropdown:hover {
-				border-bottom: 1px solid white;
-			}
-			.active { border-bottom: 1px solid white; }
+		<style type="text/css">				
+			@font-face { font-family: 'Telegrafico'; src: url('http://2016.igem.org/wiki/images/f/f0/T--TEC-Costa_Rica--prostal_font_telegrafico.ttf'); } 
 			main { width: 100%; }
 			body {
 				padding-top: 75px;
@@ -25,14 +20,14 @@
 				color: white;
 			}
 			#home h1 { 
-				font-family: 'Courgette', cursive;
+				font-family: 'Telegrafico', sans-serif;
 				font-size: 100px; 
 				margin: 0;
 				padding-bottom: 0;
 				display: none;
 			}
 			#home p {
-				font-family: 'Lato', sans-serif;
+				font-family: 'Telegrafico', sans-serif;
 				font-size: 20px;
 				margin: 0;
 				padding: 0;
@@ -40,8 +35,12 @@
 				text-align: center;
 				display: none;
 			}
-			#facts h1, #detection h1, #system h1 {
-				font-size: 50px;
+			#facts h1, #detection h1, #system h1 { font-size: 50px; }
+			#facts h2, #detection h2, #system h2 { font-size: 25px; }
+			#detection { color: white; }
+			#detection p { 
+				text-align: center; 
+				font-size: 20px;
 			}
 			#system-description {
 				width: 80%;
@@ -61,8 +60,8 @@
 				background-color: transparent;
 			}
 			.section {
-				padding-top: 10%;
-				padding-bottom: 10%;
+				padding-top: 8%;
+				padding-bottom: 8%;
 			}
 			@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {}
 			@media screen and (max-width: 1280px) {
@@ -82,100 +81,66 @@
 		</div>
 
 		<div id="facts" class="container section no-img-section slideanim">
-			<div class="text-center">
-				<h1>About Prostate Cancer (pCa)</h1>				
+			<h1>About Prostate Cancer (pCa)</h1>
+			<div class="row">
+				<div class="col-sm-4"></div>
+				<div id="fact1" class="col-sm-4">
+					<img src="http://2016.igem.org/wiki/images/2/28/T--TEC-Costa_Rica--prostal_home_fact2.png" class="img-responsive" alt="Fact 1">
+				</div>
+				<div class="col-sm-4"></div>
 			</div>
 			<div class="row">
-				<!--
-				<div class="col-md-12">
-					<p>Prostate cancer (pCa) is the second most common type of cancer among men in Costa Rica, with a man dying every 27 hours in average. Yearly data since 2012 shows that an average of 373 men die every year of this disease, and 44 of every 100 000 men suffer from this illness. Globally, an estimated 300 000 men die every year of pCa, and more than a million men are diagnosed, so this is a global concern. This data is aggravated by the fact that most of deaths occur because men refuse to undergo clinical examination, which consists mainly in Digital Rectal Examination (DRE). Therefore, if a method which can detect pCa is developed in which DRE or a biopsy are not needed, the rate of deaths could be dramatically reduced, since pCa is not aggressive if properly treated. There are alternative tests, such as Prostate Specific Antigen (PSA) or RNA-PCR amplification, but the first is not really specific for cancer, and the second one is expensive and requires costly equipment. Therefore, we propose a bacterial-based system which can detect RNA and produce an easy-to-read signal.</p>
+				<div id="fact2" class="col-sm-4">
+					<img src="http://2016.igem.org/wiki/images/6/6f/T--TEC-Costa_Rica--prostal_home_fact1.png" class="img-responsive" alt="Fact 2">
 				</div>
-				-->
-				<div id="fact1" class="col-md-4">
-					<div class="text-center">						
-						<h2>A subtitle</h2>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-					ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-					dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-					nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-					Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
-					enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
-					felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-					elementum semper nisi.</p>
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4"></div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4"></div>
+				<div id="fact3" class="col-sm-4">
+					<img src="http://2016.igem.org/wiki/images/e/e9/T--TEC-Costa_Rica--prostal_home_fact3.png" class="img-responsive" alt="Fact 3">
 				</div>
-				<div id="fact2" class="col-md-4">
-					<div class="text-center">						
-						<h2>A subtitle</h2>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-					ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-					dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-					nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-					Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
-					enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
-					felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-					elementum semper nisi.</p>
-				</div>
-				<div id="fact3" class="col-md-4">
-					<div class="text-center">						
-						<h2>A subtitle</h2>
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-					ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-					dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-					nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-					Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
-					enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
-					felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-					elementum semper nisi.</p>
-				</div>
+				<div class="col-sm-4"></div>
 			</div>
 		</div>
 
 		<div id="detection" class="section bg-img-section">
 			<div class="container">
-				<h1>How is pCa detected?</h1>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="text-center">							
-							<h2>A subtitle</h2>
+				<div class="text-center">
+					<h1>How is pCa detected?</h1>					
+				</div>
+				<div id="methods">
+					<div class="row">
+						<div id="detection-method1" class="col-sm-4">
+							<div class="text-center">							
+								<h2>Digital Rectal Examination</h2>
+								<p>Highly invasive</p>
+							</div>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-						ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-						dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-						nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-						Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
-						enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
-						felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-						elementum semper nisi.</p>
+						<div class="col-sm-4"></div>
+						<div class="col-sm-4"></div>
 					</div>
-					<div class="col-md-4">
-						<div class="text-center">							
-							<h2>A subtitle</h2>
+					<div class="row">
+						<div class="col-sm-4"></div>
+						<div id="detection-method2" class="col-sm-4">
+							<div class="text-center">							
+								<h2>Prostate Specific Antigen: <br>PSA Test</h2>
+								<p>Not specific for pCa</p>
+							</div>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-						ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-						dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-						nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-						Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
-						enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
-						felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-						elementum semper nisi.</p>
+						<div class="col-sm-4"></div>
 					</div>
-					<div class="col-md-4">
-						<div class="text-center">							
-							<h2>A subtitle</h2>
+					<div class="row">
+						<div class="col-sm-4"></div>
+						<div class="col-sm-4"></div>
+						<div id="detection-method3" class="col-sm-4">						
+							<div class="text-center">							
+								<h2>RNA-based PCR amplification</h2>
+								<p>Expensive technique</p>
+							</div>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-						ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-						dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-						nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-						Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
-						enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
-						felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-						elementum semper nisi.</p>
-					</div>
+					</div>					
 				</div>
 			</div>
 		</div>
@@ -235,7 +200,7 @@
 
 			$(document).ready(function() {
 				$("#home h1").fadeIn(1000);
-				$("#home p").fadeIn(1000);
+				$("#home p").fadeIn(2000);
 			});
 		</script>
 	</body>

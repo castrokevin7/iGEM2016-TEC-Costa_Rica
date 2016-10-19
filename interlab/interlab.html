@@ -19,18 +19,8 @@
 			display: table-cell;
 			vertical-align: middle;
 			background-color: rgba(0, 0, 0, 0.2);
-		}				
-		.parallax {
-			perspective: 1px;
-			overflow-x: hidden;
-			overflow-y: auto;
-		}	
-		.concept {
-			display: block;
-			text-align: center;
-			margin: 10px auto 0 auto;
-			width: 85%
 		}
+		.concept { width: 85%; }
 		.container-fluid .row { margin-bottom: 20px; } 
 		figure { margin-bottom: 15px; }
 		.modal-trigger {
@@ -95,24 +85,6 @@
 		    color: #bbb;
 		    text-decoration: none;
 		    cursor: pointer;
-		}
-		.slideanim {visibility:hidden;}
-		.slide {
-		    animation-name: slide;
-		    -webkit-animation-name: slide;
-		    animation-duration: 1s;
-		    -webkit-animation-duration: 1s;
-		    visibility: visible;
-		}
-		@keyframes slide {
-		  0% {
-		    opacity: 0;
-		    transform: translateY(70%);
-		  } 
-		  100% {
-		    opacity: 1;
-		    transform: translateY(0%);
-		  }
 		}	
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 		}
@@ -136,7 +108,7 @@
 				<h2>How close can the numbers be when fluorescence is measured all around the world?</h2>
 				<p style="text-align: center;">This year’s Interlab study aims to establish standard units for the measurement of fluorescence, by establishing a comparison between the measurements of many different labs around the globe with previously measured standards.</p>
 			</div>	
-			<div class="container-fluid">
+			<div id="constructs" class="container-fluid">
 				<h2>Constructs</h2>
 			  <div class="row">
 			    <div class="col-sm-6">
@@ -154,7 +126,7 @@
 			    </div>
 			  </div>
 			</div>			
-			<div class="container-fluid slideanim">
+			<div id="equipment" class="container-fluid slideanim">
 				<h2>Equipment</h2>
 			  <div class="row">
 			    <div class="col-sm-6">
@@ -172,13 +144,13 @@
 			    </div>
 			  </div>
 			</div>
-			<div class="container-fluid slideanim">
+			<div id="materials-methods" class="container-fluid slideanim">
 				<h2>Materials and Methods</h2>
 				<p>The experiments were made made on a transformed Escherichia coli, strain DH5α. The bacteria were grown on Luria-Bertani broth. The materials and protocols were supplied by igem HQ.</p>
 				<br>
 			  <div class="row">
 			    <div class="col-sm-6">
-						<p>First, the OD600 measurement was standardized using the provided LUDOX to create a correction factor for the Abs600 measurement between the instruments.</p>
+					<p>First, the OD600 measurement was standardized using the provided LUDOX to create a correction factor for the Abs600 measurement between the instruments.</p>
 			    </div>
 			    <div class="col-sm-6">
 			    	<figure><img class="modal-trigger img-responsive" alt="OD600 calibration with LUDOX." src="http://2016.igem.org/wiki/images/2/2e/T--TEC-Costa_Rica--prostal_interlab_OD600.png"><figcaption><p>Figure 3. OD600 calibration with LUDOX.</p></figcaption></figure>
@@ -193,10 +165,10 @@
 			  </div>
 			  <div class="row">
 			    <div class="col-sm-6">
-						<p>Then, the fluorescence value was corrected using a series of dilutions of the chromophore FITC as a standard. A curve was generated with the serial dilutions of the molecule which was measured with the plate reader with the GFP program.</p> 
+					<p>Then, the fluorescence value was corrected using a series of dilutions of the chromophore FITC as a standard. A curve was generated with the serial dilutions of the molecule which was measured with the plate reader with the GFP program.</p> 
 			    </div>
 			    <div class="col-sm-6">
-						<figure><img class="modal-trigger img-responsive" alt="FITC measurement standard curve." src="http://2016.igem.org/wiki/images/2/21/T--TEC-Costa_Rica--prostal_interlab_FITC-curve.png"><figcaption><p>Figure 4. FITC measurement standard curve.</p></figcaption></figure>
+					<figure><img class="modal-trigger img-responsive" alt="FITC measurement standard curve." src="http://2016.igem.org/wiki/images/2/21/T--TEC-Costa_Rica--prostal_interlab_FITC-curve.png"><figcaption><p>Figure 4. FITC measurement standard curve.</p></figcaption></figure>
 					<div class="modal">
 				      <div class="modal-content">
 				      	<span class="close-modal">x</span>
@@ -208,10 +180,10 @@
 			  </div>
 			  <div class="row">
 			    <div class="col-sm-6">
-						<p>After the bacteria were transformed and grown overnight, we set all the concentrations to an Abs600 of 0,02. These subcultures were kept in a shaker, and samples were taken every hour for 6 hours.</p>
+					<p>After the bacteria were transformed and grown overnight, we set all the concentrations to an Abs600 of 0,02. These subcultures were kept in a shaker, and samples were taken every hour for 6 hours.</p>
 			    </div>
 			    <div class="col-sm-6">
-						<figure><img class="modal-trigger img-responsive" alt="Abs600 of the overnight culture." src="http://2016.igem.org/wiki/images/6/64/T--TEC-Costa_Rica--prostal_interlab_Normalization.png"><figcaption><p>Figure 5. Abs600 of the overnight culture.</p></figcaption></figure>
+					<figure><img class="modal-trigger img-responsive" alt="Abs600 of the overnight culture." src="http://2016.igem.org/wiki/images/6/64/T--TEC-Costa_Rica--prostal_interlab_Normalization.png"><figcaption><p>Figure 5. Abs600 of the overnight culture.</p></figcaption></figure>
 					<div class="modal">
 				      <div class="modal-content">
 				      	<span class="close-modal">x</span>
@@ -222,7 +194,7 @@
 			    </div>
 			  </div>			  
 			</div>	
-			<div class="container-fluid slideanim">
+			<div id="results" class="container-fluid slideanim">
 				<h2>Results</h2>	
 			  <div class="row">
 			    <div class="col-sm-6">
@@ -241,7 +213,7 @@
 			  </div>
 			  <div class="row">
 			    <div class="col-sm-6">
-						<p>A curve for fluorescence was also generated, where it can be easily seen that the device 1 has the most fluorescence, followed by device 2, positive control, and negative control and device 3 in the bottom with no response.</p>
+					<p>A curve for fluorescence was also generated, where it can be easily seen that the device 1 has the most fluorescence, followed by device 2, positive control, and negative control and device 3 in the bottom with no response.</p>
 			    </div>
 			    <div class="col-sm-6">
 			    	<figure><img class="modal-trigger img-responsive" alt="Fluorescence of the constructs vs time." src="http://2016.igem.org/wiki/images/4/4a/T--TEC-Costa_Rica--prostal_interlab_GFP-FI.png"><figcaption><p>Figure 7. Fluorescence of the constructs vs time.</p></figcaption></figure>
@@ -256,7 +228,7 @@
 			  </div>	
 			  <div class="row">
 			    <div class="col-sm-6">
-						<p>Also, a ratio of fluorescence against absorbance was established in order to correct for the effect of the GFP production on the bacterial growth.</p>
+					<p>Also, a ratio of fluorescence against absorbance was established in order to correct for the effect of the GFP production on the bacterial growth.</p>
 			    </div>
 			    <div class="col-sm-6">
 			    	<figure><img class="modal-trigger img-responsive" alt="Fluorescence/Absorbance ratio." src="http://2016.igem.org/wiki/images/d/dd/T--TEC-Costa_Rica--prostal_interlab_FIAbs.png"><figcaption><p>Figure 8. Fluorescence/Absorbance ratio.</p></figcaption></figure>
@@ -272,11 +244,6 @@
 			</div>
 		</main>
 		<script type="text/javascript">
-			var navs = document.getElementsByClassName('dropdown');
-			Array.prototype.forEach.call(navs, function(nav) {
-				navs.className = "";
-				navs.className = "dropdown";
-			});
 			var nav = document.getElementById('nav-interlab');
 			nav.className += " active";
 

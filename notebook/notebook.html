@@ -20,39 +20,17 @@
 			vertical-align: middle;
 			background-color: rgba(0, 0, 0, 0.2);
 		}				
-		.parallax {
-			perspective: 1px;
-			overflow-x: hidden;
-			overflow-y: auto;
-		}	
-		.concept {
-			display: block;
-			text-align: center;
-			margin: 10px auto 0 auto;
-			width: 80%
-		}	
-		.notebook .container-fluid { padding: 30px 25px; }
-		.notebook .container-fluid .row {
+		#notebook-sections .container-fluid { padding: 30px 25px; }
+		#notebook-sections .container-fluid .row {
 			padding-bottom: 20px;
 		    border-bottom: 1px solid #d3d3d3;
 		}	
-		.notebook .container-fluid .row a { color: black; }
-		.notebook .container-fluid .row .col-sm-4 { padding: 20px; }
-		.section-image {
-			border-radius: 50%;
+		#notebook-sections .container-fluid .row a { color: black; }
+		#notebook-sections .container-fluid .row .col-sm-4 { padding: 20px; }
+		#notebook-sections img {
+			width: 250px;
 			height: 250px;
-			width: 250px;			
-			background-color: #364C5E;
-		}	
-		.section-image img {
-			margin: 0 auto 0 auto;
-			height: 150px;
-			width: 150px;	
-			margin-top: 25px;	
-		}	
-		.image-align {
-			padding-top: 20px; 
-			text-align: center;
+			margin: 0 auto;
 		}		 
 		#protocols .row { border: none; }	
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
@@ -74,58 +52,38 @@
 			<div class="concept">
 				<p style="text-align: center;">In this section, you can see the work we have done this months. In the Laboratory section, you can find a journal of our daily work, classified by month. On the Protocols section, our tested, step-by-step protocols can help you do your experiment in a better way, or you can just see how we do what we do!</p>
 			</div>		
-			<div id="laboratory" class="container-fluid">
-			  <div class="row">
-			    <div class="col-sm-4">
-				    <div class="section-image">
-				    	<div class="image-align">
-				    		<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Notebook/Laboratory"><img src="http://2016.igem.org/wiki/images/5/5b/T--TEC-Costa_Rica--prostal_notebook_lab.png" class="img-responsive image-link" alt="Laboratory"></a>	 
-				    	</div>
+			<div id="notebook-sections">
+				<div id="laboratory" class="container-fluid">
+				  <div class="row">
+				    <div class="col-sm-4">
+					    <img src="http://2016.igem.org/wiki/images/5/5b/T--TEC-Costa_Rica--prostal_notebook_lab.png" class="img-responsive" alt="Laboratory">
 				    </div>
-			    </div>
-			    <div class="col-sm-8">
-				  <h1>Laboratory</h1>
-			      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-			      <br><a class="btn btn-default btn-lg" href="http://2016.igem.org/Team:TEC-Costa_Rica/Notebook/Laboratory">Read More</a>
-			    </div>
-			  </div>
-			</div>
+				    <div class="col-sm-8">
+					  <h1>Laboratory</h1>
+				      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				      <br><a class="btn btn-default btn-lg" href="http://2016.igem.org/Team:TEC-Costa_Rica/Notebook/Laboratory">Read More</a>
+				    </div>
+				  </div>
+				</div>
 
-			<div id="protocols" class="container-fluid slideanim">
-			  <div class="row">
-			    <div class="col-sm-4 col-sm-push-8">
-				    <div class="section-image">
-				    	<div class="image-align">
-				    		<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Notebook/Protocols"><img src="http://2016.igem.org/wiki/images/7/79/T--TEC-Costa_Rica--prostal_notebook_protocols.png" class="img-responsive image-link" alt="Protocols"></a>	 
-				    	</div>
+				<div id="protocols" class="container-fluid slideanim">
+				  <div class="row">
+				    <div class="col-sm-4 col-sm-push-8">
+					    <img src="http://2016.igem.org/wiki/images/7/79/T--TEC-Costa_Rica--prostal_notebook_protocols.png" class="img-responsive" alt="Protocols">
 				    </div>
-			    </div>
-			    <div class="col-sm-8 col-sm-pull-4">
-				  <h1>Protocols</h1>
-			      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-			      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-			      <br><a class="btn btn-default btn-lg" href="http://2016.igem.org/Team:TEC-Costa_Rica/Notebook/Protocols">Read More</a>
-			    </div>
-			  </div>
-			</div>			
+				    <div class="col-sm-8 col-sm-pull-4">
+					  <h1>Protocols</h1>
+				      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				      <br><a class="btn btn-default btn-lg" href="http://2016.igem.org/Team:TEC-Costa_Rica/Notebook/Protocols">Read More</a>
+				    </div>
+				  </div>
+				</div>					
+			</div>
 		</main>
 		<script type="text/javascript">
 			var nav = document.getElementById('nav-notebook');
 			nav.className += " active";
-
-			var elements = document.getElementsByClassName('image-link');
-			Array.prototype.forEach.call(elements, function(element) {
-				element.addEventListener("mouseover", function() {
-					this.style.height = "175px"; 
-					this.style.width = "175px"; 
-					this.style.marginTop = "10px";
-				});
-				element.addEventListener("mouseout", function() {
-					this.style.height = "150px"; 
-					this.style.width = "150px"; 
-					this.style.marginTop = "25px";
-				});	
-			});
 		</script>
 	</body>
 </html>

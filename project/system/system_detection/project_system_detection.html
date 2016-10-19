@@ -19,19 +19,7 @@
 			display: table-cell;
 			vertical-align: middle;
 			background-color: rgba(0, 0, 0, 0.2);
-		}	
-		.jumbotron span { font-size: 40px; }		
-		.parallax {
-			perspective: 1px;
-			overflow-x: hidden;
-			overflow-y: auto;
-		}
-		.concept {
-			display: block;
-			text-align: center;
-			margin: 10px auto 0 auto;
-			width: 80%
-		}	
+		}		
 		#advantageous { margin-bottom: 15px; }
 		#advantageous .container-fluid { padding: 30px 25px; }
 		#module-sections { margin-bottom: 15px; }
@@ -48,7 +36,7 @@
 		    text-align: center;
 		    margin-bottom: 1px;
 		}
-		button.accordion:hover {
+		button.accordion:hover, button.active {
 		    background-color: #ccc;
 		}
 		div.panel {
@@ -61,6 +49,69 @@
 		.accordion h1 {
 			margin: 0;
 			padding: 0;
+		}
+		.modal-trigger {
+		    cursor: pointer;
+		    transition: 0.3s;
+		}
+		.modal-trigger:hover { opacity: 0.7; }
+		.modal {
+		    display: none;
+		    position: fixed;
+		    z-index: 1; /* Sit on top */
+		    padding-top: 100px; /* Location of the box */
+		    left: 0;
+		    top: 0;
+		    width: 100%; /* Full width */
+		    height: 100%; /* Full height */
+		    overflow: auto; /* Enable scroll if needed */
+		    background-color: rgb(0,0,0); /* Fallback color */
+		    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+		}
+		.modal-content, .modal-content img {
+		    margin: auto;
+		    display: block;
+		    width: 100%;
+		    max-width: 700px;
+		}
+		.caption-modal {
+		    margin: auto;
+		    display: block;
+		    width: 90%;
+		    max-width: 700px;
+		    text-align: center;
+		    color: #ccc;
+		    padding: 10px 0;
+		    height: 150px;
+		}
+		.modal-content, .modal-content img, .caption-modal {
+		    -webkit-animation-name: zoom;
+		    -webkit-animation-duration: 0.6s;
+		    animation-name: zoom;
+		    animation-duration: 0.6s;
+		}
+		@-webkit-keyframes zoom {
+		    from {-webkit-transform:scale(0)}
+		    to {-webkit-transform:scale(1)}
+		}
+		@keyframes zoom {
+		    from {transform:scale(0)}
+		    to {transform:scale(1)}
+		}
+		.close-modal {
+		    position: absolute;
+		    right: -20px;
+		    top: -20px;
+		    color: white;
+		    font-size: 30px;
+		    font-weight: bold;
+		    transition: 0.3s;
+		}
+		.close-modal:hover,
+		.close-modal:focus {
+		    color: #bbb;
+		    text-decoration: none;
+		    cursor: pointer;
 		}	
 		#system-sections { 
 			margin-top: 20px;
@@ -106,26 +157,76 @@
 				<h1 style="font-size: 50px;">System<br><span>Detection Module</span></h1>
 			</div>	
 			<div class="concept">
-				<p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<p style="text-align: center;">We found out that conformational changes of the dCas9 during protein activation and action are an useful approach to create a detection system. Even though Cas9 system targets DNA we found a PAMmer strategy to detect single stranded RNA, ideally for targeting PCA3 Prostate Cancer biomarker. To create a diagnose system we select a dCas9 chassis and analyzed hotspots, defining a two protein insertion strategy.</p>
 			</div>
 			<div id="advantageous" class="container-fluid">
 			  <div class="row">
 			    <div class="col-sm-5 col-sm-push-7">
 			    	<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" class="img-responsive">
 			    </div>
-			    <div class="col-sm-7 col-sm-pull-5">					  
+			    <div class="col-sm-7 col-sm-pull-5 text-center">					  
 					<h1>Advantageous Detecion</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>The modified Cas9 detection approach has the advantage to be a useful system for detecting nucleic acids due to its versatility. By creating a new sgRNA the system could detect another nucleic acid of interest. We could target RNA based on the PAMmer strategy, where a small DNA fragments complement the single stranded RNA. Finally the system is ideal to set a detection output by reason of the hotspots found in the sequence that could accept protein insertions.</p>
 			    </div>
 			  </div>
 			</div>
+			<!--
+			<figure><img class="modal-trigger img-responsive" alt="Figure 1. TEV activation." src="http://2016.igem.org/wiki/images/c/ca/T--TEC-Costa_Rica--prostal_project_system_response_bg2.png"><figcaption><p style="text-align: center;">Figure 1. TEV activation.</p></figcaption></figure>					
+			<div class="modal">
+				<div class="modal-content">
+					<span class="close-modal">x</span>
+					<img>				      	
+				</div> 
+				<div class="caption-modal"><p style="text-align: center;"></p></div>
+			</div>
+
+			http://2016.igem.org/wiki/images/c/cb/T--TEC-Costa_Rica--prostal_project_system_detection_bg1.png
+
+http://2016.igem.org/wiki/images/6/64/T--TEC-Costa_Rica--prostal_project_system_detection_bg2.png
+
+			http://2016.igem.org/wiki/images/0/0d/T--TEC-Costa_Rica--prostal_project_system_detection_design1.png
+
+			http://2016.igem.org/wiki/images/a/ad/T--TEC-Costa_Rica--prostal_project_system_detection_design2.png
+
+			http://2016.igem.org/wiki/images/2/2b/T--TEC-Costa_Rica--prostal_project_system_detection_design3.png
+			-->
 			<div class="module-sections">
 				<button id="background" class="accordion"><h1>Background</h1></button>
 				<div class="panel">
+					<h2>1. Cas9 conformational changes</h2>
+					<p>We decided to base our detection module in the CRISPR/Cas9 system due to its versatility to detect different targets. The CRISPR system is based on two molecules, one Cas9 protein with nuclease activity and one sgRNA that activates the protein; this sgRNA is the key component also due to that it complements the target thanks to a 20 nucleotide variable region (Sternberg et al, 2015). Our system is adaptable then to target different nucleic acids just designing new sgRNA but using the same Cas9 protein.</p>
+					<br>
+					<p>Noticing this useful system we started to study the Cas9 protein by structure and activity. We focused in how the sgRNA activates the Cas9 and found out that the protein has three states depending on the presence of sgRNA and target. The Cas9 has a defined conformation in an inactive state and it changes its conformation when the sgRNA is bounded due to interaction between the recognition lobe (REC) and the sgRNA; upon activation the nuclease domain HNH moves to cleave the nucleic acid as a final conformational change mencioned Sternberg et al (2015).</p>
+					<br>
+					<p>We thought that the HNH domain could be a potential site to engineer the Cas9 protein. The HNH domain is activated by the sgRNA conformational change and moves along to the target, if the sgRNA and the target are complementary the HNH would cleave; upon HNH activity the RuvC nuclease is activated commented Sternberg et al (2015) . Looking to establish a detection system we selected this conformational change as a profitable approach.</p>
+
+					<h2>2. Adapting dCas9 to RNA</h2>
+					<p>As we needed to detect an RNA biomarker of prostate cancer we next focused on the detection of nucleic acids by the Cas9. To be activated the HNH domain of the Cas9, the protein needs to detect a PAM sequence next to the target sequence but in the opposite strand; the PAM sequence is present only in DNA sequences (O’Connell et al, 2014). In our case the nucleic acid is RNA and it is single stranded.</p>
+					<br>
+					<p>Due to this problem we search for RNA detection mediated by Cas9 and found out that it is possible. There’s an approach to target single stranded RNA using a Streptococcus pyogenes dCas9. To target RNA the dCAs9 needs to recognize the PAM sequence in a DNA strand, a short DNA sequence containing the PAM sequence, called PAMmer, is needed the to target RNA upon hybridisation between the PAMmer and the target argued O’Connell et al (2014).</p>
+					<br>
+					<p>We wanted to design a system that target specific RNA’s of interest, as PCA3 a biomarker for prostate cancer. Considering that the dCas9 needs a PAMmer DNA sequence to target the RNA we started thinking our system as a laboratory test. In this case the PAMmer could be add as a reagent.</p>
+
+					<h2>3. dCas9 insertion hotspots</h2>
+					<p>After selecting the dCas9 as our chassis for the detection and noticing the conformational changes of the protein in the different states; we focused on how to design a synthetic system to generate an output, after targeting the RNA of interest using these conformational changes. Due to the potencial of targeting the genome there’s a lot of research in Cas9 applications. One approach elucidates that the Cas9 protein tolerates protein domain insertions at specific sites of the sequence without affecting the binding nor the activity (Oakes et al, 2016).</p>
+					<br>
+					<p>Thinking of an interesting approach of modifying the detection system and nor the response part we started to look up points of interest for insertions. Cas9 insertion were validated inserting random PDZ, a 86 amino acid domain, into the DNA sequence of the protein using transposons; finding a lot of hotspots in the sequence but specially in six clusters, including the HNH domain defined Oakes et al (2016). As we saw the HNH domain is a key component in the dCas9 activity, so we define this hotspots as a posible insertion site.</p>
+					<br>
+					<p>Inserting various domain into the Cas9 protein it’s possible but it has some considerations. Cas9 or dCAs9 could tolerate multiple domain insertions while retaining its activity; however three or more insertions could lead into a considerable decrease of the activity, in the experiment case repressing GFP expression argued Oakes et al (2016). We decided to use a multiple insertion strategy to create the detection chassis.</p>
+					<a id="back-to-top" href="#background" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
 					<div><a href="#background"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
 				</div>
 				<button id="design" class="accordion"><h1>Design</h1></button>
 				<div class="panel">
+					<p>For the PAMmer design we follow O’Connell et al (2014) findings:</p>
+					<ul>
+						<li><p>PAMmer must be a short deoxyribonucleotide single stranded sequence.</p></li>
+						<li><p>PAMmer need a 19 nucleotide extension downstream the base paring region of the RNA target.</p></li>
+						<li><p>PAMmer should have an 2 to 8 nucleotide extension upstream the NGG to gain binding specificity, however it shouldn’t be to long to avoid losing binding affinity.</p></li>
+						<li><p>PAM region in the PAMmer must not be the same as in the gene to avoid gene silencing.</p></li>
+					</ul>
+					<br>
+					<p>To design the sgRNA we used a two steps strategy to create the sequence. First we searched the sequence for the sgRNA for Streptococcus pyogenes already modified as a chimeric sgRNA just with the variable base-paring region; we used the sequence detailed in Larson et al. (2013). Next we used Deskgen tool to find possible targets sites in the PCA3 variant 2 gene.</p>
 					<div><a href="#design"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
 				</div>		
 				<button id="results" class="accordion"><h1>Results</h1></button>
@@ -134,6 +235,16 @@
 				</div>	
 				<button id="references" class="accordion"><h1>References</h1></button>
 				<div class="panel">
+					<p></p>
+					<p>Larson, M. H., Gilbert, L. A., Wang, X., Lim, W. A., Weissman, J. S., & Qi, L. S. (2013). CRISPR interference (CRISPRi) for sequence-specific control of gene expression. Nature protocols, 8(11), 2180-2196.</p>
+					<br>
+					<p>Oakes, B. L., Nadler, D. C., Flamholz, A., Fellmann, C., Staahl, B. T., Doudna, J. A., & Savage, D. F. (2016). Profiling of engineering hotspots identifies an allosteric CRISPR-Cas9 switch. Nature biotechnology, 34(6), 646-651.</p>
+					<br>
+					<p>O’Connell, M. R., Oakes, B. L., Sternberg, S. H., East-Seletsky, A., Kaplan, M., & Doudna, J. A. (2014). Programmable RNA recognition and cleavage by CRISPR/Cas9. Nature, 516(7530), 263-266.</p>
+					<br>
+					<p>Sternberg, S. H., LaFrance, B., Kaplan, M., & Doudna, J. A. (2015). Conformational control of DNA target cleavage by CRISPR–Cas9. Nature, 527(7576), 110-113.</p>
+					<br>
+					<p>Weber, E., Engler, C., Gruetzner, R., Werner, S., & Marillonnet, S. (2011). A modular cloning system for standardized assembly of multigene constructs. PloS one, 6(2), e16765.</p>
 					<div><a href="#references"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
 				</div>
 			</div>
@@ -167,6 +278,30 @@
 			        this.nextElementSibling.classList.toggle("show");
 			    }
 			}
+
+			var triggers = document.getElementsByClassName('modal-trigger');
+			var modals = document.getElementsByClassName('modal');
+			var closers = document.getElementsByClassName('close-modal');
+			Array.prototype.forEach.call(triggers, function(trigger) {
+			  trigger.addEventListener("click", function() {
+			    var modal = this.parentNode.parentNode.getElementsByClassName("modal")[0];
+			    var modal_content = modal.getElementsByClassName("modal-content")[0];
+			    var img = modal_content.getElementsByTagName("img")[0];
+			    var caption = modal.getElementsByClassName("caption-modal")[0];
+			    var p = caption.getElementsByTagName("p")[0];
+		        img.src = this.src;
+		        p.innerHTML = this.alt;
+		        modal.style.display = "block";
+
+			  })
+			});
+			Array.prototype.forEach.call(closers, function(close) {
+			  close.addEventListener("click", function() {
+			    Array.prototype.forEach.call(modals, function(modal) {
+			      modal.style.display = "none";
+			    });
+			  })
+			});
 		</script>
 	</body>
 </html>

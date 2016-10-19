@@ -19,18 +19,6 @@
 			display: table-cell;
 			vertical-align: middle;
 			background-color: rgba(0, 0, 0, 0.2);
-		}		
-		.jumbotron span { font-size: 40px; }		
-		.parallax {
-			perspective: 1px;
-			overflow-x: hidden;
-			overflow-y: auto;
-		}	
-		.concept {
-			display: block;
-			text-align: center;
-			margin: 10px auto 20px auto;
-			width: 80%
 		}					
 		.structural-modelling img {
 			height: 400px;
@@ -67,33 +55,14 @@
 			text-align: center;
 			list-style: none;
 		}		
-		#mathematical-modelling .container-fluid {
-		    padding: 30px 25px;
-		}
-		#mathematical-modelling .container-fluid .row {
-		    border-top: 1px solid #d3d3d3;
-		}	
-		#mathematical-modelling .container-fluid .row a {
-			color: black;
-		}
-		#mathematical-modelling .container-fluid .row .col-sm-4 {
-			padding: 20px;
-		}
-		#mathematical-modelling .section-image {
-			border-radius: 50%;
+		#mathematical-modelling .container-fluid { padding: 30px 25px; }
+		#mathematical-modelling .container-fluid .row { border-top: 1px solid #d3d3d3; }	
+		#mathematical-modelling .container-fluid .row a { color: black; }
+		#mathematical-modelling .container-fluid .row .col-sm-4 { padding: 20px; }			
+		#mathematical-modelling img {
+			width: 250px;
 			height: 250px;
-			width: 250px;			
-			background-color: #364C5E;
-		}	
-		#mathematical-modelling .section-image img {
-			margin: 0 auto 0 auto;
-			height: 150px;
-			width: 150px;	
-			margin-top: 25px;	
-		}	
-		#mathematical-modelling .image-align {
-			padding-top: 20px; 
-			text-align: center;
+			margin: 0 auto;
 		}	
 		@media (min-width: 768px) {
 			.carousel-caption p {
@@ -206,15 +175,12 @@
 			<conf3.png>
 			Footer: “Third conformation of Cas9 protein, after the binding of the sgRNA and the target DNA.”-->
 			<p>After this was done, the three models were aligned in their PAM Interacting and RuvC domains using the “MatchMaker” structure comparison tool. These domains remain relatively stable through all the conformational change, being the HNH and the REC lobes the one which present a bigger change. In order to see more clearly the behaviour of the protein during its conformational change, the tool “Morph Conformations” was used to create an animated morph of the changing protein. This animation shows that the REC lobe suffers an aggressive reconformation when it interacts with the sgRNA, and is brought together with the HNH domain. This suggests that the HNH and REC zones of the Cas9 protein are good candidates to engineer the protein in order to be able to detect the recognition of the target DNA through conformational change.</p>
-			<div id="mathematical-modelling">
-				<div class="container-fluid slideanim">
+
+			<div id="mathematical-modelling" class="slideanim">
+				<div class="container-fluid">
 				  <div class="row">
 				    <div class="col-sm-4 col-sm-push-8">
-					    <div class="section-image">
-					    	<div class="image-align">
-					    		<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Modelling_Simulations/Mathematical_Modelling"><img src="" class="img-responsive image-link" alt="Mathematical Modelling"></a>	 
-					    	</div>
-					    </div>
+					    <img src="http://2016.igem.org/wiki/images/3/3b/T--TEC-Costa_Rica--prostal_project_mathematical_modelling.png" class="img-responsive image-link" alt="Mathematical Modelling">
 				    </div>
 				    <div class="col-sm-8 col-sm-pull-4">
 					  <h1>Mathematical Modelling</h1>

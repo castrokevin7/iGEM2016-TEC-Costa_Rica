@@ -20,47 +20,18 @@
 			vertical-align: middle;
 			background-color: rgba(0, 0, 0, 0.2);
 		}		
-		.jumbotron span { font-size: 40px; }		
-		.parallax {
-			perspective: 1px;
-			overflow-x: hidden;
-			overflow-y: auto;
-		}	
-		.concept {
-			display: block;
-			text-align: center;
-			margin: 10px auto 20px auto;
-			width: 80%
-		}		
-		.project-modelling_simulations .container-fluid {
-		    padding: 30px 25px;
-		}
-		.project-modelling_simulations .container-fluid .row {
+		#modelling-sections .container-fluid { padding: 30px 25px; }
+		#modelling-sections .container-fluid .row { 
 			padding-bottom: 20px;
 		    border-bottom: 1px solid #d3d3d3;
 		}	
-		.project-modelling_simulations .container-fluid .row a {
-			color: black;
-		}
-		.project-modelling_simulations .container-fluid .row .col-sm-4 {
-			padding: 20px;
-		}
-		.section-image {
-			border-radius: 50%;
+		#modelling-sections .container-fluid .row a { color: black; }
+		#modelling-sections .container-fluid .row .col-sm-4 { padding: 20px; }	
+		#modelling-sections img {
+			width: 250px;
 			height: 250px;
-			width: 250px;			
-			background-color: #364C5E;
+			margin: 0 auto;
 		}	
-		.section-image img {
-			margin: 0 auto 0 auto;
-			height: 150px;
-			width: 150px;	
-			margin-top: 25px;	
-		}	
-		.image-align {
-			padding-top: 20px; 
-			text-align: center;
-		}		
 		#mathematical-modelling .row { border: none; }		
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 		}
@@ -86,57 +57,37 @@
 			<div class="container-fluid">
 				<p>The modelling for the Project was classified into two categories.</p>
 			</div>
-			<div id="structural-modelling" class="container-fluid">
-			  <div class="row">
-			    <div class="col-sm-4">
-				    <div class="section-image">
-				    	<div class="image-align">
-				    		<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Modelling_Simulations/Structural_Modelling"><img src="" class="img-responsive image-link" alt="Structural Modelling"></a>	 
-				    	</div>
+			<div id="modelling-sections">
+				<div id="structural-modelling" class="container-fluid">
+				  <div class="row">
+				    <div class="col-sm-4">
+					    <img src="http://2016.igem.org/wiki/images/d/de/T--TEC-Costa_Rica--prostal_project_structural_modelling.png" class="img-responsive" alt="Structural Modelling">
 				    </div>
-			    </div>
-			    <div class="col-sm-8">
-				  <h1>Structural Modelling</h1>
-			      <p>On the structural modelling area, we worked on the visualization of different Streptococcus pyogenes Cas9 Structures on varying conformations (Sternberg, LaFrance, Kaplan, & Doudna, 2015)...</p>
-			      <br><a class="btn btn-default btn-lg" href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Modelling_Simulations/Structural_Modelling">Read More</a>
-			    </div>
-			  </div>
-			</div>
+				    <div class="col-sm-8">
+					  <h1>Structural Modelling</h1>
+				      <p>On the structural modelling area, we worked on the visualization of different Streptococcus pyogenes Cas9 Structures on varying conformations (Sternberg, LaFrance, Kaplan, & Doudna, 2015)...</p>
+				      <br><a class="btn btn-default btn-lg" href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Modelling_Simulations/Structural_Modelling">Read More</a>
+				    </div>
+				  </div>
+				</div>
 
-			<div id="mathematical-modelling" class="container-fluid slideanim">
-			  <div class="row">
-			    <div class="col-sm-4 col-sm-push-8">
-				    <div class="section-image">
-				    	<div class="image-align">
-				    		<a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Modelling_Simulations/Mathematical_Modelling"><img src="" class="img-responsive image-link" alt="Mathematical Modelling"></a>	 
-				    	</div>
+				<div id="mathematical-modelling" class="container-fluid slideanim">
+				  <div class="row">
+				    <div class="col-sm-4 col-sm-push-8">
+					    <img src="http://2016.igem.org/wiki/images/3/3b/T--TEC-Costa_Rica--prostal_project_mathematical_modelling.png" class="img-responsive" alt="Mathematical Modelling">
 				    </div>
-			    </div>
-			    <div class="col-sm-8 col-sm-pull-4">
-				  <h1>Mathematical Modelling</h1>
-			      <p>Our mathematical model was based on Boolean logic gates, because we want a signal response only if all our inputs are present, and an analogical output is not our main focus...</p>
-			      <br><a class="btn btn-default btn-lg" href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Modelling_Simulations/Mathematical_Modelling">Read More</a>
-			    </div>
-			  </div>
+				    <div class="col-sm-8 col-sm-pull-4">
+					  <h1>Mathematical Modelling</h1>
+				      <p>Our mathematical model was based on Boolean logic gates, because we want a signal response only if all our inputs are present, and an analogical output is not our main focus...</p>
+				      <br><a class="btn btn-default btn-lg" href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/Modelling_Simulations/Mathematical_Modelling">Read More</a>
+				    </div>
+				  </div>				
+				</div>
 			</div>	
 		</main>
 		<script type="text/javascript">
 			var nav = document.getElementById('nav-project');
 			nav.className += " active";
-
-			var elements = document.getElementsByClassName('image-link');
-			Array.prototype.forEach.call(elements, function(element) {
-				element.addEventListener("mouseover", function() {
-					this.style.height = "175px"; 
-					this.style.width = "175px"; 
-					this.style.marginTop = "10px";
-				});
-				element.addEventListener("mouseout", function() {
-					this.style.height = "150px"; 
-					this.style.width = "150px"; 
-					this.style.marginTop = "25px";
-				});	
-			});
 		</script>
 	</body>
 </html>

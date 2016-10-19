@@ -20,18 +20,6 @@
 			vertical-align: middle;
 			background-color: rgba(0, 0, 0, 0.2);
 		}	
-		.jumbotron span { font-size: 40px; }		
-		.parallax {
-			perspective: 1px;
-			overflow-x: hidden;
-			overflow-y: auto;
-		}
-		.concept {
-			display: block;
-			text-align: center;
-			margin: 10px auto 0 auto;
-			width: 80%
-		}
 		#advantageous { margin-bottom: 15px; }
 		#advantageous .container-fluid { padding: 30px 25px; }
 		#module-sections { margin-bottom: 15px; }
@@ -48,7 +36,7 @@
 		    text-align: center;
 		    margin-bottom: 1px;
 		}
-		button.accordion:hover {
+		button.accordion:hover, button.active {
 		    background-color: #ccc;
 		}
 		div.panel {
@@ -61,6 +49,69 @@
 		.accordion h1 {
 			margin: 0;
 			padding: 0;
+		}
+		.modal-trigger {
+		    cursor: pointer;
+		    transition: 0.3s;
+		}
+		.modal-trigger:hover { opacity: 0.7; }
+		.modal {
+		    display: none;
+		    position: fixed;
+		    z-index: 1; /* Sit on top */
+		    padding-top: 100px; /* Location of the box */
+		    left: 0;
+		    top: 0;
+		    width: 100%; /* Full width */
+		    height: 100%; /* Full height */
+		    overflow: auto; /* Enable scroll if needed */
+		    background-color: rgb(0,0,0); /* Fallback color */
+		    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+		}
+		.modal-content, .modal-content img {
+		    margin: auto;
+		    display: block;
+		    width: 100%;
+		    max-width: 700px;
+		}
+		.caption-modal {
+		    margin: auto;
+		    display: block;
+		    width: 90%;
+		    max-width: 700px;
+		    text-align: center;
+		    color: #ccc;
+		    padding: 10px 0;
+		    height: 150px;
+		}
+		.modal-content, .modal-content img, .caption-modal {
+		    -webkit-animation-name: zoom;
+		    -webkit-animation-duration: 0.6s;
+		    animation-name: zoom;
+		    animation-duration: 0.6s;
+		}
+		@-webkit-keyframes zoom {
+		    from {-webkit-transform:scale(0)}
+		    to {-webkit-transform:scale(1)}
+		}
+		@keyframes zoom {
+		    from {transform:scale(0)}
+		    to {transform:scale(1)}
+		}
+		.close-modal {
+		    position: absolute;
+		    right: -20px;
+		    top: -20px;
+		    color: white;
+		    font-size: 30px;
+		    font-weight: bold;
+		    transition: 0.3s;
+		}
+		.close-modal:hover,
+		.close-modal:focus {
+		    color: #bbb;
+		    text-decoration: none;
+		    cursor: pointer;
 		}
 		#system-sections {
 			margin-top: 20px;
@@ -105,6 +156,7 @@
 			<div class="jumbotron text-center parallax">	  
 				<h1 style="font-size: 50px;">System<br><span>Response Module</span></h1>
 			</div>	
+			<!--http://2016.igem.org/wiki/images/d/d4/T--TEC-Costa_Rica--prostal_project_system_response_bg1.png-->
 			<div class="concept">
 				<p style="text-align: center;">Our response system is based on a fluorescence emission signal and uses the fusion protein GFP-Dark Quencher linked together by a TEV cleavage site, as the key component of the module. We characterized an intein mediated reconstitution of the Split TEV as the system’s input; when the association by the intein mechanism occurs, the two split TEV bind together into a functional TEV protease. This active protease is then capable of triggering our response module by catalyzing the proteolytic cleavage of the GFP-Dark Quencher linker, leading to an increase in fluorescence emission. With this system, we established a new intein-split TEV tool approach.</p>
 			</div>
@@ -113,7 +165,7 @@
 			    <div class="col-sm-5 col-sm-push-7">
 			    	<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" class="img-responsive">
 			    </div>
-			    <div class="col-sm-7 col-sm-pull-5">					  
+			    <div class="col-sm-7 col-sm-pull-5 text-center">					  
 					<h1>Advantageous Response</h1>
 					<p>Our response module is mediated by the enzymatic reaction of the reconstituted split TEV. One single detection event will guarantee one functional TEV, which could target multiple linker sites. This key feature based on the reconstitution of split TEV assures the amplification of the response making it easy to be detected and quantified. This response module and the split TEV approach are ideal to set a detection threshold.</p>
 			    </div>
@@ -125,7 +177,23 @@
 					<h2>1. TEV Activation</h2>
 					<p>We based our response system’s strategy on a split TEV approach, where the TEV sequence was separated into two fragments, which can be fused together by a reaction. The original TEV sequence has a S219V mutation to reduce its autoproteolysis and the integration position picked out to generate the split fragments was the amino acid 118, a functional split site already described (Sonntag & Nootz, 2011). This split TEV is already part of the iGEM repertory and based on the principle that there is no basal activity of the protease, we selected it as our response system's trigger.</p>
 					<br>
-					<p>Nevertheless, a second regulated reaction needs to take place to activate the TEV protease. Sonntag and Nootz (2011) mention that reconstitution of the TEV activity by a conditional protein splicing, as mediated by inteins, is a powerful tool due to its high specific activity and artificial regulation within the cell. We consider protein splicing by inteins the proper strategy to regulate the reconstitution of the split TEV in a post-translational reaction, specified in figure_.</p>
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="col-inner">
+								<p>Nevertheless, a second regulated reaction needs to take place to activate the TEV protease. Sonntag and Nootz (2011) mention that reconstitution of the TEV activity by a conditional protein splicing, as mediated by inteins, is a powerful tool due to its high specific activity and artificial regulation within the cell. We consider protein splicing by inteins the proper strategy to regulate the reconstitution of the split TEV in a post-translational reaction, specified in Figure 1.</p>		
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<figure><img class="modal-trigger img-responsive" alt="Figure 1. TEV activation." src="http://2016.igem.org/wiki/images/c/ca/T--TEC-Costa_Rica--prostal_project_system_response_bg2.png"><figcaption><p style="text-align: center;">Figure 1. TEV activation.</p></figcaption></figure>					
+							<div class="modal">
+								<div class="modal-content">
+									<span class="close-modal">x</span>
+									<img>				      	
+								</div> 
+								<div class="caption-modal"><p style="text-align: center;"></p></div>
+							</div>
+						</div>
+					</div>					
 					<br>
 					<p>The intein mechanism provide the reconstitution of the TEV mediated by a post translational reaction, where the two split inteins must find each other to start the reaction. Protein trans-splicing consist in the reaction of two split inteins fragments expressed separately; however when they find each other they make a four-step reaction to fuse the exteins components and reconstituted the intein at the same time (Topilina & Mills, 2014; Stevens et al., 2015). We decided to use this approach due to the fact that the reaction of the inteins will we limited by the release of one intein fragment associated to a split TEV from the dCas9 chassis, nonetheless the intein will ensure the reaction upon release.</p>
 					<br>
@@ -140,6 +208,14 @@
 					<p>We decided to fuse our donor chromophore (GFP) with our acceptor molecule (REACh) by a recognition peptide for TEV protease. Ganesan et.al (2006) tested this linker sequence and proved that FRET is lost upon cleavage of the linker. When the linker is cut, GFP is separated from REACh and this increase in distance prevents REACh from interacting with GFP, which results in fluoresce emission.</p>
 					<br>
 					<p>As we previously explained, in our system, after the Split-TEV is released from the dCas9, an intein reaction occurs that enables the reconstitution of an active TEV. Once this protease is activated, it is able to cleavage the GFP-REACh linker, resulting in a strong GFP fluorescence emission. This fluorescence emission is the final response of our system and it indicates the detection of a highly specific DNA or RNA molecule; in our case, the presence of prostate cancer.</p>
+					<figure><img class="modal-trigger img-responsive" alt="Figure 2. TEV mediated fluorescence response>" src="http://2016.igem.org/wiki/images/2/24/T--TEC-Costa_Rica--prostal_project_system_response_bg3.png"><figcaption><p style="text-align: center;">Figure 2. TEV mediated fluorescence response>.</p></figcaption></figure>					
+					<div class="modal">
+						<div class="modal-content">
+							<span class="close-modal">x</span>
+							<img>				      	
+						</div> 
+						<div class="caption-modal"><p style="text-align: center;"></p></div>
+					</div>
 					<div><a href="#background"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
 				</div>
 				<button id="design" class="accordion"><h1>Design</h1></button>
@@ -205,6 +281,30 @@
 			        this.nextElementSibling.classList.toggle("show");
 			    }
 			}
+
+			var triggers = document.getElementsByClassName('modal-trigger');
+			var modals = document.getElementsByClassName('modal');
+			var closers = document.getElementsByClassName('close-modal');
+			Array.prototype.forEach.call(triggers, function(trigger) {
+			  trigger.addEventListener("click", function() {
+			    var modal = this.parentNode.parentNode.getElementsByClassName("modal")[0];
+			    var modal_content = modal.getElementsByClassName("modal-content")[0];
+			    var img = modal_content.getElementsByTagName("img")[0];
+			    var caption = modal.getElementsByClassName("caption-modal")[0];
+			    var p = caption.getElementsByTagName("p")[0];
+		        img.src = this.src;
+		        p.innerHTML = this.alt;
+		        modal.style.display = "block";
+
+			  })
+			});
+			Array.prototype.forEach.call(closers, function(close) {
+			  close.addEventListener("click", function() {
+			    Array.prototype.forEach.call(modals, function(modal) {
+			      modal.style.display = "none";
+			    });
+			  })
+			});
 		</script>
 	</body>
 </html>
