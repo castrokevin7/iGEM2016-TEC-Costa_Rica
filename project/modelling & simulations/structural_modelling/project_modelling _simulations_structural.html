@@ -5,7 +5,7 @@
 		.jumbotron {
 			height: 350px;
 			width: 100%;
-			margin-bottom: 0;
+			margin: 0;
 			padding: 0;
 			display: table;
 			color: white;
@@ -21,8 +21,7 @@
 			background-color: rgba(0, 0, 0, 0.75)
 		}					
 		.structural-modelling img {
-			height: 400px;
-			width: 400px;
+			margin: 0 auto;
 		}
 		#myCarousel p {
 			text-align: center;
@@ -60,11 +59,7 @@
 		#mathematical-modelling .container-fluid .row { border-top: 1px solid #d3d3d3; }	
 		#mathematical-modelling .container-fluid .row a { color: black; }
 		#mathematical-modelling .container-fluid .row .col-sm-4 { padding: 20px; }			
-		#mathematical-modelling img {
-			width: 250px;
-			height: 250px;
-			margin: 0 auto;
-		}	
+		#mathematical-modelling img { margin: 0 auto; }	
 		@media (min-width: 768px) {
 			.carousel-caption p {
 				margin-bottom: 20px;
@@ -91,11 +86,11 @@
 			<div class="concept">
 				<p style="text-align: center;">On the structural modelling area, we worked on the visualization of different Streptococcus pyogenes Cas9 Structures on varying conformations (Sternberg, LaFrance, Kaplan, & Doudna, 2015). We selected the PDB files 4cmp (Cas9), 4zt0 (Cas9+sgRNA) and 4un3 (Cas9+sgRNA+tDNA) as described on the article and visualized the structures using the molecular modelling package Chimera, by the University of California in San Francisco Resource for Biocomputing, Visualization, and Informatics.</p>
 			</div>
-			<!--
+			<br>
 			<figure>
-			<img alt="View of the PDB file 4un3 as seen when fetched from the database" src="http://2016.igem.org/wiki/images/0/01/T--TEC-Costa_Rica--prostal_project_4un3.png">
-				<figcaption><p>View of the PDB file 4un3 as seen when fetched from the database</p></figcaption>
-			</figure>-->
+			<img class="img-responsive" alt="View of the PDB file 4un3 as seen when fetched from the database" src="http://2016.igem.org/wiki/images/0/01/T--TEC-Costa_Rica--prostal_project_4un3.png">
+				<figcaption><p style="text-align: center;">View of the PDB file 4un3 as seen when fetched from the database</p></figcaption>
+			</figure>
 			<div id="coloring" class="container-fluid">
 				<p>The first thing we did, was to color the domains of the Cas9 protein, using as reference the information in the Uniprot accession Q99ZW2. The domains were colored in all the three conformations of the Cas9.</p>
 				<div class="container">
@@ -120,7 +115,7 @@
 						      </ol>
 						      <div class="carousel-inner" role="listbox">
 						        <div class="item active">
-						          <img class="first-slide" alt="PDB file 4cmp, Cas9 colored by domains" src="http://2016.igem.org/wiki/images/3/37/T--TEC-Costa_Rica--prostal_project_cas9.png">
+						          <img class="first-slide img-responsive" alt="PDB file 4cmp, Cas9 colored by domains" src="http://2016.igem.org/wiki/images/3/37/T--TEC-Costa_Rica--prostal_project_cas9.png">
 						          <div class="container">
 						            <div class="carousel-caption">
 						              <h1>PDB file 4cmp, Cas9 colored by domains</h1>
@@ -128,7 +123,7 @@
 						          </div>
 						        </div>
 						        <div class="item">
-						          <img class="second-slide" alt="PDB file 4zt0, Cas9 + sgRNA" src="http://2016.igem.org/wiki/images/b/b2/T--TEC-Costa_Rica--prostal_project_cas9_sgRNA.png">
+						          <img class="second-slide img-responsive" alt="PDB file 4zt0, Cas9 + sgRNA" src="http://2016.igem.org/wiki/images/b/b2/T--TEC-Costa_Rica--prostal_project_cas9_sgRNA.png">
 						          <div class="container">
 						            <div class="carousel-caption">
 						              <h1>PDB file 4zt0, Cas9 + sgRNA</h1>
@@ -136,7 +131,7 @@
 						          </div>
 						        </div>
 						        <div class="item">
-						          <img class="third-slide" alt="PDB file 4un3, Cas9 + sgRNA + DNA" src="http://2016.igem.org/wiki/images/d/d3/T--TEC-Costa_Rica--prostal_project_cas9_sgRNA_DNA.png">
+						          <img class="third-slide img-responsive" alt="PDB file 4un3, Cas9 + sgRNA + DNA" src="http://2016.igem.org/wiki/images/d/d3/T--TEC-Costa_Rica--prostal_project_cas9_sgRNA_DNA.png">
 						          <div class="container">
 						            <div class="carousel-caption">
 						              <h1>PDB file 4un3, Cas9 + sgRNA + DNA</h1>
@@ -159,16 +154,64 @@
 			</div>
 			<div id="align" class="container-fluid">
 				<p>In order to be able to align the models, we had to have the same number of chains in each model, so we removed the sgRNA and the DNA from 4zt0 and 4un3, and were left with these models:</p>
-				<!--
-				<conf1.png>
-				Footer: “First conformation of Cas9 protein, no sgRNA or DNA attached.”
-
-				<conf2.png>
-				Footer: “Second conformation of Cas9, after the binding of the sgRNA.”
-
-				<conf3.png>
-				Footer: “Third conformation of Cas9 protein, after the binding of the sgRNA and the target DNA.”-->
-				<p>After this was done, the three models were aligned in their PAM Interacting and RuvC domains using the “MatchMaker” structure comparison tool. These domains remain relatively stable through all the conformational change, being the HNH and the REC lobes the one which present a bigger change. In order to see more clearly the behaviour of the protein during its conformational change, the tool “Morph Conformations” was used to create an animated morph of the changing protein. This animation shows that the REC lobe suffers an aggressive reconformation when it interacts with the sgRNA, and is brought together with the HNH domain. This suggests that the HNH and REC zones of the Cas9 protein are good candidates to engineer the protein in order to be able to detect the recognition of the target DNA through conformational change.</p>				
+				<div class="row">
+					<div class="col-sm-4">
+						<figure><img class="img-responsive" alt="First conformation of Cas9 protein, no sgRNA or DNA attached." src="http://2016.igem.org/wiki/images/2/25/T--TEC-Costa_Rica--prostal_conf1.png">
+							<figcaption><p style="text-align: center;">First conformation of Cas9 protein, no sgRNA or DNA attached.</p></figcaption>
+						</figure>
+					</div>
+					<div class="col-sm-4">
+						<figure><img class="img-responsive" alt="Second conformation of Cas9, after the binding of the sgRNA." src="http://2016.igem.org/wiki/images/b/be/T--TEC-Costa_Rica--prostal_conf2.png">
+							<figcaption><p style="text-align: center;">Second conformation of Cas9, after the binding of the sgRNA.</p></figcaption>
+						</figure>
+					</div>
+					<div class="col-sm-4">
+						<figure><img class="img-responsive" alt="Third conformation of Cas9 protein, after the binding of the sgRNA and the target DNA." src="http://2016.igem.org/wiki/images/0/03/T--TEC-Costa_Rica--prostal_conf3.png">
+							<figcaption><p style="text-align: center;">Third conformation of Cas9 protein, after the binding of the sgRNA and the target DNA.</p></figcaption>
+						</figure>
+					</div>
+				</div>
+				<br>
+				<p>After this was done, the three models were aligned in their PAM Interacting and RuvC domains using the “MatchMaker” structure comparison tool. These domains remain relatively stable through all the conformational change, being the HNH and the REC lobes the one which present a bigger change. In order to see more clearly the behaviour of the protein during its conformational change, the tool “Morph Conformations” was used to create an animated morph of the changing protein. This animation shows that the REC lobe suffers an aggressive reconformation when it interacts with the sgRNA, and is brought together with the HNH domain. This suggests that the HNH and REC zones of the Cas9 protein are good candidates to engineer the protein in order to be able to detect the recognition of the target DNA through conformational change.</p>	
+				<br>
+				<p>The sites for the engineering of the protein were selected based on the article by Oakes, et. al., (2016). The article showed the sites throughout the protein that can tolerate insertions without affecting the functionality of the protein. We made a screening of the hotspots in the REC lobe and the HNH domain and highlighted them in Chimera. Then, using the conformation we made, and the Distance tool, we selected the pairs of sites that were far in the first conformation and came together as the sgRNA and the target binded to the dCas9.</p>
+				<br>
+				<p>We found two pairs of sites that conformed to the specifications: L390 & E802, and N588 & N888. The first pair of sites has a big distance in the first conformation: 55Å (Figure 8). After that sgRNA and the target bind to the Cas9, this distance reduces to 17Å (Figure 9).</p>
+				<br>
+				<div class="row">
+					<div class="col-sm-6">
+						<figure><img class="img-responsive" alt="Figure 8. L390 and E802 on the first conformation." src="http://2016.igem.org/wiki/images/0/01/T--TEC-Costa_Rica--prostal_project_4un3.png">
+							<figcaption><p style="text-align: center;">Figure 8. L390 and E802 on the first conformation.</p></figcaption>
+						</figure>
+					</div>
+					<div class="col-sm-6">
+						<figure><img class="img-responsive" alt="Figure 9. L390 and E802 after the conformational change." src="http://2016.igem.org/wiki/images/0/01/T--TEC-Costa_Rica--prostal_project_4un3.png">
+							<figcaption><p style="text-align: center;">Figure 9. L390 and E802 after the conformational change.</p></figcaption>
+						</figure>
+					</div>
+				</div>
+				<br>
+				<p>The second pair, N588 and N888 also comes together as an effect of the conformational change, but the pair comes close with only adding the sgRNA, so the change is not specific to the target. When the Cas is not bound, the distance is of 95Å (Figure 10), then drops to 16Å (Figure 11) after the binding of the sgRNA and lastly increases to 17Å after the binding of the target (Figure 12).</p>
+				<br>
+				<div class="row">
+					<div class="col-sm-4">
+						<figure><img class="img-responsive" alt="Figure 10. First conformation of N588 and N888." src="http://2016.igem.org/wiki/images/9/9a/T--TEC-Costa_Rica--prostal_588-888_1.png">
+							<figcaption><p style="text-align: center;">Figure 10. First conformation of N588 and N888.</p></figcaption>
+						</figure>
+					</div>
+					<div class="col-sm-4">
+						<figure><img class="img-responsive" alt="Figure 11. Second conformation." src="http://2016.igem.org/wiki/images/5/5e/T--TEC-Costa_Rica--prostal_588-888_2.png">
+							<figcaption><p style="text-align: center;">Figure 11. Second conformation.</p></figcaption>
+						</figure>
+					</div>
+					<div class="col-sm-4">
+						<figure><img class="img-responsive" alt="Figure 12. Last conformation of N588 and N888." src="http://2016.igem.org/wiki/images/3/32/T--TEC-Costa_Rica--prostal_588-888.png">
+							<figcaption><p style="text-align: center;">Figure 12. Last conformation of N588 and N888.</p></figcaption>
+						</figure>
+					</div>
+					<br>
+				</div>
+				<p>These two pairs of sites are the ones we used for the design of our modular dCas9. We are using both pairs as a way to prove that conformational change can be used as a method of detection</p>
 			</div>
 
 			<div id="mathematical-modelling" class="slideanim">
