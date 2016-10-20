@@ -19,30 +19,14 @@
 			display: table-cell;
 			vertical-align: middle;
 			background-color: rgba(0, 0, 0, 0.2);
-		}		
-		.jumbotron span { font-size: 40px; }		
-		.parallax {
-			perspective: 1px;
-			overflow-x: hidden;
-			overflow-y: auto;
-		}	
-		.concept {
-			display: block;
-			text-align: center;
-			margin: 10px auto 0 auto;
-			width: 80%
 		}
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-			.jumbotron { background-attachment: scroll; }
 		}
 		@media screen and (max-width: 1280px) {
 		}
 		@media screen and (max-width: 980px) {
-			.jumbotron { background-attachment: scroll; }
 		}
 		@media screen and (max-width: 736px) {
-			.jumbotron h1 { font-size: 2.5em; }
-			.jumbotron p { font-size: .9em; }
 		}
 		@media screen and (max-width: 480px) {
 		}				
@@ -53,15 +37,87 @@
 				<h1 style="font-size: 50px;">Project<br><span>Parts</span></h1>
 			</div>
 			<div class="concept">
-				<p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<p style="text-align: center;">Our project is based on a mutated Cas9 engineered to generate a response mediated by an intein signalling. We designed two versions of the dCas9, each one with a set of hotspots that enable the insertion of our intein system or any other protein of interest.</p>
 			</div>	
+			<div id="parts" class="container-fluid">
+				<h2>BBa_K1903001: dCas9 A</h2>
+				<p>This dCas9 includes a Double Terminator and has two protein insertion frames in the amino acids L390 and E802. With structural modeling we found that this two hotspots come close when the dCas9 binds to the target molecule, which could trigger a reaction between the proteins inserted in the sites. This part is designed to be assembled with the protein insertions by a Golden Gate reaction with BbsI.</p>
+				<a href="http://parts.igem.org/Part:BBa_K1903001" class="btn btn-info" target="_blank"><p>Parts Registry</p></a>
+
+				<h2>BBa_K1903002: dCas9 B</h2>
+				<p>This dCas9 includes a Double Terminator and has two protein insertion frames in the amino acids N588 and N888. With structural modeling we found that this two hotspots come close when the dCas9 binds to the target molecule, which could trigger a reaction between the proteins inserted in the sites. This part is designed to be assembled with the protein insertions by a Golden Gate reaction with BbsI.</p>
+				<a href="http://parts.igem.org/Part:BBa_K1903002" class="btn btn-info" target="_blank"><p>Parts Registry</p></a>
+
+				<h2>BBa_K1903003: Golden Gate Adapter</h2>
+				<p>This parts is composed of a random sequence of 100 base pairs follow upstream and downstream by a BsaI restriction site. The fusion sites for both ends are part of the standard prefix and the suffix. We added a random sequence into the BsaI cut sites to make a sequence easy to detect after a PCR reaction and leading BsaI enzyme digestion.</p>
+				<a href="http://parts.igem.org/Part:BBa_K1903003" class="btn btn-info" target="_blank"><p>Parts Registry</p></a>
+
+				<h2>BBa_K1903004: GFP-TEVlinker-Quencher</h2>
+				<p>This is a FRET system to quenched the GFP E0040 using a Dark quencher REACH1 as an acceptor. The GFP and the Dark Quencher The GFP and the Dark Quencher are linked by a TEV cleavage site.</p>
+				<a href="http://parts.igem.org/Part:BBa_K1903004" class="btn btn-info" target="_blank"><p>Parts Registry</p></a>
+
+				<h2>BBa_K1903005: SplitTEV-IntN DnaE</h2>
+				<p>This parts is composed of a split TEV N terminal and the split intein N terminal from Npu DnaE fused together. These protein are expressed together and will separate from each other in the presence of the other split Intein C from Npu DnaE.</p>
+				<a href="http://parts.igem.org/Part:BBa_K1903005" class="btn btn-info" target="_blank"><p>Parts Registry</p></a>
+
+				<h2>BBa_K1903006: SplitTEV-IntN DnaE Device</h2>
+				<p>This part is a device created with the split TEV N terminal-Intein N terminal DnaE fused to the Lacl regulated promoter assembled with the RBS Elowitz.</p>
+				<a href="http://parts.igem.org/Part:BBa_K1903006" class="btn btn-info" target="_blank"><p>Parts Registry</p></a>
+
+				<h2>BBa_K1903007: SplitTEV-IntC DnaE</h2>
+				<p>This part is composed of a split Intein C terminal from Npu DnaE and the split TEV C terminal. These protein are expressed together and will separate from each other in the presence of the other split Intein N from Npu DnaE.</p>
+				<a href="http://parts.igem.org/Part:BBa_K1903007" class="btn btn-info" target="_blank"><p>Parts Registry</p></a>
+
+				<h2>BBa_K1903008: SplitTEV-IntC DnaE Device</h2>
+				<p>This part is a device created with the split Intein C terminal from Npu DnaE and the split TEV C terminal, fused to the Anderson promoter assembled with the RBS Elowitz.</p>
+				<a href="http://parts.igem.org/Part:BBa_K1903008" class="btn btn-info" target="_blank"><p>Parts Registry</p></a>
+
+				<h2>BBa_K1903009: RFP-IntN DnaB</h2>
+				<p>This part is based on a RFP fused to the Intein N terminal from SSp DnaB expressed as a fusion protein.</p>
+				<a href="http://parts.igem.org/Part:BBa_K1903009" class="btn btn-info" target="_blank"><p>Parts Registry</p></a>
+
+				<h2>BBa_K1903010: RFP-IntN DnaB Device</h2>
+				<p>This device is based on the RFP - Intein N DnaB linked to a Lacl regulated promoter assembled with the RBS Elowitz.</p>
+				<a href="http://parts.igem.org/Part:BBa_K1903010" class="btn btn-info" target="_blank"><p>Parts Registry</p></a>
+
+				<h2>BBa_K1903011: IntC DnaB</h2>
+				<p>For this part the added the Intein terminal C Ssp DnaB to a Double terminator This Intein C DnaB recognizes the Intein N DnaB as a cleavage site. This part was based on the BioBrick Intein protease BBa_K1362251.</p>
+				<a href="http://parts.igem.org/Part:BBa_K1903011" class="btn btn-info" target="_blank"><p>Parts Registry</p></a>
+				
+				<h2>BBa_K1903012: IntC DnaB Device</h2>
+				<p>This part is composed by the 11 amino acids from the SSp DnaB Intein N and 5 amino acids from the original Extein. Intein terminal C Ssp DnaB was fused to an Anderson promoter assembled to a RBS Elowitz.</p>
+				<a href="http://parts.igem.org/Part:BBa_K1903012" class="btn btn-info" target="_blank"><p>Parts Registry</p></a>
+
+				<h2>BBa_K1903013: SplitTEV-IntN DnaE Device + SplitTEV-IntC DnaE Device</h2>
+				<p>For this BioBrick we fused two devices BBa_K1903006 and BBa_K1903008. This is a system that will react Inteins from DnaE to trigger the reconstitution of the TEV, under the presence of IPTG to induce the BBa_K1903006 BioBrick.</p>
+				<a href="http://parts.igem.org/Part:BBa_K1903013" class="btn btn-info" target="_blank"><p>Parts Registry</p></a>
+
+				<h2>BBa_K1903014: RFP-IntN DnaB Device + IntC DnaB Device</h2>
+				<p>For this BioBrick we fused two devices BBa_K1903010 and BBa_K1903012. This is a system that will react Inteins from DnaB to trigger Intein protease action, under the presence of IPTG to induce the BBa_K1903010 BioBrick.</p>
+				<a href="http://parts.igem.org/Part:BBa_K1903014" class="btn btn-info" target="_blank"><p>Parts Registry</p></a>
+
+				<h2>BBa_K1903015: GFP-linker-Quencher Device</h2>
+				<p>This is a device created with the BioBricks GFP-TEVLinker-DarkQuencher and the Anderson promoter fused to a RBS Elowitz BBa_B0034.</p>
+				<a href="http://parts.igem.org/Part:BBa_K1903015" class="btn btn-info" target="_blank"><p>Parts Registry</p></a>
+
+				<h2>BBa_K1903020: Insertion 1 for dCas9 version A</h2>
+				<p>This part is a protein insertion design to be assembled in dCas9 version A's L390 amino acid hotspot by a Golden Gate reaction. The part is flanked by two BbsI recognition sites and it has the fusion sites ACTA and TTAC at the start and end of the sequence.</p>
+				<a href="http://parts.igem.org/Part:BBa_K1903020" class="btn btn-info" target="_blank"><p>Parts Registry</p></a>
+
+				<h2>BBa_K1903021: Insertion 2 for dCas9 version A</h2>
+				<p>This part is a protein insertion design to be assembled in dCas9 version A's E802 amino acid hotspot by a Golden Gate reaction. The part is flanked by two BbsI recognition sites and it has the fusion sites GAGC and TGCC at the start and end of the sequence.</p>
+				<a href="http://parts.igem.org/Part:BBa_K1903021" class="btn btn-info" target="_blank"><p>Parts Registry</p></a>
+
+				<h2>BBa_K1903022: Insertion 1 for dCas9 version B</h2>
+				<p>This part is a protein insertion design to be assembled in dCas9 version A's N588 amino acid hotspot by a Golden Gate reaction. The part is flanked by two BbsI recognition sites and it has the fusion sites GGAG and GCTT at the start and end of the sequence.</p>
+				<a href="http://parts.igem.org/Part:BBa_K1903022" class="btn btn-info" target="_blank"><p>Parts Registry</p></a>
+
+				<h2>BBa_K1903023: Insertion 2 for dCas9 version B</h2>
+				<p>This part is a protein insertion design to be assembled in dCas9 version A's N888 amino acid hotspot by a Golden Gate reaction. The part is flanked by two BbsI recognition sites and it has the fusion sites AATG and TACT at the start and end of the sequence.</p>
+				<a href="http://parts.igem.org/Part:BBa_K1903023" class="btn btn-info" target="_blank"><p>Parts Registry</p></a>
+			</div>
 		</main>
 		<script type="text/javascript">
-			var navs = document.getElementsByClassName('dropdown');
-			Array.prototype.forEach.call(navs, function(nav) {
-				navs.className = "";
-				navs.className = "dropdown";
-			});
 			var nav = document.getElementById('nav-project');
 			nav.className += " active";
 		</script>	

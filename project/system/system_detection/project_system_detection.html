@@ -22,6 +22,7 @@
 		}		
 		#advantageous { margin-bottom: 15px; }
 		#advantageous .container-fluid { padding: 30px 25px; }
+		#advantageous .col-sm-7 { padding-top: 40px;  }
 		#module-sections { margin-bottom: 15px; }
 		button.accordion {
 		    background-color: #eee;
@@ -36,9 +37,7 @@
 		    text-align: center;
 		    margin-bottom: 1px;
 		}
-		button.accordion:hover, button.active {
-		    background-color: #ccc;
-		}
+		button.accordion:hover, button.active { background-color: #ccc; }
 		div.panel {
 			padding: 5px 50px;
 			display: none;
@@ -71,8 +70,7 @@
 		.modal-content, .modal-content img {
 		    margin: auto;
 		    display: block;
-		    width: 100%;
-		    max-width: 700px;
+		    width: 90%;
 		}
 		.caption-modal {
 		    margin: auto;
@@ -157,67 +155,127 @@
 				<h1 style="font-size: 50px;">System<br><span>Detection Module</span></h1>
 			</div>	
 			<div class="concept">
-				<p style="text-align: center;">We found out that conformational changes of the dCas9 during protein activation and action are an useful approach to create a detection system. Even though Cas9 system targets DNA we found a PAMmer strategy to detect single stranded RNA, ideally for targeting PCA3 Prostate Cancer biomarker. To create a diagnose system we select a dCas9 chassis and analyzed hotspots, defining a two protein insertion strategy.</p>
+				<p style="text-align: center;">We found out that conformational changes of the dCas9 during protein activation and action are an useful approach to create a detection system. Even though Cas9 naturally targets only DNA molecules, we found a PAMmer strategy to detect single stranded RNA, ideal for targeting PCA3 Prostate Cancer biomarker. To create a diagnose system we select a dCas9 chassis and analyzed hotspots, defining a two protein insertion strategy.</p>
 			</div>
 			<div id="advantageous" class="container-fluid">
 			  <div class="row">
 			    <div class="col-sm-5 col-sm-push-7">
-			    	<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" class="img-responsive">
+			    	<img src="http://2016.igem.org/wiki/images/1/19/T--TEC-Costa_Rica--prostal_project_system_response_detection.png" class="img-responsive" alt="Advantageous Detection">
 			    </div>
 			    <div class="col-sm-7 col-sm-pull-5 text-center">					  
-					<h1>Advantageous Detecion</h1>
-					<p>The modified Cas9 detection approach has the advantage to be a useful system for detecting nucleic acids due to its versatility. By creating a new sgRNA the system could detect another nucleic acid of interest. We could target RNA based on the PAMmer strategy, where a small DNA fragments complement the single stranded RNA. Finally the system is ideal to set a detection output by reason of the hotspots found in the sequence that could accept protein insertions.</p>
+					<h1>Advantageous Detection</h1>
+					<p>Our modified dCas9 detection approach has the advantage of being an useful system for detecting any nucleic acid molecule. By creating a new sgRNA the system could detect an specific DNA molecule of interest and we could also target RNA based on the PAMmer strategy, where a small DNA fragments complement the single stranded RNA. Finally, the system is ideal to set a detection output because of the hotspots found in the dCas9's sequence that could accept protein insertions.</p>
 			    </div>
 			  </div>
 			</div>
-			<!--
-			<figure><img class="modal-trigger img-responsive" alt="Figure 1. TEV activation." src="http://2016.igem.org/wiki/images/c/ca/T--TEC-Costa_Rica--prostal_project_system_response_bg2.png"><figcaption><p style="text-align: center;">Figure 1. TEV activation.</p></figcaption></figure>					
-			<div class="modal">
-				<div class="modal-content">
-					<span class="close-modal">x</span>
-					<img>				      	
-				</div> 
-				<div class="caption-modal"><p style="text-align: center;"></p></div>
-			</div>
-
-			http://2016.igem.org/wiki/images/c/cb/T--TEC-Costa_Rica--prostal_project_system_detection_bg1.png
-
-http://2016.igem.org/wiki/images/6/64/T--TEC-Costa_Rica--prostal_project_system_detection_bg2.png
-
-			http://2016.igem.org/wiki/images/0/0d/T--TEC-Costa_Rica--prostal_project_system_detection_design1.png
-
-			http://2016.igem.org/wiki/images/a/ad/T--TEC-Costa_Rica--prostal_project_system_detection_design2.png
-
-			http://2016.igem.org/wiki/images/2/2b/T--TEC-Costa_Rica--prostal_project_system_detection_design3.png
-			-->
 			<div class="module-sections">
 				<button id="background" class="accordion"><h1>Background</h1></button>
 				<div class="panel">
 					<h2>1. Cas9 conformational changes</h2>
 					<p>We decided to base our detection module in the CRISPR/Cas9 system due to its versatility to detect different targets. The CRISPR system is based on two molecules, one Cas9 protein with nuclease activity and one sgRNA that activates the protein; this sgRNA is the key component also due to that it complements the target thanks to a 20 nucleotide variable region (Sternberg et al, 2015). Our system is adaptable then to target different nucleic acids just designing new sgRNA but using the same Cas9 protein.</p>
 					<br>
-					<p>Noticing this useful system we started to study the Cas9 protein by structure and activity. We focused in how the sgRNA activates the Cas9 and found out that the protein has three states depending on the presence of sgRNA and target. The Cas9 has a defined conformation in an inactive state and it changes its conformation when the sgRNA is bounded due to interaction between the recognition lobe (REC) and the sgRNA; upon activation the nuclease domain HNH moves to cleave the nucleic acid as a final conformational change mencioned Sternberg et al (2015).</p>
+					<div class="row">
+						<div class="col-sm-6">
+							<p>Noticing this useful system we started to study the Cas9 protein by structure and activity. We focused in how the sgRNA activates the Cas9 and found out that the protein has three states depending on the presence of sgRNA and target, as detailed in Figure 1. The Cas9 has a defined conformation in an inactive state and it changes its conformation when the sgRNA is bounded due to interaction between the recognition lobe (REC) and the sgRNA; upon activation the nuclease domain HNH moves to cleave the nucleic acid as a final conformational change mencioned Sternberg et al (2015).</p>
+						</div>
+						<div class="col-sm-6">
+							<figure><img class="modal-trigger img-responsive" alt="Figure 1. Conformational changes of Cas9 upon sgRNA binding and sgRNA associated to the target." src="http://2016.igem.org/wiki/images/c/cb/T--TEC-Costa_Rica--prostal_project_system_detection_bg1.png"><figcaption><p style="text-align: center;">Figure 1. Conformational changes of Cas9 upon sgRNA binding and sgRNA associated to the target.</p></figcaption></figure>
+							<div class="modal">
+								<div class="modal-content">
+									<span class="close-modal">x</span>
+									<img>				      	
+								</div> 
+								<div class="caption-modal"><p style="text-align: center;"></p></div>
+							</div>
+						</div>
+					</div>
 					<br>
 					<p>We thought that the HNH domain could be a potential site to engineer the Cas9 protein. The HNH domain is activated by the sgRNA conformational change and moves along to the target, if the sgRNA and the target are complementary the HNH would cleave; upon HNH activity the RuvC nuclease is activated commented Sternberg et al (2015) . Looking to establish a detection system we selected this conformational change as a profitable approach.</p>
 
 					<h2>2. Adapting dCas9 to RNA</h2>
-					<p>As we needed to detect an RNA biomarker of prostate cancer we next focused on the detection of nucleic acids by the Cas9. To be activated the HNH domain of the Cas9, the protein needs to detect a PAM sequence next to the target sequence but in the opposite strand; the PAM sequence is present only in DNA sequences (O’Connell et al, 2014). In our case the nucleic acid is RNA and it is single stranded.</p>
+					<p>As we needed to detect an RNA biomarker for prostate cancer we next focused on the detection of nucleic acids by the Cas9. The HNH domain of the Cas9 needs to detect a PAM sequence next to the target sequence (but in the opposite strand) for being activated. The PAM sequence is only present in DNA sequences (O’Connell et al, 2014) and in our case, our target molecule is single stranded RNA.</p>
 					<br>
-					<p>Due to this problem we search for RNA detection mediated by Cas9 and found out that it is possible. There’s an approach to target single stranded RNA using a Streptococcus pyogenes dCas9. To target RNA the dCAs9 needs to recognize the PAM sequence in a DNA strand, a short DNA sequence containing the PAM sequence, called PAMmer, is needed the to target RNA upon hybridisation between the PAMmer and the target argued O’Connell et al (2014).</p>
+					<p>Due to this problem we search for RNA detection mediated by Cas9 and found out that it is possible. There’s an approach to target single stranded RNA using a Streptococcus pyogenes dCas9. To target RNA the dCAs9 needs to recognize the PAM sequence in a DNA strand, a short DNA sequence containing the PAM sequence, called PAMmer, is needed the to target RNA upon hybridization between the PAMmer and the target argued O’Connell et al (2014).</p>
 					<br>
-					<p>We wanted to design a system that target specific RNA’s of interest, as PCA3 a biomarker for prostate cancer. Considering that the dCas9 needs a PAMmer DNA sequence to target the RNA we started thinking our system as a laboratory test. In this case the PAMmer could be add as a reagent.</p>
+					<p>We wanted to design a system that target specific RNA’s of interest, as PCA3 a biomarker for prostate cancer. Considering that the dCas9 needs a PAMmer DNA sequence to target the RNA, we started thinking of our system as a laboratory test in the PAMmer could be add as a reagent.</p>
 
 					<h2>3. dCas9 insertion hotspots</h2>
 					<p>After selecting the dCas9 as our chassis for the detection and noticing the conformational changes of the protein in the different states; we focused on how to design a synthetic system to generate an output, after targeting the RNA of interest using these conformational changes. Due to the potencial of targeting the genome there’s a lot of research in Cas9 applications. One approach elucidates that the Cas9 protein tolerates protein domain insertions at specific sites of the sequence without affecting the binding nor the activity (Oakes et al, 2016).</p>
 					<br>
 					<p>Thinking of an interesting approach of modifying the detection system and nor the response part we started to look up points of interest for insertions. Cas9 insertion were validated inserting random PDZ, a 86 amino acid domain, into the DNA sequence of the protein using transposons; finding a lot of hotspots in the sequence but specially in six clusters, including the HNH domain defined Oakes et al (2016). As we saw the HNH domain is a key component in the dCas9 activity, so we define this hotspots as a posible insertion site.</p>
 					<br>
-					<p>Inserting various domain into the Cas9 protein it’s possible but it has some considerations. Cas9 or dCAs9 could tolerate multiple domain insertions while retaining its activity; however three or more insertions could lead into a considerable decrease of the activity, in the experiment case repressing GFP expression argued Oakes et al (2016). We decided to use a multiple insertion strategy to create the detection chassis.</p>
-					<a id="back-to-top" href="#background" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
-					<div><a href="#background"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+					<div class="row">
+						<div class="col-sm-6">
+							<p>Inserting various domain into the Cas9 protein it’s possible but it has some considerations. Cas9 or dCAs9 could tolerate multiple domain insertions while retaining its activity; however three or more insertions could lead into a considerable decrease of the activity, in the experiment case repressing GFP expression argued Oakes et al (2016). We decided to use a multiple insertion strategy to create the detection chassis as shown in Figure 2. We chose pairs of hotspots based on our <a href="http://2016.igem.org/Team:TEC-Costa_Rica/Project/System" target="_blank">structural modelling</a> and finally define two events: version A with Leucine L390 - Glutamic acid E802 and version B with Asparagine N588-Asparagine N888 as hotspots.</p>
+						</div>
+						<div class="col-sm-6">
+							<figure><img class="modal-trigger img-responsive" alt="Figure 2. Screening hotspots in the dCas9." src="http://2016.igem.org/wiki/images/6/64/T--TEC-Costa_Rica--prostal_project_system_detection_bg2.png"><figcaption><p style="text-align: center;">Figure 2. Screening hotspots in the dCas9.</p></figcaption></figure>
+							<div class="modal">
+								<div class="modal-content">
+									<span class="close-modal">x</span>
+									<img>				      	
+								</div> 
+								<div class="caption-modal"><p style="text-align: center;"></p></div>
+							</div>
+						</div>
+					</div>
+					<br>
+					<a id="back-to-top" href="#background" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
 				</div>
 				<button id="design" class="accordion"><h1>Design</h1></button>
 				<div class="panel">
+					<h1>1. dCas9</h1>
+					<p>We were able to design two dCas9 that allow protein insertions in two sets of hotspots. For testing these spots, we created an A and B version of the protein: A-dCas9 <a target="_blank" href="http://parts.igem.org/Part:BBa_K1903001:Design">BBa_K1903001</a> accepts protein insertions in amino acids L390 and E802; these hotspots come close when dCas9 binds to the target molecule, which could trigger a reaction between the proteins inserted in the sites. On the other hand, B-dCas9 <a target="_blank" href="http://parts.igem.org/Part:BBa_K1903002:Design">BBa_K1903002</a> allows insertions in amino acids N588 and N888 and these sites come close since the sgRNA binds to the dCas9.</p>
+					<br>
+					<p>For designing these proteins we used Streptococcus pyogenes’s Cas9 (Uniprot accession Q99ZW2) optimized for E.coli and mutated for being catalytically inactive (mutations D10A and H840A). We added a Double Terminator (BBa_B0015) at the end of each protein’s sequence and then we divided each protein in 4 gBlocks of approximately 1000 bp each.</p>
+					<br>
+					<p>Since each Cas9’s hotspots where on gBlocks 2 and 3, we planned an assembly strategy in which we could exchange gBlocks 1 and 4 for assembling two complete dCas9 protein with different insertion frames at the studied hotspots. We based in Golden Gate Assembly Method for designing our gBlocks and we used Weber et.al (2011) fusion sites stragety.</p>
+					<br>
+					<p>Each of our gBlocks has BsaI recognition sites at its start and end; the “start” recognition sites from each gBlock are inverted so that the recognition sites can be lost after the Golden Gate reaction. As its shown in Figure 3, each of the 6 gBlocks has different fusion sites, which where added next to each BsaI recognition site.</p>
+					<br>
+					<p>In our assembly strategy, by performing a Golden Gate reaction with BsaI enzyme and the gBlocks 1, 2A, 3A and 4, we would obtain our A version dCas9 that includes L 390 and E802 hotspots; and by assembling gBlocks 1, 2B, 3B and 4, we would obtain our B version dCas9, that has hotspots N588 and N888.</p>
+					<br>
+					<div>
+						<figure><img src="http://2016.igem.org/wiki/images/0/0d/T--TEC-Costa_Rica--prostal_project_system_detection_design1.png" class="modal-trigger img-responsive" alt="Figure 3. dCas9’s gBlock Golden Gate assemble strategy."><figcaption><p style="text-align: center;">Figure 3. dCas9’s gBlock Golden Gate assemble strategy.</p></figcaption></figure>
+						<div class="modal">
+							<div class="modal-content">
+								<span class="close-modal">x</span>
+								<img>				      	
+							</div> 
+							<div class="caption-modal"><p style="text-align: center;"></p></div>
+						</div>
+					</div>					
+					<br>
+					<p>Because we wanted to insert proteins in each of dCas9’s hotspots, we designed two insertion windows inside each dCas9 protein sequence. A-dCas9 has two insertion windows: one from amino acid 1 to 60 that contains L390 hotspot and other from 248 to 266, which contains E802 site. On the other hand, B-dCas9 has its insertion frames from amino acid 583 to 601, that includes N588 hotspot and from 882 to 908, which includes the hotspot N888.</p>
+					<br>
+					<p>These insertion frames are flanked by BbsI recognition sites; the “start” recognition sites of each frame are inverted so that the recognition sequences can be lost after this second Golden Gate reaction, leaving a functional dCas9 with two protein insertions. Figures 4 and 5 show A and B version of complete dCas9 with their insertion frames assemble strategy.</p>
+					<div class="row">
+						<div class="col-sm-6">
+							<figure><img src="http://2016.igem.org/wiki/images/a/ad/T--TEC-Costa_Rica--prostal_project_system_detection_design2.png" class="modal-trigger img-responsive" alt="Figure 4. Golden Gate assemble strategy for adding protein insertions to A-dCas9."><figcaption><p style="text-align: center;">Figure 4. Golden Gate assemble strategy for adding protein insertions to A-dCas9.</p></figcaption></figure>
+							<div class="modal">
+								<div class="modal-content">
+									<span class="close-modal">x</span>
+									<img>				      	
+								</div> 
+								<div class="caption-modal"><p style="text-align: center;"></p></div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<figure><img src="http://2016.igem.org/wiki/images/2/2b/T--TEC-Costa_Rica--prostal_project_system_detection_design3.png" class="modal-trigger img-responsive" alt="Figure 5. Golden Gate assemble strategy for adding protein insertions to B-dCas9."><figcaption><p style="text-align: center;">Figure 5. Golden Gate assemble strategy for adding protein insertions to B-dCas9.</p></figcaption></figure>
+							<div class="modal">
+								<div class="modal-content">
+									<span class="close-modal">x</span>
+									<img>				      	
+								</div> 
+								<div class="caption-modal"><p style="text-align: center;"></p></div>
+							</div>
+						</div>
+					</div>
+					<br>
+					<p>For this assemble strategy we also used Weber et.al (2011) fusion sites and as its shown below, every frame has different versions of sites, which are part of the Cas9 protein sequence and are going to be kept after the insertions's assembly. We designed two dCas9 version A protein insertions which can be found as BioBricks <a target="_blank" href="http://parts.igem.org/Part:BBa_K1903020">BBa_K1903020</a> and <a target="_blank" href="http://parts.igem.org/Part:BBa_K1903021">BBa_K1903021</a> and two dCas9 version B insertions: <a target="_blank" href="http://parts.igem.org/Part:BBa_K1903022">BBa_K1903022</a> and <a target="_blank" href="http://parts.igem.org/Part:BBa_K1903023">BBa_K1903023</a>. Using these BioBricks sequences as a temple, new protein insertions can be designed for assembling version A and B dCas9.</p>
+					<h2>2. Golden Gate Adaptor</h2>
+					<p>We design a Golden Gate Adapter as the Biobrick <a href="http://parts.igem.org/Part:BBa_K1903003">BBa_K1903003</a>, enabling iGEMS's standard assembly plasmid to be a Golden Gate assembly vector. This part is composed of the prefix lacking the XbaI however instead there’s a BsaI fusion site follow by the BsaI recognition sequence, a 100 random nucleotides spacer and finally the suffix having also a BsaI fusion site. Digesting this BioBrick with EcoRI and PstI and ligating it to the plasmid, would make any standard assembly vector adaptable to Golden Gate upon the reaction takes place. The BsaI fusion site is inverted and only when the Golden Gate reaction is made the XbaI site will apear having a normal prefix for the part.</p>
+					<h2>3.PAMmer</h2>
 					<p>For the PAMmer design we follow O’Connell et al (2014) findings:</p>
 					<ul>
 						<li><p>PAMmer must be a short deoxyribonucleotide single stranded sequence.</p></li>
@@ -225,13 +283,15 @@ http://2016.igem.org/wiki/images/6/64/T--TEC-Costa_Rica--prostal_project_system_
 						<li><p>PAMmer should have an 2 to 8 nucleotide extension upstream the NGG to gain binding specificity, however it shouldn’t be to long to avoid losing binding affinity.</p></li>
 						<li><p>PAM region in the PAMmer must not be the same as in the gene to avoid gene silencing.</p></li>
 					</ul>
-					<br>
+					<h2>4. sgRNA</h2>
 					<p>To design the sgRNA we used a two steps strategy to create the sequence. First we searched the sequence for the sgRNA for Streptococcus pyogenes already modified as a chimeric sgRNA just with the variable base-paring region; we used the sequence detailed in Larson et al. (2013). Next we used Deskgen tool to find possible targets sites in the PCA3 variant 2 gene.</p>
-					<div><a href="#design"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+					<br>
+					<a id="back-to-top" href="#design" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
 				</div>		
 				<button id="results" class="accordion"><h1>Results</h1></button>
-				<div class="panel">			
-					<div><a href="#results"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+				<div class="panel">		
+					<br>	
+					<a id="back-to-top" href="#results" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
 				</div>	
 				<button id="references" class="accordion"><h1>References</h1></button>
 				<div class="panel">
@@ -245,6 +305,7 @@ http://2016.igem.org/wiki/images/6/64/T--TEC-Costa_Rica--prostal_project_system_
 					<p>Sternberg, S. H., LaFrance, B., Kaplan, M., & Doudna, J. A. (2015). Conformational control of DNA target cleavage by CRISPR–Cas9. Nature, 527(7576), 110-113.</p>
 					<br>
 					<p>Weber, E., Engler, C., Gruetzner, R., Werner, S., & Marillonnet, S. (2011). A modular cloning system for standardized assembly of multigene constructs. PloS one, 6(2), e16765.</p>
+					<br>
 					<div><a href="#references"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
 				</div>
 			</div>

@@ -22,6 +22,7 @@
 		}	
 		#advantageous { margin-bottom: 15px; }
 		#advantageous .container-fluid { padding: 30px 25px; }
+		#advantageous .col-sm-7 { padding-top: 40px;  }
 		#module-sections { margin-bottom: 15px; }
 		button.accordion {
 		    background-color: #eee;
@@ -71,8 +72,7 @@
 		.modal-content, .modal-content img {
 		    margin: auto;
 		    display: block;
-		    width: 100%;
-		    max-width: 700px;
+		    width: 90%;
 		}
 		.caption-modal {
 		    margin: auto;
@@ -156,14 +156,13 @@
 			<div class="jumbotron text-center parallax">	  
 				<h1 style="font-size: 50px;">System<br><span>Response Module</span></h1>
 			</div>	
-			<!--http://2016.igem.org/wiki/images/d/d4/T--TEC-Costa_Rica--prostal_project_system_response_bg1.png-->
 			<div class="concept">
 				<p style="text-align: center;">Our response system is based on a fluorescence emission signal and uses the fusion protein GFP-Dark Quencher linked together by a TEV cleavage site, as the key component of the module. We characterized an intein mediated reconstitution of the Split TEV as the system’s input; when the association by the intein mechanism occurs, the two split TEV bind together into a functional TEV protease. This active protease is then capable of triggering our response module by catalyzing the proteolytic cleavage of the GFP-Dark Quencher linker, leading to an increase in fluorescence emission. With this system, we established a new intein-split TEV tool approach.</p>
 			</div>
 			<div id="advantageous" class="container-fluid">
 			  <div class="row">
 			    <div class="col-sm-5 col-sm-push-7">
-			    	<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" class="img-responsive">
+			    	<img src="http://2016.igem.org/wiki/images/f/f0/T--TEC-Costa_Rica--prostal_project_system_response_advantageous.png" class="img-responsive" alt="Advantageous Detection">
 			    </div>
 			    <div class="col-sm-7 col-sm-pull-5 text-center">					  
 					<h1>Advantageous Response</h1>
@@ -207,34 +206,49 @@
 					<h2>3. No more Quenched-GFP</h2>
 					<p>We decided to fuse our donor chromophore (GFP) with our acceptor molecule (REACh) by a recognition peptide for TEV protease. Ganesan et.al (2006) tested this linker sequence and proved that FRET is lost upon cleavage of the linker. When the linker is cut, GFP is separated from REACh and this increase in distance prevents REACh from interacting with GFP, which results in fluoresce emission.</p>
 					<br>
-					<p>As we previously explained, in our system, after the Split-TEV is released from the dCas9, an intein reaction occurs that enables the reconstitution of an active TEV. Once this protease is activated, it is able to cleavage the GFP-REACh linker, resulting in a strong GFP fluorescence emission. This fluorescence emission is the final response of our system and it indicates the detection of a highly specific DNA or RNA molecule; in our case, the presence of prostate cancer.</p>
-					<figure><img class="modal-trigger img-responsive" alt="Figure 2. TEV mediated fluorescence response>" src="http://2016.igem.org/wiki/images/2/24/T--TEC-Costa_Rica--prostal_project_system_response_bg3.png"><figcaption><p style="text-align: center;">Figure 2. TEV mediated fluorescence response>.</p></figcaption></figure>					
-					<div class="modal">
-						<div class="modal-content">
-							<span class="close-modal">x</span>
-							<img>				      	
-						</div> 
-						<div class="caption-modal"><p style="text-align: center;"></p></div>
+					<p>As we previously explained, in our system, after the Split-TEV is released from the dCas9, an intein reaction occurs that enables the reconstitution of an active TEV. Once this protease is activated, it is able to cleavage the GFP-REACh linker, resulting in a strong GFP fluorescence emission, which is shown in Figure 2. This fluorescence emission is the final response of our system and it indicates the detection of a highly specific DNA or RNA molecule; in our case, the presence of prostate cancer.</p>
+					<div>
+						<figure><img class="modal-trigger img-responsive" alt="Figure 2. TEV mediated fluorescence response" src="http://2016.igem.org/wiki/images/2/24/T--TEC-Costa_Rica--prostal_project_system_response_bg3.png"><figcaption><p style="text-align: center;">Figure 2. TEV mediated fluorescence response.</p></figcaption></figure>					
+						<div class="modal">
+							<div class="modal-content">
+								<span class="close-modal">x</span>
+								<img>				      	
+							</div> 
+							<div class="caption-modal"><p style="text-align: center;"></p></div>
+						</div>
 					</div>
-					<div><a href="#background"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+					<br>
+					<a id="back-to-top" href="#background" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
 				</div>
 				<button id="design" class="accordion"><h1>Design</h1></button>
 				<div class="panel">
 					<br>
-					<p>For the split intein approach we created two construct, each of them having one section of the intein:</p>
-						<ul>
-							<li><p>The first BioBrick was formed with the split TEV N - split Intein - Double Terminator based on the iGEM parts: BBa_K1159318, BBa_K1362400, BBa_B0015.</p></li>
-							<li><p>For the second BioBrick, split TEV N-split Intein N - Double Terminator, we used the following parts: BBa_K1362401, BBa_K1159102, BBa_B0015.</p></li>
-						</ul>
+					<p>For the split intein approach we created two construct, each of them having one section of the intein, as shown in Figure 3:</p>
+					<div>
+						<figure><img class="modal-trigger img-responsive" alt="Figure 3. Npu DnaE trans splicing split inteins." src="http://2016.igem.org/wiki/images/1/15/T--TEC-Costa_Rica--prostal_project_system_response_design1.png"><figcaption><p style="text-align: center;">Figure 3. Npu DnaE trans splicing split inteins.</p></figcaption></figure>					
+						<div class="modal">
+							<div class="modal-content">
+								<span class="close-modal">x</span>
+								<img>				      	
+							</div> 
+							<div class="caption-modal"><p style="text-align: center;"></p></div>
+						</div>
+					</div>	
+					<ul>
+						<li><p>The first BioBrick was formed with the split TEV N - split Intein - Double Terminator based on the iGEM parts: BBa_K1159318, BBa_K1362400, BBa_B0015.</p></li>
+						<li><p>For the second BioBrick, split TEV N-split Intein N - Double Terminator, we used the following parts: BBa_K1362401, BBa_K1159102, BBa_B0015.</p></li>
+					</ul>
 					<br>
 					<p>For this module we designed the BioBrick GFP-TEV Site-Dark Quencher-Double Terminator based on iGEM parts: BBa_E0040, BBa_K1159318 and BBa_K1319001 and BBa_B0015 respectively. Then we assembled the construct with the Anderson Promoter J23101 and the RBS Elowitz BBa_B0034 to generate our response module device, and we registered this complete device as a BioBrick too.</p>
 					<br>
 					<p>We designed a positive control device expressing a TEV protease to cleavage the linker between the GFP and the Dark Quencher. We based this BioBrick on the following parts: BBa_R0010, BBa_B0034, BBa_K1319004, BBa_B0015.</p>
-					<div><a href="#design"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+					<br>
+					<a id="back-to-top" href="#design" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
 				</div>		
 				<button id="results" class="accordion"><h1>Results</h1></button>
-				<div class="panel">			
-					<div><a href="#results"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+				<div class="panel">		
+					<br>
+					<a id="back-to-top" href="#results" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
 				</div>	
 				<button id="references" class="accordion"><h1>References</h1></button>
 				<div class="panel">
@@ -248,7 +262,8 @@
 					<p>Stevens, A. J., Brown, Z. Z., Shah, N. H., Sekar, G., Cowburn, D., & Muir, T. W. (2016). Design of a Split Intein with Exceptional Protein Splicing Activity. Journal of the American Chemical Society, 138(7), 2162-2165.</p>
 					<br>
 					<p>Topilina, N. I., & Mills, K. V. (2014). Recent advances in in vivo applications of intein-mediatedprotein splicing. Mobile Dna, 5(1), 1.</p>
-					<div><a href="#references"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+					<br>
+					<a id="back-to-top" href="#references" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
 				</div>
 			</div>
 			<div id="system-sections" class="container-fluid slideanim">

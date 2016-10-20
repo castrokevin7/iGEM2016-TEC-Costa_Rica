@@ -19,21 +19,35 @@
 			display: table-cell;
 			vertical-align: middle;
 			background-color: rgba(0, 0, 0, 0.2);
-		}	
-		.jumbotron span {
-			font-size: 40px;
-		}	
-		.parallax {
-			perspective: 1px;
-			overflow-x: hidden;
-			overflow-y: auto;
 		}
-		.concept {
-			display: block;
-			text-align: center;
-			margin: 10px auto;
-			width: 80%
+		button.accordion {
+		    background-color: #eee;
+		    color: #444;
+		    cursor: pointer;
+		    padding: 18px;
+		    width: 100%;
+		    text-align: left;
+		    border: none;
+		    outline: none;
+		    transition: 0.4s;
+		    text-align: center;
+		    margin-bottom: 1px;
 		}
+		button.accordion:hover, button.active {
+		    background-color: #ccc;
+		}
+		div.panel {
+			padding: 5px 50px;
+			display: none;
+			margin: 0;
+			border: 1px solid #eee;
+		}
+		div.panel.show { display: block; }
+		.accordion h1 {
+			margin: 0;
+			padding: 0;
+		}
+		#attributions { margin: 15px 0; }
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 		}
 		@media screen and (max-width: 1280px) {
@@ -53,47 +67,95 @@
 			<div class="concept">
 				<p style="text-align: center;">We truly appreciate all the support and advice we received from all the people involved in our project. Below we give special attributions to the ones who guided and assisted us through these months.</p>
 			</div>
-			<div class="container-fluid">
-				<p><strong>David García</strong> helped us ordering most of our supplies and working on administrative affairs.  Also, he reviewed most of our protocols and provided advice on our laboratory techniques. He was extremely helpful in our human practice as a mentor in SynBioThon 2016 and gave us some contacts and advice for fundraising.</p>
-				<br>
-				<p><strong>Silver Ceballos</strong> provided some great advice on designing experiments and on our laboratory techniques. He assisted us in the design of our genetic constructs and provided us with pcr primers and TEV protease. Also, he helped us in our human practice by being a mentor and a judge in SynBioThon 2016.</p>
-				<br>
-				<p><strong>Silvia Arce</strong> offered guidance on our protein procedures and provided us with a protein extraction protocol and some colonies of E.coli BL21. Also, she helped us with our human practice by being a mentor in SynBioThon 2016.</p>
-				<br>
-				<p><strong><a href="http://www.cibus-30.com/">Cibus 3.0</a> (startup)</strong> supplied us with iGEM backbones minipreps.</p>
-				<br>
-				<p><strong>Miguel Rojas</strong> as the director of the Biotechnology Investigation Center allowed us to use the laboratories for the development of the project. Also, he provided presentation coaching and contacts for fundraising.</p>
-				<br>
-				<p><strong>Carlos Alvarado</strong> as the director of the Biology Department of our university he supported our human practice and helped us with administrative procedures.</p>
-				<br>
-				<p><strong>Giovanni Garro</strong> provided some advice and contacts for fundraising.</p>
-				<br>
-				<p><strong>Osvaldo Vega</strong> from Speratum assisted us with the BioTek Synergy H1 Multi-Mode Reader and helped us in SynBioThon 2016 by being a mentor.</p>
-				<br>
-				<p><strong>Ricardo Román</strong> from <a href="http://www.cenat.ac.cr/" target="_blank">CENAT</a> facilitated us a supercomputer for protein modeling.</p>
-				<br>
-				<p><strong>Pablo Gaínza, Marianne Hütt, Christian Marín and Osvaldo Vega</strong> guided us in our brainstorming.</p>
-				<br>
-				<p><strong>Natalia Bolaños, Agustín Büchert, Johan Morales, Allan Orozco and Luis Alonso Porras</strong> assisted us in our human practice as mentors in SynBioThon 2016.</p>
-				<br>
-				<p><strong>Karol Jiménez, Raúl Trejos and Karla Valerín</strong> assisted us in our human practice as judges in SynBioThon 2016.</p>
-				<br>
-				<p><strong>Juan Diego Jaén and Paola Rodríguez</strong> assisted us in our human practice as presenters in SynBioThon 2016.</p>
-				<br>
-				<p><strong>Marcelo Castro, Rafael Lobo, José Pablo Méndez and Sofía Miranda</strong> from MagGENta BioLabs helped us in our human practice by sharing their experience of entrepeneurs in SynBioThon 2016.</p>
-				<br>
-				<p><strong>Marcela Esquivel</strong> from La Feria Producciones recorded and edited our video of our human practice SynBioThon 2016.</p>
-				<br>
-				<p><strong>Maryuri Orozco</strong> took some incredible pictures of our human practice SynBioThon 2016.</p>
-				<br>
-				<p><strong>Repretel, Hoy en el TEC, La República, CRhoy and El Financiero</strong> helped us divulgate the project and find contacts for fundraising.</p>
-				<br>
-				<p>Special thanks to all the people that participated in our human practices for making them possible!</p>
+			<div id="attributions" class="container-fluid">
+				<div class="row">
+					<div class="col-sm-6">
+						<button class="accordion"><h2>David García</h2></button>
+						<div class="panel">
+							<p>David helped us ordering most of our supplies and working on administrative affairs.  Also, he reviewed most of our protocols and provided advice on our laboratory techniques. He was extremely helpful in our human practice as a mentor in SynBioThon 2016 and gave us some contacts and advice for fundraising.</p>
+						</div>
+						<button class="accordion"><h2>Silver Ceballos</h2></button>
+						<div class="panel">
+							<p>Ceballos provided some great advice on designing experiments and on our laboratory techniques. He assisted us in the design of our genetic constructs and provided us with pcr primers and TEV protease. Also, he helped us in our human practice by being a mentor and a judge in SynBioThon 2016.</p>
+						</div>
+						<button class="accordion"><h2>Silvia Arce</h2></button>
+						<div class="panel">
+							<p>Silvia offered guidance on our protein procedures and provided us with a protein extraction protocol and some colonies of E.coli BL21. Also, she helped us with our human practice by being a mentor in SynBioThon 2016.</p>
+						</div>
+						<button class="accordion"><h2>Miguel Rojas</h2></button>
+						<div class="panel">
+							<p>Miguel Rojas as the director of the Biotechnology Investigation Center allowed us to use the laboratories for the development of the project. Also, he provided presentation coaching and contacts for fundraising.</p>
+						</div>				
+						<button class="accordion"><h2>Carlos Alvarado</h2></button>
+						<div class="panel">
+							<p>Carlos as the director of the Biology Department of our university he supported our human practice and helped us with administrative procedures.</p>
+						</div>					
+					</div>
+					<div class="col-sm-6">
+						<button class="accordion"><h2>Giovanni Garro</h2></button>
+						<div class="panel">					
+							<p>Garro provided some advice and contacts for fundraising.</p>
+						</div>
+						<button class="accordion"><h2>Osvaldo Vega</h2></button>
+						<div class="panel">					
+							<p>Osvaldo from Speratum assisted us with the BioTek Synergy H1 Multi-Mode Reader and helped us in SynBioThon 2016 by being a mentor.</p>
+						</div>
+						<button class="accordion"><h2>Ricardo Román</h2></button>
+						<div class="panel">					
+							<p>Román from <a href="http://www.cenat.ac.cr/" target="_blank">CENAT</a> facilitated us a supercomputer for protein modeling.</p>
+						</div>
+						<button class="accordion"><h2>Marcela Esquivel</h2></button>
+						<div class="panel">										
+							<p>Marcela, from La Feria Producciones, recorded and edited our video of our human practice SynBioThon 2016.</p>
+						</div>
+						<button class="accordion"><h2>Maryuri Orozco</h2></button>
+						<div class="panel">														
+							<p>Orozco took some incredible pictures of our human practice SynBioThon 2016.</p>
+						</div>					
+					</div>
+				</div>
+				<button class="accordion"><h2>Pablo Gaínza, Marianne Hütt, Christian Marín and Osvaldo Vega</h2></button>
+				<div class="panel">					
+					<p>They guided us in our brainstorming.</p>
+				</div>
+				<button class="accordion"><h2>Natalia Bolaños, Agustín Büchert, Johan Morales, Allan Orozco and Luis Alonso Porras</h2></button>
+				<div class="panel">										
+					<p>They assisted us in our human practice as mentors in SynBioThon 2016.</p>
+				</div>				
+				<button class="accordion"><h2>Karol Jiménez, Raúl Trejos and Karla Valerín</h2></button>
+				<div class="panel">										
+					<p>They assisted us in our human practice as judges in SynBioThon 2016.</p>
+				</div>
+				<button class="accordion"><h2>Juan Diego Jaén and Paola Rodríguez</h2></button>
+				<div class="panel">										
+					<p>They assisted us in our human practice as presenters in SynBioThon 2016.</p>
+				</div>				
+				<button class="accordion"><h2>Marcelo Castro, Rafael Lobo, José Pablo Méndez and Sofía Miranda</h2></button>
+				<div class="panel">										
+					<p>They, from MagGENta BioLabs, helped us in our human practice by sharing their experience of entrepeneurs in SynBioThon 2016.</p>
+				</div>
+				<button class="accordion"><h2>Repretel, Hoy en el TEC, La República, CRhoy and El Financiero</h2></button>
+				<div class="panel">														
+					<p>They helped us divulgate the project and find contacts for fundraising.</p>
+				</div>
+				<button class="accordion"><h2>Cibus 3.0</h2></button>
+				<div class="panel">
+					<p><a href="http://www.cibus-30.com/">Cibus 3.0</a> (startup) supplied us with iGEM backbones minipreps.</p>
+				</div>		
 			</div>
+			<p style="text-align: center;">Special thanks to all the people that participated in our human practices for making them possible!</p>
 		</main>
 		<script type="text/javascript">
 			var nav = document.getElementById('nav-team');
 			nav.className += " active";
+
+			var acc = document.getElementsByClassName("accordion");
+			for (var i = 0; i < acc.length; i++) {
+			    acc[i].onclick = function() {
+			        this.classList.toggle("active");
+			        this.nextElementSibling.classList.toggle("show");
+			    }
+			}
 		</script>
 	</body>
 </html>

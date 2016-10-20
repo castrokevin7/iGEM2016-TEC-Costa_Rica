@@ -22,6 +22,7 @@
 		}			
 		#advantageous { margin-bottom: 15px; }
 		#advantageous .container-fluid { padding: 30px 25px; }
+		#advantageous .col-sm-7 { padding-top: 40px;  }
 		#module-sections { margin-bottom: 15px; }
 		button.accordion {
 		    background-color: #eee;
@@ -71,8 +72,7 @@
 		.modal-content, .modal-content img {
 		    margin: auto;
 		    display: block;
-		    width: 100%;
-		    max-width: 700px;
+		    width: 90%;
 		}
 		.caption-modal {
 		    margin: auto;
@@ -157,50 +157,71 @@
 				<h1 style="font-size: 50px;">System<br><span>Signaling Module</span></h1>
 			</div>	
 			<div class="concept">
-				<p style="text-align: center;">The signaling module is based on the interaction of the two fragments of an intein derived protease. Each of the split intein fragments was designed to be inserted in a different Cas9 domain. Thus, when the Cas9 conformational change occurs the distance between the split intein fragments is reduced and the reaction takes place. As a result of the cleavage, a split TEV protease joined to a trans-splicing Npu DnaE N-intein is released as a signal. To test the intein reac tion we designed two BioBricks with histags on them in order to recover the excised fragments by protein extraction.</p>
+				<p style="text-align: center;">The signaling module is based on the interaction of the two fragments of an intein derived protease. Each of the split intein fragments was designed to be inserted in a different Cas9 domain. Thus, when the Cas9 conformational change occurs the distance between the split intein fragments is reduced and the reaction takes place. As a result of the cleavage, a split TEV protease joined to a trans-splicing Npu DnaE N-intein is released as a signal. To test the intein reaction we designed two BioBricks with histags on them in order to recover the excised fragments by protein extraction.</p>
 			</div>
 			<div id="advantageous" class="container-fluid">
 			  <div class="row">
 			    <div class="col-sm-5 col-sm-push-7">
-			    	<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" class="img-responsive">
+			    	<img src="http://2016.igem.org/wiki/images/5/57/T--TEC-Costa_Rica--prostal_project_system_signaling_advantageous.png" class="img-responsive" alt="Advantageous Signaling">
 			    </div>
 			    <div class="col-sm-7 col-sm-pull-5 text-center">					  
 					<h1>Advantageous Signaling</h1>
-					<p>Our signaling strategy uses the cleavage properties of a cis-splicing split intein to release an insertion when a conformational change occurs. The specifity of the intein derived protease recognition makes it suitable for proteolytic reactions in E.coli and S.cerevisae. Therefore, this module gives a precise approach for protein excision and so provides a mechanism useful for signaling and protein regulation.</p>
+					<p>Our signaling strategy uses the cleavage properties of a cis-splicing split intein to release an insertion when a conformational change occurs. The specifity of the intein derived protease recognition makes it suitable for proteolytic reactions in <em>E.coli and S.cerevisae</em>. Therefore, this module gives a precise approach for protein excision and so provides a mechanism useful for signaling and protein regulation.</p>
 			    </div>
 			  </div>
 			</div>
 			<!--
-			<figure><img class="modal-trigger img-responsive" alt="Figure 1. TEV activation." src="http://2016.igem.org/wiki/images/c/ca/T--TEC-Costa_Rica--prostal_project_system_response_bg2.png"><figcaption><p style="text-align: center;">Figure 1. TEV activation.</p></figcaption></figure>					
-			<div class="modal">
-				<div class="modal-content">
-					<span class="close-modal">x</span>
-					<img>				      	
-				</div> 
-				<div class="caption-modal"><p style="text-align: center;"></p></div>
-			</div>
-
 			http://2016.igem.org/wiki/images/9/91/T--TEC-Costa_Rica--prostal_project_system_signaling_bg1.png
-
-			http://2016.igem.org/wiki/images/0/08/T--TEC-Costa_Rica--prostal_project_system_signaling_bg2.png
-
-			http://2016.igem.org/wiki/images/c/c2/T--TEC-Costa_Rica--prostal_project_system_signaling_bg3.png
-
-			http://2016.igem.org/wiki/images/3/35/T--TEC-Costa_Rica--prostal_project_system_signaling_bg4.png
+		
 			-->
 			<div class="module-sections">
 				<button id="background" class="accordion"><h1>Background</h1></button>
 				<div class="panel">
 					<h2>1. Intein derived protease</h2>
-					<p>We thought that the best way to indicate that the Cas9 conformational change had occurred was through the release of a signal molecule. For that reason, our signaling module is based on the interaction of two insertions in the Cas9 protein that allows the release of a split TEV protease when the conformational change occurs. To release one of the insertions we decided to use the Ssp DnaB S1 split-intein. This intein derived protease (IP) consists of a 144 aa C-terminal intein fragment that recognices and cleaves the peptide bond between the Gly and Cys residues of the 16 aa N-terminal fragment (Volkmann et al., 2011), thus resulting in a cis-splicing reaction as shown in figure X.</p>
+					<p>We thought that the best way to indicate that the dCas9 conformational change had occurred was through the release of a signal molecule. For that reason, our signaling module is based on the interaction of two insertions in the dCas9 protein that allows the release of a split TEV protease when the conformational change occurs. To release one of the insertions we decided to use the Ssp DnaB S1 split-intein. This intein derived protease (IP) consists of a 144 aa C-terminal intein fragment that recognices and cleaves the peptide bond between the Gly and Cys residues of the 16 aa N-terminal fragment (Volkmann et al., 2011), thus resulting in a cis-splicing reaction as shown in Figure 1.</p>
+					<br>
+					<div>
+						<figure><img src="http://2016.igem.org/wiki/images/0/08/T--TEC-Costa_Rica--prostal_project_system_signaling_bg2.png" class="modal-trigger img-responsive" alt="Figure 1. Cis-acting Ssp DnaB S1 split-intein."><figcaption><p style="text-align: center;">Figure 1. Cis-acting Ssp DnaB S1 split-intein.</p></figcaption></figure>
+						<div class="modal">
+							<div class="modal-content">
+								<span class="close-modal">x</span>
+								<img>				      	
+							</div> 
+							<div class="caption-modal"><p style="text-align: center;"></p></div>
+						</div>
+					</div>
 					<br>
 					<p>We choosed the Ssp DnaB S1 split-intein because it has high ligation kinetics which reduces the time of reaction (Aranko et al., 2014). Also, Volkman et al., 2011 have proved that the intein reaction can occur in <em>Escherichia coli</em> without affecting the cell viability. Aditionally, the high specificity of the C-intein recognition avoids undesired cleavege of other proteins (Tropilina & Mills, 2014). This IP has already been used in iGEM and it's in the repository.</p>
 
 					<h2>2. Release of split TEV</h2>
 					<p>In order to allow the reaction to occur only with the Cas9 conformational change, we decided to insert the C-intein in one of the hotspots and the complement intein in a second hotspot. Thus, when the Cas9 binds to the target ARN the distance between the insertions is reduced and the intein reaction takes place. Because we aimed to release an amino acid sequence inside a domain we had to excise not one but two peptide bonds. For that reason, one of the insertions consists of a split TEV protease joined with a trans-splicing Npu DnaE N-intein and flanked by two N-inteins. Therefore, when the insertions become closer the C—intein will cleave both N-inteins and release a split TEV protease used in our response module. The trans-splicing intein was added to allow the reconstitution of the split-TEV in the mentioned module.</p>
 					<br>
+					<div class="row">
+						<div class="col-sm-6">
+							<figure><img src="http://2016.igem.org/wiki/images/c/c2/T--TEC-Costa_Rica--prostal_project_system_signaling_bg3.png" class="modal-trigger img-responsive" alt="Figure 2. Intein mediated dCas9 detection system. Only when the dCas9 is associated to both target and sgRNA, the C-intein Ssp DnaB will react with the N-terminals inteins."><figcaption><p style="text-align: center;">Figure 2. Intein mediated dCas9 detection system. Only when the dCas9 is associated to both target and sgRNA, the C-intein Ssp DnaB will react with the N-terminals inteins.</p></figcaption></figure>
+							<div class="modal">
+								<div class="modal-content">
+									<span class="close-modal">x</span>
+									<img>				      	
+								</div> 
+								<div class="caption-modal"><p style="text-align: center;"></p></div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<figure><img src="http://2016.igem.org/wiki/images/3/35/T--TEC-Costa_Rica--prostal_project_system_signaling_bg4.png" class="modal-trigger img-responsive" alt="Figure 3. Split TEV-split Intein N release from the dCas9"><figcaption><p style="text-align: center;">Figure 3. Split TEV-split Intein N release from the dCas9</p></figcaption></figure>
+							<div class="modal">
+								<div class="modal-content">
+									<span class="close-modal">x</span>
+									<img>				      	
+								</div> 
+								<div class="caption-modal"><p style="text-align: center;"></p></div>
+							</div>
+						</div>
+					</div>
+					<br>
 					<p>Based on the protein structural model we decided to insert the smallest sequence in the REC lobe because it suffers the most aggressive conformational change. In contrast, the longest insertion which included the split TEV protease joined to a trans-splicing Npu DnaE N-intein and both N-inteins was inserted in the HNH domain. Also, we added the flexible linker 2x (GGGS) on both sides of each insertion to allow a better interaction between the split inteins. According to Chen et al. (2013) flexible linkers are usually used to provide a degree of movement and thus allow a better interaction between the linked peptide sequences. This linker has already been used in iGEM to fuse proteins and is part of the repository.</p>
-					<div><a href="#background"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+					<br>
+					<a id="back-to-top" href="#background" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
 				</div>
 				<button id="design" class="accordion"><h1>Design</h1></button>
 				<div class="panel">
@@ -212,11 +233,13 @@
 					<p>Also, we designed two BioBricks to test the cleavage activity of the split inteins we used in the insertions. The first Biobrick consists of a histag followed by a red fluorescent protein (RFP), an Ssp DnaB N-intein and a double terminator. The sequences were obtained from the following BioBricks: BBa_K844000, BBa_E1010, and BBa_B0010. This first BioBrick we designed was then assembled with an IPTG inducible promoter (Bba_R0010) and a RBS Elowitz.</p>
 					<br>
 					<p>The second BioBrick contains the complementary Ssp DnaB C-intein with a histag and a double terminator. For this design we used the following BioBricks from the iGEM repository: BBa_K1362251, BBa_K844000 and BBa_B0010. We assembled this BioBrick with an Anderson Promoter J23100 and a RBS Elowitz. Both assembled complete devices were also registered as BioBricks.</p>
-					<div><a href="#design"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+					<br>
+					<a id="back-to-top" href="#design" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
 				</div>		
 				<button id="results" class="accordion"><h1>Results</h1></button>
-				<div class="panel">			
-					<div><a href="#results"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+				<div class="panel">	
+					<br>
+					<a id="back-to-top" href="#results" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
 				</div>	
 				<button id="references" class="accordion"><h1>References</h1></button>
 				<div class="panel">
@@ -228,7 +251,8 @@
 					<p>Topilina, N. I., & Mills, K. V. (2014). Recent advances in in vivo applications of intein-mediated protein splicing. <em>Mobile DNA</em>, 5(1), 5. doi:10.1186/1759-8753-5-5</p>
 					<br>
 					<p>Volkmann, G., Volkmann, V., & Liu, X. (2011). Site-specific protein cleavage in vivo by an intein-derived protease. <em>FEBS Letters</em>, 586(1), 79-84. doi:10.1016/j.febslet.2011.11.028</p>
-					<div><a href="#references"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
+					<br>
+					<a id="back-to-top" href="#references" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
 				</div>
 			</div>
 			<div id="system-sections" class="container-fluid slideanim">
@@ -261,6 +285,30 @@
 			        this.nextElementSibling.classList.toggle("show");
 			    }
 			}
+
+			var triggers = document.getElementsByClassName('modal-trigger');
+			var modals = document.getElementsByClassName('modal');
+			var closers = document.getElementsByClassName('close-modal');
+			Array.prototype.forEach.call(triggers, function(trigger) {
+			  trigger.addEventListener("click", function() {
+			    var modal = this.parentNode.parentNode.getElementsByClassName("modal")[0];
+			    var modal_content = modal.getElementsByClassName("modal-content")[0];
+			    var img = modal_content.getElementsByTagName("img")[0];
+			    var caption = modal.getElementsByClassName("caption-modal")[0];
+			    var p = caption.getElementsByTagName("p")[0];
+		        img.src = this.src;
+		        p.innerHTML = this.alt;
+		        modal.style.display = "block";
+
+			  })
+			});
+			Array.prototype.forEach.call(closers, function(close) {
+			  close.addEventListener("click", function() {
+			    Array.prototype.forEach.call(modals, function(modal) {
+			      modal.style.display = "none";
+			    });
+			  })
+			});
 		</script>
 	</body>
 </html>
