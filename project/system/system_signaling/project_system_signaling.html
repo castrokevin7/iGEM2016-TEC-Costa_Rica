@@ -139,6 +139,18 @@
 		    border-top-right-radius: 0px;
 		    border-bottom-left-radius: 0px;
 		    border-bottom-right-radius: 0px;
+		}		
+		figcaption p {
+			text-align: center !important;
+		}
+		.caption-modal p {
+			text-align: center !important;			
+		}
+		figure img {
+			margin: 0 auto !important;
+		}
+		.back-top a {
+			float: right;
 		}
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 		}
@@ -170,10 +182,6 @@
 			    </div>
 			  </div>
 			</div>
-			<!--
-			http://2016.igem.org/wiki/images/9/91/T--TEC-Costa_Rica--prostal_project_system_signaling_bg1.png
-		
-			-->
 			<div class="module-sections">
 				<button id="background" class="accordion"><h1>Background</h1></button>
 				<div class="panel">
@@ -221,7 +229,10 @@
 					<br>
 					<p>Based on the protein structural model we decided to insert the smallest sequence in the REC lobe because it suffers the most aggressive conformational change. In contrast, the longest insertion which included the split TEV protease joined to a trans-splicing Npu DnaE N-intein and both N-inteins was inserted in the HNH domain. Also, we added the flexible linker 2x (GGGS) on both sides of each insertion to allow a better interaction between the split inteins. According to Chen et al. (2013) flexible linkers are usually used to provide a degree of movement and thus allow a better interaction between the linked peptide sequences. This linker has already been used in iGEM to fuse proteins and is part of the repository.</p>
 					<br>
-					<a id="back-to-top" href="#background" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					<div class="back-top">
+						<a href="#background"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					</div>
+					<br>
 				</div>
 				<button id="design" class="accordion"><h1>Design</h1></button>
 				<div class="panel">
@@ -234,7 +245,10 @@
 					<br>
 					<p>The second BioBrick contains the complementary Ssp DnaB C-intein with a histag and a double terminator. For this design we used the following BioBricks from the iGEM repository: BBa_K1362251, BBa_K844000 and BBa_B0010. We assembled this BioBrick with an Anderson Promoter J23100 and a RBS Elowitz. Both assembled complete devices were also registered as BioBricks.</p>
 					<br>
-					<a id="back-to-top" href="#design" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					<div class="back-top">
+						<a href="#design"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					</div>
+					<br>
 				</div>		
 				<button id="results" class="accordion"><h1>Results</h1></button>
 				<div class="panel">	
@@ -270,8 +284,11 @@
 					<br>
 					<h2>Under construction</h2>
 					<p>For further results we need to validated the intein C DnaB's (K190312) protease activity, reason why we need to re-assemble K1903010 and K190312. By analyzing this construct’s function, we would proof the intein release mechanism of our system.</p>
+					<br>	
+					<div class="back-top">
+						<a href="#results"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					</div>
 					<br>
-					<a id="back-to-top" href="#results" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
 				</div>	
 				<button id="references" class="accordion"><h1>References</h1></button>
 				<div class="panel">
@@ -284,7 +301,10 @@
 					<br>
 					<p>Volkmann, G., Volkmann, V., & Liu, X. (2011). Site-specific protein cleavage in vivo by an intein-derived protease. <em>FEBS Letters</em>, 586(1), 79-84. doi:10.1016/j.febslet.2011.11.028</p>
 					<br>
-					<a id="back-to-top" href="#references" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					<div class="back-top">
+						<a href="#references"><span class="glyphicon glyphicon-chevron-up"></span></a>						
+					</div>
+					<br>
 				</div>
 			</div>
 			<div id="system-sections" class="container-fluid slideanim">
@@ -340,6 +360,17 @@
 			      modal.style.display = "none";
 			    });
 			  })
+			});
+			$("body a").on('click', function(event) {
+				if (this.hash !== "") {
+					event.preventDefault();
+					var hash = this.hash;
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 900, function() {
+						window.location.hash = hash;
+					});
+				}
 			});
 		</script>
 	</body>

@@ -33,7 +33,78 @@
 			width: 250px;
 			height: 250px;
 			margin: 0 auto;
-		}	
+		}
+		.modal-trigger {
+		    cursor: pointer;
+		    transition: 0.3s;
+		}
+		.modal-trigger:hover { opacity: 0.7; }
+		.modal {
+		    display: none;
+		    position: fixed;
+		    z-index: 1; /* Sit on top */
+		    padding-top: 100px; /* Location of the box */
+		    left: 0;
+		    top: 0;
+		    width: 100%; /* Full width */
+		    height: 100%; /* Full height */
+		    overflow: auto; /* Enable scroll if needed */
+		    background-color: rgb(0,0,0); /* Fallback color */
+		    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+		}
+		.modal-content, .modal-content img {
+		    margin: auto;
+		    display: block;
+		    width: 90%;
+		}
+		.caption-modal {
+		    margin: auto;
+		    display: block;
+		    width: 90%;
+		    max-width: 700px;
+		    text-align: center;
+		    color: #ccc;
+		    padding: 10px 0;
+		    height: 150px;
+		}
+		.modal-content, .modal-content img, .caption-modal {
+		    -webkit-animation-name: zoom;
+		    -webkit-animation-duration: 0.6s;
+		    animation-name: zoom;
+		    animation-duration: 0.6s;
+		}
+		@-webkit-keyframes zoom {
+		    from {-webkit-transform:scale(0)}
+		    to {-webkit-transform:scale(1)}
+		}
+		@keyframes zoom {
+		    from {transform:scale(0)}
+		    to {transform:scale(1)}
+		}
+		.close-modal {
+		    position: absolute;
+		    right: -20px;
+		    top: -20px;
+		    color: white;
+		    font-size: 30px;
+		    font-weight: bold;
+		    transition: 0.3s;
+		}
+		.close-modal:hover,
+		.close-modal:focus {
+		    color: #bbb;
+		    text-decoration: none;
+		    cursor: pointer;
+		}		
+		figcaption p {
+			text-align: center !important;
+		}
+		.caption-modal p {
+			text-align: center !important;			
+		}
+		figure img {
+			margin: 0 auto !important;
+		}
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 		}
 		@media screen and (max-width: 1280px) {
@@ -56,6 +127,28 @@
 			<div class="container-fluid">
 				<h1>Mathematical Modelling</h1>
 				<p>First, we considered the more general approach of the system (Fig. 1). Each inducer will activate the expression of IntN, IntC or GFP-Q. Both inteins will bind to produce the TEV, which starts the cleavage of GFP-Q to produce GFP. Because of the nature of the system, the fluorescence will start after the 3 inducers were added, and no response would be shown if any one of them were missing. Initially we wanted to prove every scenario, but due to time constrains we instead considered the IntC and GFP-Q to express constitutively (as if their inducers were always present) (Fig. 2). This way, we only control the expression of IntN.</p>
+				<div class="row">
+					<div class="col-sm-6">
+						<figure><img src="http://2016.igem.org/wiki/images/f/f5/T--TEC-Costa_Rica--diagrama1-01.png" class="modal-trigger img-responsive" alt="Figure 1."><figcaption><p style="text-align: center;">Figure 1.</p></figcaption></figure>
+						<div class="modal">
+							<div class="modal-content">
+								<span class="close-modal">x</span>
+								<img>				      	
+							</div> 
+							<div class="caption-modal"><p style="text-align: center;"></p></div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<figure><img src="http://2016.igem.org/wiki/images/3/30/T--TEC-Costa_Rica--diagrama2-02.png" class="modal-trigger img-responsive" alt="Figure 2."><figcaption><p style="text-align: center;">Figure 2.</p></figcaption></figure>
+						<div class="modal">
+							<div class="modal-content">
+								<span class="close-modal">x</span>
+								<img>				      	
+							</div> 
+							<div class="caption-modal"><p style="text-align: center;"></p></div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div id="model-kinetics" class="container-fluid slideanim">
 				<h1>Model Kinetics</h1>
@@ -83,9 +176,6 @@
 				<p>Description of model parameters</p>
 				<img src="http://2016.igem.org/wiki/images/1/1d/T--TEC-Costa_Rica--prostal_project_system_mathematical_modelling_parameters.png" class="img-responsive" alt="Parameters Table">
 			</div>
-			<div id="data-gathering" class="container-fluid slideanim">
-				<h1>Data Gathering</h1>
-			</div>
 			<div id="assumptions" class="container-fluid slideanim">
 				<h1>Assumptions</h1>
 				<p>Other assumptions were made to further simplify the model:</p>
@@ -93,9 +183,6 @@
 					<li><p>Even when the affinity between a polymerase and an activated gene is very low when the activator is not present, there will still be a low transcription rate (called basal rate). Regardless we considered the basal rate of IntN as zero.</p></li>
 					<li><p>Because the bacteria will constantly produce IntC and GFP-Q, at the start of the assays we wouldn’t be sure of their initial concentration. So we assumed that by this point, both reactions were in steady state. That is, <!-- FORMULA --></p></li>
 				</ol>
-			</div>
-			<div id="results" class="container-fluid slideanim">
-				<h1>Results</h1>
 			</div>
 			<div id="structural-modelling" class="slideanim">
 				<div class="container-fluid">
@@ -115,6 +202,30 @@
 		<script type="text/javascript">
 			var nav = document.getElementById('nav-project');
 			nav.className += " active";
+
+			var triggers = document.getElementsByClassName('modal-trigger');
+			var modals = document.getElementsByClassName('modal');
+			var closers = document.getElementsByClassName('close-modal');
+			Array.prototype.forEach.call(triggers, function(trigger) {
+			  trigger.addEventListener("click", function() {
+			    var modal = this.parentNode.parentNode.getElementsByClassName("modal")[0];
+			    var modal_content = modal.getElementsByClassName("modal-content")[0];
+			    var img = modal_content.getElementsByTagName("img")[0];
+			    var caption = modal.getElementsByClassName("caption-modal")[0];
+			    var p = caption.getElementsByTagName("p")[0];
+		        img.src = this.src;
+		        p.innerHTML = this.alt;
+		        modal.style.display = "block";
+
+			  })
+			});
+			Array.prototype.forEach.call(closers, function(close) {
+			  close.addEventListener("click", function() {
+			    Array.prototype.forEach.call(modals, function(modal) {
+			      modal.style.display = "none";
+			    });
+			  })
+			});
 		</script>
 	</body>
 </html>

@@ -139,7 +139,19 @@
 		    border-top-right-radius: 0px;
 		    border-bottom-left-radius: 0px;
 		    border-bottom-right-radius: 0px;
-		}	
+		}		
+		figcaption p {
+			text-align: center !important;
+		}
+		.caption-modal p {
+			text-align: center !important;			
+		}
+		figure img {
+			margin: 0 auto !important;
+		}
+		.back-top a {
+			float: right;
+		}
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 		}
 		@media screen and (max-width: 1280px) {
@@ -218,7 +230,10 @@
 						</div>
 					</div>
 					<br>
-					<a id="back-to-top" href="#background" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					<div class="back-top">
+						<a href="#background"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					</div>
+					<br>
 				</div>
 				<button id="design" class="accordion"><h1>Design</h1></button>
 				<div class="panel">
@@ -234,8 +249,10 @@
 							<div class="caption-modal"><p style="text-align: center;"></p></div>
 						</div>
 					</div>	
+					<br>
 					<ul>
-						<li><p>The first BioBrick was formed with the split TEV N - split Intein - Double Terminator based on the iGEM parts: BBa_K1159318, BBa_K1362400, BBa_B0015.</p></li>
+						<li><p>The first BioBrick was formed with the split TEV N - split Intein - Double Terminator based on the iGEM parts: BBa_K1159318, BBa_K1362400, BBa_B0015.</p>
+						<br></li>
 						<li><p>For the second BioBrick, split TEV N-split Intein N - Double Terminator, we used the following parts: BBa_K1362401, BBa_K1159102, BBa_B0015.</p></li>
 					</ul>
 					<br>
@@ -243,7 +260,10 @@
 					<br>
 					<p>We designed a positive control device expressing a TEV protease to cleavage the linker between the GFP and the Dark Quencher. We based this BioBrick on the following parts: BBa_R0010, BBa_B0034, BBa_K1319004, BBa_B0015.</p>
 					<br>
-					<a id="back-to-top" href="#design" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					<div class="back-top">
+						<a href="#design"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					</div>
+					<br>
 				</div>		
 				<button id="results" class="accordion"><h1>Results</h1></button>
 				<div class="panel">		
@@ -289,8 +309,11 @@
 					<br>
 					<h2>Under construction</h2>
 					<p>We need to assemble K1903006, K1903008 and K1903015 together or plan an alternative strategy; with the goal of testing the split TEV reconstitution mediated by inteins and the reconstituted TEV activity by the TEVlinkers’s cleavage, which has to trigger the GFP’s fluorescence emission. This assay will be necessary to have a positive control of the global system reaction.</p>
+					<br>	
+					<div class="back-top">
+						<a href="#results"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					</div>
 					<br>
-					<a id="back-to-top" href="#results" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
 				</div>	
 				<button id="references" class="accordion"><h1>References</h1></button>
 				<div class="panel">
@@ -305,7 +328,10 @@
 					<br>
 					<p>Topilina, N. I., & Mills, K. V. (2014). Recent advances in in vivo applications of intein-mediatedprotein splicing. Mobile Dna, 5(1), 1.</p>
 					<br>
-					<a id="back-to-top" href="#references" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					<div class="back-top">
+						<a href="#references"><span class="glyphicon glyphicon-chevron-up"></span></a>						
+					</div>
+					<br>
 				</div>
 			</div>
 			<div id="system-sections" class="container-fluid slideanim">
@@ -361,6 +387,17 @@
 			      modal.style.display = "none";
 			    });
 			  })
+			});
+			$("body a").on('click', function(event) {
+				if (this.hash !== "") {
+					event.preventDefault();
+					var hash = this.hash;
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 900, function() {
+						window.location.hash = hash;
+					});
+				}
 			});
 		</script>
 	</body>

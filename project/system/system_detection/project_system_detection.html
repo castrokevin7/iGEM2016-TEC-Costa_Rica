@@ -139,6 +139,18 @@
 		    border-bottom-left-radius: 0px;
 		    border-bottom-right-radius: 0px;
 		}
+		figcaption p {
+			text-align: center !important;
+		}
+		.caption-modal p {
+			text-align: center !important;			
+		}
+		figure img {
+			margin: 0 auto !important;
+		}
+		.back-top a {
+			float: right;
+		}
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 		}
 		@media screen and (max-width: 1280px) {
@@ -221,7 +233,10 @@
 						</div>
 					</div>
 					<br>
-					<a id="back-to-top" href="#background" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					<div class="back-top">
+						<a href="#background"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					</div>
+					<br>
 				</div>
 				<button id="design" class="accordion"><h1>Design</h1></button>
 				<div class="panel">
@@ -287,12 +302,15 @@
 					<h2>4. sgRNA</h2>
 					<p>To design the sgRNA we used a two steps strategy to create the sequence. First we searched the sequence for the sgRNA for Streptococcus pyogenes already modified as a chimeric sgRNA just with the variable base-paring region; we used the sequence detailed in Larson et al. (2013). Next we used Deskgen tool to find possible targets sites in the PCA3 variant 2 gene.</p>
 					<br>
-					<a id="back-to-top" href="#design" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					<div class="back-top">
+						<a href="#design"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					</div>
+					<br>
 				</div>		
 				<button id="results" class="accordion"><h1>Results</h1></button>
 				<div class="panel">		
 					<h2>Assembly</h2>
-					<p>First we adapted a pSB1C3 plasmid to Golden Gate using the adapter that we previously designed. We ordered the adapter and digested and ligated it to the plasmid; then we did a transformation and obtained positive results validated by PCR of the miniprep as shown in Figure 5. This miniprep was used as the vector of the dCas9’s Golden Gate reaction.</p>
+					<p>First we adapted a pSB1C3 plasmid to Golden Gate using the adapter that we previously designed. We ordered the adapter and digested and ligated it to the plasmid; then we did a transformation and obtained positive results validated by PCR of the miniprep as shown in Figure 6. This miniprep was used as the vector of the dCas9’s Golden Gate reaction.</p>
 					<br>
 					<div>
 						<figure><img class="modal-trigger img-responsive" alt="Figure 6. Golden gate adapter in pSB1C3 validated by PCR and electrophoresis agarose gel." src="http://2016.igem.org/wiki/images/6/6b/T--TEC-Costa_Rica--Detection_results_1.png"><figcaption><p style="text-align: center;">Figure 6. Golden gate adapter in pSB1C3 validated by PCR and electrophoresis agarose gel.</p></figcaption></figure>					
@@ -309,7 +327,7 @@
 					<br>
 					<p>We performed a transformation with 4 uL of the reaction and obtained 66 white colonies with only 4 red colonies as a result of the dCas9 assembly. Because we didn't have a selection method, the efficiency of the reaction was 6%, with a total of 4 events confirmed by minipreps’s PCR from 66 colonies processed.</p>
 					<br>
-					<p>As shown in figure 6, the fragments of both versions of the dCas9, have a size between 4000 and 5000 bp based on the Mass Ruler ladder, which matches the theoretical size of 4525 bp for both version A-dCas9 and B-dCas9, respectively. Based on this result we could argue that the fusion sites TCTA, GCAA, GGGT, AATG, and TACT can be used in a same Golden Gate assembly reaction.</p>
+					<p>As shown in Figure 7, the fragments of both versions of the dCas9, have a size between 4000 and 5000 bp based on the Mass Ruler ladder, which matches the theoretical size of 4525 bp for both version A-dCas9 and B-dCas9, respectively. Based on this result we could argue that the fusion sites TCTA, GCAA, GGGT, AATG, and TACT can be used in a same Golden Gate assembly reaction.</p>
 					<br>
 					<div>
 						<figure><img class="modal-trigger img-responsive" alt="Figure 7. dCas9 assembly validated by PCR and an agarose gel electrophoresis." src="http://2016.igem.org/wiki/images/d/d3/T--TEC-Costa_Rica--Detection_results_2.png"><figcaption><p style="text-align: center;">Figure 7. dCas9 assembly validated by PCR and an agarose gel electrophoresis.</p></figcaption></figure>					
@@ -325,7 +343,10 @@
 					<h2>Under construction</h2>
 					<p>For further work we will assembly the insertions into the dCas9 with a second Golden Gate reaction with BbsI enzyme. Upon assembly we’ll need to characterized the dCas9 with its insertions by sequencing; to finally validated our system with a fluorescent essay mediated by the release of this insertions.</p>
 					<br>	
-					<a id="back-to-top" href="#results" class="btn btn-primary btn-lg back-to-top" role="button" data-toggle="tooltip" data-placement="right"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					<div class="back-top">
+						<a href="#results"><span class="glyphicon glyphicon-chevron-up"></span></a>
+					</div>
+					<br>
 				</div>	
 				<button id="references" class="accordion"><h1>References</h1></button>
 				<div class="panel">
@@ -340,8 +361,10 @@
 					<br>
 					<p>Weber, E., Engler, C., Gruetzner, R., Werner, S., & Marillonnet, S. (2011). A modular cloning system for standardized assembly of multigene constructs. PloS one, 6(2), e16765.</p>
 					<br>
-					<div><a href="#references"><span class="glyphicon glyphicon-chevron-up"></span></a></div>
-				</div>
+					<div class="back-top">
+						<a href="#references"><span class="glyphicon glyphicon-chevron-up"></span></a>						
+					</div>
+					<br>
 			</div>
 			<div id="system-sections" class="container-fluid slideanim">
 				<div class="row"> 
@@ -396,6 +419,17 @@
 			      modal.style.display = "none";
 			    });
 			  })
+			});
+			$("body a").on('click', function(event) {
+				if (this.hash !== "") {
+					event.preventDefault();
+					var hash = this.hash;
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 900, function() {
+						window.location.hash = hash;
+					});
+				}
 			});
 		</script>
 	</body>
