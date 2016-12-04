@@ -19,6 +19,7 @@
 			display: table-cell;
 			vertical-align: middle;
 			background-color: rgba(0, 0, 0, 0.2);
+			font-size: 50px !important;
 		}			
 		#synbiothon-details { margin-top: 20px; }
 		#synbiothon-details .row { margin-top: 10px; }
@@ -64,8 +65,8 @@
 		#syn-video video { 
 			display: block;
 			margin: 0 auto;
-			width: 800px;
-			height: 450px;
+			width: 80%;
+			height: 100%;
 		}
 		#synbiothon-details .row {
 			padding-top: 20px;
@@ -73,6 +74,10 @@
 		}
 		#reach img {
 			margin-bottom: 15px;
+		}
+		.comments img {
+			margin: 0 auto;
+			width: 75%
 		}
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 		}
@@ -84,19 +89,29 @@
 			.panel { height: auto; }
 			.panel-body { height: auto; }
 			.panel-heading { height: auto; }
+			.jumbotron h1 {
+				font-size: 40px !important;
+			}	
+			.jumbotron span {
+				font-size: 30px !important;
+			}	
 		}
 		@media screen and (max-width: 480px) {
 			.panel { height: auto; }
 			.panel-body { height: auto; }
 			.panel-heading { height: auto; }
-		} 		
-		@media screen and (max-width: 480px) {
-		}								
+			.jumbotron h1 {
+				font-size: 30px !important;
+			}
+			.jumbotron span {
+				font-size: 20px !important;
+			}		
+		} 								
 	</style>
 	<body>
 		<main class="synbiothon well">
 			<div class="jumbotron text-center parallax">	  
-				<h1 style="font-size: 50px;">SynBioThon 2016<br><span>Rewriting the code</span></h1>		
+				<h1>SynBioThon 2016<br><span>Rewriting the code</span></h1>		
 			</div>			
 			<div class="concept">
 				<p style="text-align: center;">SynBioThon 2016 (SBT16) is a Synthetic Biology competition, in which teams of students work for a weekend to create an <em>in silico</em> genetic device that can solve some kind of problem. SBT16 was organized not only as a mean to promote Synthetic Biology within the community but also to make aware about the importance of the application of Synthetic Biology as a high potential tool that allows technological development in Costa Rica. As an iGEM team, we wanted to improve innovation, creativity, and teamwork among participants; we worked to generate a space for student’s active participation in science.</p>
@@ -112,6 +127,12 @@
 				<h1>Reach</h1>
 				<img src="http://2016.igem.org/wiki/images/9/97/T--TEC-Costa_Rica--prostal_hp_reach.png" class="img-responsive" alt="Prostal Reach">
 				<p>For SBT16, we had diverse talks in different classes and universities, trying to reach the most diverse participants for our event but also for promoting Synthetic Biology within students. In our university (TEC), we spoke with people of different majors (Biotechnology Engineering, Material Science, Agricultural Engineering, and others). We also went to University of Costa Rica (UCR), where we spoke with people of Biology, Microbiology, and Pharmacy, and to the National University (UNA), where we talked to students of Biology. We also gave talks in other universities such as UCIMED (Medical School), and LEAD University (Business Management).</p>
+				<br>
+				<div class="comments container-fluid">
+					<div class="row slideanim">
+						<img class="img-responsive" src="http://2016.igem.org/wiki/images/3/3c/T--TEC-Costa_Rica--prostal_hp_projects_commet1.jpg" alt="Comment 1">
+					</div>
+				</div>
 				<br>
 				<p>Prior to the event, we had preparatory workshops with students so they could get a grasp of genetics, molecular biology, and bioinformatics if they weren’t familiar with them. A total of eight workshops were imparted at UCR, UNA, and TEC. We had about 80 students overall in a full-day session. We had a theoric section, and then an activity to test the concepts, and after lunch a demonstrative session of bioinformatics, centered in databases and Benchling, which was followed by work.</p>
 				<p>These workshops encouraged students to participate in SBT16, so once the inscription closed we had 78 students from three different universities, willing to participate in our 54-hour SynBio competition.</p>
@@ -172,13 +193,6 @@
 			    </div>    
 			  </div>
 			</div>	
-			<!--
-			<div class="comments container-fluid">
-				<div class="row slideanim">
-					<img class="img-responsive" src="http://2016.igem.org/wiki/images/3/3c/T--TEC-Costa_Rica--prostal_hp_projects_commet1.jpg" alt="Comment 1">
-				</div>
-			</div>
-			-->
 		</main>
 		<script type="text/javascript">
 			var nav = document.getElementById('nav-human_practice');

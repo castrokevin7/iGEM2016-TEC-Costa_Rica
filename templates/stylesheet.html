@@ -116,9 +116,12 @@
 	}	
 	.concept {
 		display: block;
-		text-align: center;
+		text-align: center !important;
 		margin: 10px auto 0 auto;
 		width: 80%
+	}
+	.concept p {
+		text-align: center !important;
 	}
 	.jumbotron span { font-size: 40px; }
 	.slideanim { visibility: hidden; }
@@ -144,6 +147,9 @@
 	}
 	@media screen and (max-width: 980px) {
 		#navbar { float: left; }
+		.well {
+			padding: 0;
+		}
 	}
 	@media screen and (max-width: 768px) {	
 		#navbar { 

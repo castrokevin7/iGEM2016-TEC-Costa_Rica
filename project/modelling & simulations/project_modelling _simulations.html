@@ -18,7 +18,8 @@
 		.jumbotron h1 {
 			display: table-cell;
 			vertical-align: middle;
-			background-color: rgba(0, 0, 0, 0.75)
+			background-color: rgba(0, 0, 0, 0.75);
+			font-size: 50px !important;
 		}		
 		#modelling-sections .container-fluid { padding: 30px 25px; }
 		#modelling-sections .container-fluid .row { 
@@ -40,14 +41,32 @@
 		@media screen and (max-width: 980px) {
 		}
 		@media screen and (max-width: 736px) {
+			.jumbotron h1 {
+				font-size: 40px !important;
+			}	
+			.jumbotron span {
+				font-size: 30px !important;
+			}	
 		}
 		@media screen and (max-width: 480px) {
-		}				
+			.jumbotron h1 {
+				font-size: 30px !important;
+			}
+			.jumbotron span {
+				font-size: 20px !important;
+			}		
+		}
+		@media screen and (max-width: 350px) {
+			#modelling-sections img {
+				width: 100%;
+				height: 100%;
+			}		
+		}		
 	</style>
 	<body>
 	<main class="project-modelling_simulations well">
 			<div class="jumbotron text-center parallax">
-				<h1 style="font-size: 50px;">Project<br><span>Modelling & Simulations</span></h1>
+				<h1>Project<br><span>Modelling & Simulations</span></h1>
 			</div>
 			<div class="concept">
 				<p style="text-align: center;">The modelling for the Project can be classified into two categories</p>

@@ -18,7 +18,8 @@
 		.jumbotron h1 {
 			display: table-cell;
 			vertical-align: middle;
-			background-color: rgba(0, 0, 0, 0.75)
+			background-color: rgba(0, 0, 0, 0.75);
+			font-size: 50px !important;
 		}
 		#model-kinetics img {
 			width: 50%;
@@ -107,26 +108,41 @@
 		}
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 		}
-		@media screen and (max-width: 1280px) {
-		}
-		@media screen and (max-width: 980px) {
-		}
+
 		@media screen and (max-width: 736px) {
+			.jumbotron h1 {
+				font-size: 40px !important;
+			}	
+			.jumbotron span {
+				font-size: 30px !important;
+			}	
 		}
 		@media screen and (max-width: 480px) {
-		}				
+			.jumbotron h1 {
+				font-size: 30px !important;
+			}
+			.jumbotron span {
+				font-size: 20px !important;
+			}		
+		}
+		@media screen and (max-width: 350px) {
+			#structural-sections img {
+				width: 100%;
+				height: 100%;
+			}		
+		}					
 	</style>
 	<body>
 	<main class="mathematical-modelling well">
 			<div class="jumbotron text-center parallax">
-				<h1 style="font-size: 50px;">Modelling & Simulations<br><span>Mathematical Modelling</span></h1>
+				<h1>Modelling & Simulations<br><span>Mathematical Modelling</span></h1>
 			</div>
 			<div class="concept">
 				<p style="text-align: center;">Our mathematical model was based on Boolean logic gates, because we want a signal response only if all our inputs are present, and an analogical output is not our main focus. For this, we designed a genetic three-input AND gate activated on IntN (SpiltTEV IntN DnaE), IntC (SplitTEV IntC DnaE) and GFP-Q (GFP-TEVlinker-Quencher); each of them were controlled by separate promoter inputs. The output was the fluorescence exhibited by GFP.</p>
 			</div>	
 			<div class="container-fluid">
 				<h1>Mathematical Modelling</h1>
-				<p>First, we considered the more general approach of the system (Fig. 1). Each inducer will activate the expression of IntN, IntC or GFP-Q. Both inteins will bind to produce the TEV, which starts the cleavage of GFP-Q to produce GFP. Because of the nature of the system, the fluorescence will start after the 3 inducers were added, and no response would be shown if any one of them were missing. Initially we wanted to prove every scenario, but due to time constrains we instead considered the IntC and GFP-Q to express constitutively (as if their inducers were always present) (Fig. 2). This way, we only control the expression of IntN.</p>
+				<p>First, we considered the more general approach of the system (Figure. 1). Each inducer will activate the expression of IntN, IntC or GFP-Q. Both inteins will bind to produce the TEV, which starts the cleavage of GFP-Q to produce GFP. Because of the nature of the system, the fluorescence will start after the 3 inducers were added, and no response would be shown if any one of them were missing. Initially we wanted to prove every scenario, but due to time constrains we instead considered the IntC and GFP-Q to express constitutively (as if their inducers were always present) (Figure. 2). This way, we only control the expression of IntN.</p>
 				<div class="row">
 					<div class="col-sm-6">
 						<figure><img src="http://2016.igem.org/wiki/images/f/f5/T--TEC-Costa_Rica--diagrama1-01.png" class="modal-trigger img-responsive" alt="Figure 1."><figcaption><p style="text-align: center;">Figure 1.</p></figcaption></figure>

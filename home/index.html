@@ -70,6 +70,9 @@
 				padding-top: 5%;
 				padding-bottom: 2%;
 			}
+			#system-pieces, #facts-pieces {
+				display: none;
+			}
 			@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {}
 			@media screen and (max-width: 1280px) {
 
@@ -90,6 +93,12 @@
 				#facts h1, #detection h1, #system h1 { font-size: 30px; }
 				#facts h2, #detection h2, #system h2 { font-size: 25px; }
 				#facts p, #detection p, #system p { font-size: 15px; }
+				#system-full, #facts-full {
+					display: none;
+				}
+				#system-pieces, #facts-pieces {
+					display: block;
+				}
 			}
 			@media screen and (max-width: 410px) {	
 				#home h1 {
@@ -114,9 +123,20 @@
 
 		<div id="facts" class="container section no-img-section slideanim">
 			<h1>About Prostate Cancer (pCa)</h1>
-			<div class="row">
+			<div id="facts-full" class="row">
 				<div class="col-sm-12">
 					<img src="http://2016.igem.org/wiki/images/1/11/T--TEC-Costa_Rica--prostal_home_facts.png" class="img-responsive" alt="pCa Facts">
+				</div>
+			</div>
+			<div id="facts-pieces" class="row">
+				<div class="col-sm-3">
+					<img src="http://2016.igem.org/wiki/images/6/6f/T--TEC-Costa_Rica--prostal_home_fact1.png" class="img-responsive" alt="pCa Fact 1">
+				</div>
+				<div class="col-sm-3">
+					<img src="http://2016.igem.org/wiki/images/2/28/T--TEC-Costa_Rica--prostal_home_fact2.png" class="img-responsive" alt="pCa Fact 2">
+				</div>
+				<div class="col-sm-3">
+					<img src="http://2016.igem.org/wiki/images/e/e9/T--TEC-Costa_Rica--prostal_home_fact3.png" class="img-responsive" alt="pCa Fact 3">
 				</div>
 			</div>
 		</div>
@@ -163,9 +183,20 @@
 
 		<div id="system" class="container section no-img-section slideanim">
 			<h1>Our new detection method</h1>
-			<div class="row">
+			<div id="system-full" class="row">
 				<div class="col-sm-12">
 					<img src="http://2016.igem.org/wiki/images/9/97/T--TEC-Costa_Rica--prostal_home_system_benefits.png" class="img-responsive" alt="System Benefits">
+				</div>
+			</div>
+			<div id="system-pieces" class="row">
+				<div class="col-sm-3">
+					<img src="http://2016.igem.org/wiki/images/b/b0/T--TEC-Costa_Rica--prostal_home_system1.png" class="img-responsive" alt="System Benefit 1">
+				</div>
+				<div class="col-sm-3">
+					<img src="http://2016.igem.org/wiki/images/0/0d/T--TEC-Costa_Rica--prostal_home_system2.png" class="img-responsive" alt="System Benefit 2">
+				</div>
+				<div class="col-sm-3">
+					<img src="http://2016.igem.org/wiki/images/d/db/T--TEC-Costa_Rica--prostal_home_system3.png" class="img-responsive" alt="System Benefit 3">
 				</div>
 			</div>
 		</div>

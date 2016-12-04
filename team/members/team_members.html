@@ -16,7 +16,7 @@
       position: relative;
     }
     .jumbotron img {
-      height: 650px; 
+      height: 700px; 
       width: 100%; 
       display: block;
       margin: 0 auto;
@@ -28,6 +28,7 @@
       top: 350px;
       width: 100%;
       background-color: rgba(0,0,0,0.5);
+      font-size: 50px !important;
     }
     .jumbotron span { font-size: 40px; }
     .parallax {
@@ -95,12 +96,12 @@
         cursor: pointer;
     }
     .marketing { margin-top: 20px; }
-    .marketing .col-lg-3 {
+    .marketing .col-lg-3, .marketing .col-md-3, .marketing .col-sm-3 {
       margin-bottom: 20px;
       text-align: center;
     }
     .marketing h2 { font-weight: normal; }
-    .marketing .col-lg-3 p {
+    .marketing .col-lg-3 p, .marketing .col-md-3 p, .marketing .col-sm-3 p {
       margin-right: 10px;
       margin-left: 10px;
     }         
@@ -120,8 +121,14 @@
           height: 300px; 
           width: 100%; 
         }
-        .jumbotron h1 { top: 120px; }
+        .jumbotron h1 { 
+          top: 120px; 
+          font-size: 40px !important;
+        }
         .modal-content img { height: 300px; }
+      .jumbotron span {
+        font-size: 30px !important;
+      }   
     }
     @media screen and (max-width: 480px) {
         .jumbotron { 
@@ -132,19 +139,25 @@
           height: 300px; 
           width: 100%; 
         }
-        .jumbotron h1 { top: 120px; }
+        .jumbotron h1 { 
+          top: 120px; 
+          font-size: 30px !important;
+        }
         .modal-content img { height: 300px; }
+      .jumbotron span {
+        font-size: 20px !important;
+      }   
     }       
   </style>
   <body>
   <main class="team-members well">  
     <div class="jumbotron text-center">   
       <img class="responsive" src="http://2016.igem.org/wiki/images/5/59/T--TEC-Costa_Rica--prostal_team_members2.jpg" alt="iGEM Costa Rica Team Members">
-      <h1 style="font-size: 50px;">Team<br><span>Members</span></h1>
+      <h1>Team<br><span>Members</span></h1>
     </div>
     <div class="container marketing">
       <div class="row slideanim" style="margin-top: 35px;">
-        <div class="col-lg-3">
+        <div class="col-sm-3 col-md-3 col-lg-3">
           <div class="card">
             <img class="img-responsive" src="http://2016.igem.org/wiki/images/5/58/T--TEC-Costa_Rica--prostal_team_member_juli.jpg" alt="Juliana Artavia">
             <div class="container-fluid">
@@ -169,7 +182,7 @@
             </div>
            </div>
         </div> 
-        <div class="col-lg-3">
+        <div class="col-sm-3 col-md-3 col-lg-3">
           <div class="card">
             <img class="img-responsive" src="http://2016.igem.org/wiki/images/2/20/T--TEC-Costa_Rica--prostal_team_member_kevin.jpg" alt="Kevin Castro">
             <div class="container-fluid">
@@ -194,7 +207,7 @@
             </div>
            </div>
         </div> 
-        <div class="col-lg-3">
+        <div class="col-sm-3 col-md-3 col-lg-3">
           <div class="card">
             <img class="img-responsive" src="http://2016.igem.org/wiki/images/9/95/T--TEC-Costa_Rica--prostal_team_member_pablo.jpg" alt="Pablo Vargas">
             <div class="container-fluid">
@@ -219,7 +232,7 @@
             </div>
            </div>
         </div> 
-        <div class="col-lg-3">
+        <div class="col-sm-3 col-md-3 col-lg-3">
           <div class="card">
             <img class="img-responsive" src="http://2016.igem.org/wiki/images/3/35/T--TEC-Costa_Rica--prostal_team_member_pau.jpg" alt="Paula Thiel">
             <div class="container-fluid">
@@ -246,7 +259,7 @@
         </div>         
       </div>
       <div class="row slideanim" style="margin-top: 10px;">
-        <div class="col-lg-3">        
+        <div class="col-sm-3 col-md-3 col-lg-3">        
           <div class="card">
             <img class="img-responsive" src="http://2016.igem.org/wiki/images/b/b9/T--TEC-Costa_Rica--prostal_team_member_rafa.jpg" alt="Rafael Montenegro">
             <div class="container-fluid">
@@ -271,7 +284,7 @@
             </div>
            </div>
         </div> 
-        <div class="col-lg-3">
+        <div class="col-sm-3 col-md-3 col-lg-3">
           <div class="card">
             <img class="img-responsive" src="http://2016.igem.org/wiki/images/8/84/T--TEC-Costa_Rica--prostal_team_member_sam.jpg" alt="Samantha García">
             <div class="container-fluid">
@@ -296,7 +309,7 @@
             </div>
            </div>
         </div> 
-        <div class="col-lg-3">
+        <div class="col-sm-3 col-md-3 col-lg-3">
           <div class="card">
             <img class="img-responsive" src="http://2016.igem.org/wiki/images/4/49/T--TEC-Costa_Rica--prostal_team_member_sofia.jpg" alt="Sofía Vieto">
             <div class="container-fluid">
@@ -321,7 +334,7 @@
             </div>
            </div>
         </div> 
-        <div class="col-lg-3">
+        <div class="col-sm-3 col-md-3 col-lg-3">
           <div class="card">
             <img class="img-responsive" src="http://2016.igem.org/wiki/images/4/46/T--TEC-Costa_Rica--prostal_team_member_tim.jpg" alt="Timothy Bustillos">
             <div class="container-fluid">

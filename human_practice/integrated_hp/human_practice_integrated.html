@@ -19,6 +19,7 @@
 			display: table-cell;
 			vertical-align: middle;
 			background-color: rgba(0, 0, 0, .75);
+			font-size: 50px !important;
 		}		
 		.surveys { margin-top: 15px; }
 		.surveys img { margin: 0 auto; }
@@ -27,8 +28,8 @@
 		#integrated-video video { 
 			display: block;
 			margin: 0 auto;
-			width: 800px;
-			height: 450px;
+			width: 80%;
+			height: 100%;
 		}
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 		}
@@ -37,22 +38,34 @@
 		@media screen and (max-width: 980px) {
 		}
 		@media screen and (max-width: 736px) {
+			.jumbotron h1 {
+				font-size: 40px !important;
+			}	
+			.jumbotron span {
+				font-size: 30px !important;
+			}	
 		}
 		@media screen and (max-width: 480px) {
+			.jumbotron h1 {
+				font-size: 30px !important;
+			}
+			.jumbotron span {
+				font-size: 20px !important;
+			}		
 		}					
 	</style>
 	<body>
 		<main class="human_practice-integrated well">
 			<div class="jumbotron text-center parallax">	  
-				<h1 style="font-size: 50px;">Integrated Human Practice<br><span>What do men know about their prostate?</span></h1>
+				<h1>Integrated Human Practice<br><span>What do men know about their prostate?</span></h1>
 			</div>			
 			<div class="concept">
 				<p style="text-align: center;">For our Integrated Human Practice, we decided to ask ourselves why men didn’t have their prostate checked for prostate cancer. By doing this, we were able to decide for the best possible way of detecting this illness in a way that most men would find friendly enough.</p>
 			</div>
 			<div id="integrated-video" class="container-fluid">
 				<h1>Take a look to this introductory video!</h1>
-				<video controls poster="http://2016.igem.org/wiki/images/1/1e/T--TEC-Costa_Rica--prostal_human_practice_synbio.png">
-				  <source src="2016.igem.org/wiki/images/2/2b/T--TEC-Costa_Rica--HP-Gold.mov" type="video/mov">
+				<video controls poster="http://2016.igem.org/wiki/images/d/dd/T--TEC-Costa_Rica--IHP.jpg">
+				  <source src="http://2016.igem.org/wiki/images/2/21/T--TEC-Costa_Rica--Video_IHP.mp4" type="video/mp4">
 				   Your browser does not support HTML5 video.
 				</video>
 			</div>
